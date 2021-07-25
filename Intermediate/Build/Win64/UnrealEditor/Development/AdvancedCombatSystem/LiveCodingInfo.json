@@ -24,6 +24,7 @@
 			"ACFComboWindowNotifyState.cpp.obj",
 			"ACFCoreComponent.cpp.obj",
 			"ACFCheatManager.cpp.obj",
+			"ACFGameModeBase.cpp.obj",
 			"ACFHUD.cpp.obj",
 			"ACFPlayerController.cpp.obj",
 			"ACFPlayerState.cpp.obj",
@@ -58,6 +59,7 @@
 		"Module.AdvancedCombatSystem.gen.2_of_3.cpp.obj": [
 			"ACFDeveloperSettings.gen.cpp.obj",
 			"ACFFunctionLibrary.gen.cpp.obj",
+			"ACFGameModeBase.gen.cpp.obj",
 			"ACFGameplayAbility.gen.cpp.obj",
 			"ACFGameplayAbility_MeleeBase.gen.cpp.obj",
 			"ACFHUD.gen.cpp.obj",
