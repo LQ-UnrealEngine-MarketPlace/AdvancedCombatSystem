@@ -9,6 +9,7 @@
 
 class UAbilitySystemComponent;
 class UACFGameplayAbility;
+class UACFUWDebugAbilityQueue;
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -88,7 +89,7 @@ public:
 	/**
 	* Returns the Debug Widget from HUD associated with this character (if any)
 	*/
-	//virtual UGSCUWDebugAbilityQueue* GetDebugWidgetFromHUD();
+	virtual UACFUWDebugAbilityQueue* GetDebugWidgetFromHUD();
 
 protected:
 	// Called when the game starts

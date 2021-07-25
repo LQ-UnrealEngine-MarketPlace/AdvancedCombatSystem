@@ -57,6 +57,14 @@ G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\
 G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFGameplayAbility_MeleeBase.gen.cpp
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/AbilitySystem/Abilities/ACFGameplayAbility_MeleeBase.h
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFGameplayAbility_MeleeBase.generated.h
+G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFHUD.gen.cpp
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Game/Player/ACFHUD.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/HUD.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/HUDHitBox.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/DebugTextInfo.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\DebugTextInfo.generated.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\HUD.generated.h
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFHUD.generated.h
 G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFPawnBase.gen.cpp
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Actors/Pawns/ACFPawnBase.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\AbilitySystemInterface.h

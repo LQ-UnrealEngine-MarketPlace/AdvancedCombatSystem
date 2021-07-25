@@ -116,42 +116,6 @@ G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engin
 G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/AbilitySystem/Components/ACFAbilityQueueComponent.cpp
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\AbilitySystem/Components/ACFAbilityQueueComponent.h
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFAbilityQueueComponent.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/AbilitySystem/Components/ACFAbilitySystemComponent.cpp
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/AbilitySystem/Tasks/ACFAbilityTask_PlayMontageAndWaitForEvent.cpp
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/AbilitySystem/Tasks/ACFAbilityTask_SpawnProjectile.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\AbilitySystem/Tasks/ACFAbilityTask_SpawnProjectile.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFAbilityTask_SpawnProjectile.generated.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Projectiles/ACFProjectileBase.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFProjectileBase.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/AdvancedCombatSystem.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\AdvancedCombatSystem.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Characters/ACFAICharacter.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Characters/ACFAICharacter.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFAICharacter.generated.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\ShapeComponent.generated.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\CapsuleComponent.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Characters/ACFCharacterBase.cpp
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Characters/ACFPlayerCharacter.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Characters/ACFPlayerCharacter.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPlayerCharacter.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Pawns/ACFPawnBase.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Pawns/ACFPawnBase.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPawnBase.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Projectiles/ACFProjectileBase.cpp
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\MovementComponent.generated.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\ProjectileMovementComponent.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Animations/AnimNotifies/ACFTriggerComboNotify.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Animations/AnimNotifies/ACFTriggerComboNotify.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFTriggerComboNotify.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Animations/AnimNotifyStates/ACFAbilityQueueNotifyState.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Animations/AnimNotifyStates/ACFAbilityQueueNotifyState.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Animation/AnimNotifies/AnimNotifyState.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\AnimNotifyState.generated.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFAbilityQueueNotifyState.generated.h
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Widgets/Debugs/ACFUWDebugAbilityQueue.h
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Widgets/ACFUserWidget.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\UMG\Public\Blueprint/UserWidget.h
@@ -247,10 +211,56 @@ G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\UMG\W
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\UMG\UserWidget.generated.h
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFUserWidget.generated.h
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFUWDebugAbilityQueue.generated.h
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Game/Player/ACFHUD.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/HUD.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/HUDHitBox.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/DebugTextInfo.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\DebugTextInfo.generated.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\HUD.generated.h
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFHUD.generated.h
+G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/AbilitySystem/Components/ACFAbilitySystemComponent.cpp
+G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/AbilitySystem/Tasks/ACFAbilityTask_PlayMontageAndWaitForEvent.cpp
+G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/AbilitySystem/Tasks/ACFAbilityTask_SpawnProjectile.cpp
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\AbilitySystem/Tasks/ACFAbilityTask_SpawnProjectile.h
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFAbilityTask_SpawnProjectile.generated.h
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Projectiles/ACFProjectileBase.h
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFProjectileBase.generated.h
+G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/AdvancedCombatSystem.cpp
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\AdvancedCombatSystem.h
+G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Characters/ACFAICharacter.cpp
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Characters/ACFAICharacter.h
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFAICharacter.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\ShapeComponent.generated.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\CapsuleComponent.generated.h
+G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Characters/ACFCharacterBase.cpp
+G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Characters/ACFPlayerCharacter.cpp
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Characters/ACFPlayerCharacter.h
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPlayerCharacter.generated.h
+G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Pawns/ACFPawnBase.cpp
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Pawns/ACFPawnBase.h
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPawnBase.generated.h
+G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Projectiles/ACFProjectileBase.cpp
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\MovementComponent.generated.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\ProjectileMovementComponent.generated.h
+G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Animations/AnimNotifies/ACFTriggerComboNotify.cpp
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Animations/AnimNotifies/ACFTriggerComboNotify.h
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFTriggerComboNotify.generated.h
+G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Animations/AnimNotifyStates/ACFAbilityQueueNotifyState.cpp
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Animations/AnimNotifyStates/ACFAbilityQueueNotifyState.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Animation/AnimNotifies/AnimNotifyState.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\AnimNotifyState.generated.h
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFAbilityQueueNotifyState.generated.h
 G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Animations/AnimNotifyStates/ACFComboWindowNotifyState.cpp
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Animations/AnimNotifyStates/ACFComboWindowNotifyState.h
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFComboWindowNotifyState.generated.h
 G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Components/ACFCoreComponent.cpp
+G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Game/Player/ACFHUD.cpp
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Widgets/Debugs/ACFUWDebugAbilityCombo.h
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFUWDebugAbilityCombo.generated.h
 G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Game/Player/ACFPlayerController.cpp
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Game/Player/ACFPlayerController.h
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPlayerController.generated.h
@@ -266,8 +276,6 @@ G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSyst
 G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Widgets/ACFUWHUD.cpp
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Widgets/ACFUWHUD.h
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFUWHUD.generated.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Widgets/Debugs/ACFUWDebugAbilityCombo.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFUWDebugAbilityCombo.generated.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\UMG\Public\Components/TextBlock.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\UMG\Public\Components/TextWidgetTypes.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\UMG\TextWidgetTypes.generated.h

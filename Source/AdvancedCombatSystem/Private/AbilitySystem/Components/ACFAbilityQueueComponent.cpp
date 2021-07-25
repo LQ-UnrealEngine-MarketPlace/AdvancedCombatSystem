@@ -4,6 +4,8 @@
 #include "AbilitySystem/Components/ACFAbilityQueueComponent.h"
 #include "AbilitySystem/Abilities/ACFGameplayAbility.h"
 #include "AbilitySystemInterface.h"
+#include "Core/Widgets/Debugs/ACFUWDebugAbilityQueue.h"
+#include "Core/Game/Player/ACFHUD.h"
 
 // Sets default values for this component's properties
 UACFAbilityQueueComponent::UACFAbilityQueueComponent()
@@ -73,7 +75,7 @@ void UACFAbilityQueueComponent::UpdateAllowedAbilitiesForAbilityQueue(TArray<TSu
 	QueuedAllowedAbilities = AllowedAbilities;
 
 	// Notify Debug Widget if any is on screen
-	//UpdateDebugWidgetAllowedAbilities();
+	UpdateDebugWidgetAllowedAbilities();
 }
 
 void UACFAbilityQueueComponent::SetAllowAllAbilitiesForAbilityQueue(bool bAllowAllAbilities)
@@ -86,7 +88,7 @@ void UACFAbilityQueueComponent::SetAllowAllAbilitiesForAbilityQueue(bool bAllowA
 	bAllowAbilitiesForAbilityQueue = bAllowAllAbilities;
 
 	// Notify Debug Widget if any is on screen
-	//UpdateDebugWidgetAllowedAbilities();
+	UpdateDebugWidgetAllowedAbilities();
 }
 
 bool UACFAbilityQueueComponent::IsAbilityQueueOpened() const
@@ -158,10 +160,29 @@ void UACFAbilityQueueComponent::OnAbilityFailed(const UACFGameplayAbility* Abili
 	}
 }
 
-//UGSCUWDebugAbilityQueue* UACFAbilityQueueComponent::GetDebugWidgetFromHUD()
-//{
-//
-//}
+UACFUWDebugAbilityQueue* UACFAbilityQueueComponent::GetDebugWidgetFromHUD()
+{
+	if (!OwnerPawn)
+	{
+		ACF_LOG(Warning, TEXT("UACFAbilityQueueComponent::GetDebugWidgetFromHUD() OwnerPawn is invalid"))
+		return nullptr;
+	}
+
+	APlayerController* PlayerController = Cast<APlayerController>(OwnerPawn->GetController());
+	if (!PlayerController)
+	{
+		ACF_LOG(Warning, TEXT("UACFAbilityQueueComponent::GetDebugWidgetFromHUD() PlayerController is invalid"))
+		return nullptr;
+	}
+
+	AACFHUD* HUD = PlayerController->GetHUD<AACFHUD>();
+	if (!HUD)
+	{
+		return nullptr;
+	}
+
+	return Cast<UACFUWDebugAbilityQueue>(HUD->GetAbilityQueueWidget());
+}
 
 // Called when the game starts
 void UACFAbilityQueueComponent::BeginPlay()
@@ -181,16 +202,16 @@ void UACFAbilityQueueComponent::ResetAbilityQueueState()
 	QueuedAllowedAbilities.Empty();
 
 	// Notify Debug Widget if any is on screen
-	//UpdateDebugWidgetAllowedAbilities();
+	UpdateDebugWidgetAllowedAbilities();
 }
 
 void UACFAbilityQueueComponent::UpdateDebugWidgetAllowedAbilities()
 {
-	//UGSCUWDebugAbilityQueue* DebugWidget = GetDebugWidgetFromHUD();
-	//if (!DebugWidget)
-	//{
-	//	return;
-	//}
+	UACFUWDebugAbilityQueue* DebugWidget = GetDebugWidgetFromHUD();
+	if (!DebugWidget)
+	{
+		return;
+	}
 
-	//DebugWidget->UpdateAllowedAbilities(QueuedAllowedAbilities);
+	DebugWidget->UpdateAllowedAbilities(QueuedAllowedAbilities);
 }

@@ -16,6 +16,7 @@
 #include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Characters/ACFPlayerCharacter.cpp"
 #include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Pawns/ACFPawnBase.cpp"
 #include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Projectiles/ACFProjectileBase.cpp"
+#include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Animations/AnimNotifies/ACFTriggerComboNotify.cpp"
 #include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Animations/AnimNotifyStates/ACFAbilityQueueNotifyState.cpp"
 #include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Animations/AnimNotifyStates/ACFComboWindowNotifyState.cpp"
 #include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Components/ACFCoreComponent.cpp"

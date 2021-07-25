@@ -63,8 +63,8 @@ void EmptyLinkFunctionForGeneratedCodeAdvancedCombatSystem_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x06B0979E,
-				0x7A2F4A98,
+				0x01F52E2C,
+				0x001D8523,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UECodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
