@@ -34,4 +34,5 @@
 #include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Widgets/Debugs/ACFUWDebugAbilityCombo.cpp"
 #include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Widgets/Debugs/ACFUWDebugAbilityQueue.cpp"
 #include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Widgets/Debugs/ACFUWHUDAttributeDebug.cpp"
+#include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Utils/ACFK2Node_SwitchGameplayAttribute.cpp"
 #include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Utils/ACFLog.cpp"

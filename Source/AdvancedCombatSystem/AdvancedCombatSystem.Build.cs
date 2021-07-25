@@ -32,7 +32,9 @@ public class AdvancedCombatSystem : ModuleRules
             "Slate",
             "SlateCore",
             "DeveloperSettings",
-        });
+			"BlueprintGraph",
+			"UnrealEd",
+		});
 
 
         DynamicallyLoadedModuleNames.AddRange(

@@ -258,10 +258,10 @@ G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"G:\Projects\UE4\MyProject\Intermediate\Build\Win64\MyProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/FI"G:\Projects\UE4\MyProject\Intermediate\Build\Win64\MyProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h"
 /FI"G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Development\AdvancedCombatSystem\Definitions.AdvancedCombatSystem.h"
-/Yu"G:\Projects\UE4\MyProject\Intermediate\Build\Win64\MyProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"G:\Projects\UE4\MyProject\Intermediate\Build\Win64\MyProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+/Yu"G:\Projects\UE4\MyProject\Intermediate\Build\Win64\MyProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h"
+/Fp"G:\Projects\UE4\MyProject\Intermediate\Build\Win64\MyProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.pch"
 /Fo"G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Development\AdvancedCombatSystem\Module.AdvancedCombatSystem.gen.1_of_3.cpp.obj"
 /Zc:inline
 /nologo

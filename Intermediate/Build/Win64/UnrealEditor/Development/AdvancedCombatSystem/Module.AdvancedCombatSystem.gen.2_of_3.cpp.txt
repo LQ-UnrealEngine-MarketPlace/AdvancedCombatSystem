@@ -4,11 +4,6 @@ G:\Program Files\UE_5.0EA\Engine\Source\Runtime\CoreUObject\Public\UObject/Gener
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Settings/ACFDeveloperSettings.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\AttributeSet.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Engine/CurveTable.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\CurveTable.generated.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Engine/DataTable.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Public\DataTableUtils.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\DataTable.generated.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\ScalableFloat.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\DataRegistry\Source\DataRegistry\Public\DataRegistryId.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\DataRegistry\Intermediate\Build\Win64\UnrealEditor\Inc\DataRegistry\DataRegistryId.generated.h
@@ -20,21 +15,32 @@ G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSyst
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\GameplayEffectTypes.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\GameplayTags\Classes\GameplayTagContainer.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayTags\GameplayTagContainer.generated.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\PhysicsCore\Public\PhysicalMaterials/PhysicalMaterial.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\PhysicsCore\Public\PhysicsSettingsEnums.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\PhysicsCore\PhysicsSettingsEnums.generated.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\PhysicsCore\PhysicalMaterial.generated.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\AbilitySystemLog.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Public\VisualLogger/VisualLogger.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Public\VisualLogger/VisualLoggerTypes.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Public\VisualLogger\VisualLoggerCustomVersion.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayAbilities\GameplayEffectTypes.generated.h
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFFunctionLibrary.generated.h
 G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFGameModeBase.gen.cpp
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Game/ACFGameModeBase.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/Info.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\Info.generated.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\ServerStatReplicator.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\CoreUObject\Public\UObject/CoreOnline.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerController.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/OnlineReplStructs.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\OnlineReplStructs.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerMuteList.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\PlayerMuteList.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Camera/PlayerCameraManager.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\PlayerCameraManager.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Components/InputComponent.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\InputComponent.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/ForceFeedbackEffect.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\ForceFeedbackEffect.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/UpdateLevelVisibilityLevelInfo.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\UpdateLevelVisibilityLevelInfo.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\ApplicationCore\Public\GenericPlatform/IInputInterface.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\PlayerController.generated.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\GameModeBase.generated.h
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFGameModeBase.generated.h
 G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFGameplayAbility.gen.cpp
@@ -51,12 +57,24 @@ G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Gamep
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\ActiveGameplayEffectIterator.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayAbilities\GameplayEffect.generated.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities/GameplayAbilityTypes.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Animation/AnimInstance.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Animation/AnimMontage.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Animation/BlendProfile.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Public\AnimationRuntime.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\BlendProfile.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Public\AlphaBlend.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\AlphaBlend.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Animation/AnimCompositeBase.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\AnimCompositeBase.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Animation/TimeStretchCurve.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\TimeStretchCurve.generated.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\AnimMontage.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Animation/AnimNotifies/AnimNotify.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\AnimNotify.generated.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\AnimInstance.generated.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities/GameplayAbilityTargetTypes.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayAbilities\GameplayAbilityTargetTypes.generated.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayAbilities\GameplayAbilityTypes.generated.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\GameplayTasks\Classes\GameplayTaskOwnerInterface.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\GameplayTasks\Public\GameplayTaskTypes.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayTasks\GameplayTaskOwnerInterface.generated.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayAbilities\GameplayAbility.generated.h
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\AbilitySystem\Abilities\../ACFAbilityTypes.h
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFAbilityTypes.generated.h
@@ -72,6 +90,11 @@ G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/Deb
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\DebugTextInfo.generated.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\HUD.generated.h
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFHUD.generated.h
+G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFK2Node_SwitchGameplayAttribute.gen.cpp
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Utils/ACFK2Node_SwitchGameplayAttribute.h
+G:\Program Files\UE_5.0EA\Engine\Source\Editor\BlueprintGraph\Classes\K2Node_Switch.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\BlueprintGraph\K2Node_Switch.generated.h
+G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFK2Node_SwitchGameplayAttribute.generated.h
 G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFPawnBase.gen.cpp
 G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Actors/Pawns/ACFPawnBase.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\AbilitySystemInterface.h
@@ -123,6 +146,12 @@ G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\UMG\W
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\UMG\Widget.generated.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\UMG\Public\Components/NamedSlotInterface.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\UMG\NamedSlotInterface.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Engine/LocalPlayer.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Engine/Player.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\Player.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Public\Subsystems/LocalPlayerSubsystem.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\LocalPlayerSubsystem.generated.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\LocalPlayer.generated.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Slate\Public\Widgets/Layout/Anchors.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Slate\Anchors.generated.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\UMG\Public\Animation/WidgetAnimation.h

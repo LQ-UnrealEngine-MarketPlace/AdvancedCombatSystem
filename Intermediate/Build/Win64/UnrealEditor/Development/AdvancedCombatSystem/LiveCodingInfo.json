@@ -37,6 +37,7 @@
 			"ACFUWDebugAbilityCombo.cpp.obj",
 			"ACFUWDebugAbilityQueue.cpp.obj",
 			"ACFUWHUDAttributeDebug.cpp.obj",
+			"ACFK2Node_SwitchGameplayAttribute.cpp.obj",
 			"ACFLog.cpp.obj"
 		],
 		"Module.AdvancedCombatSystem.gen.1_of_3.cpp.obj": [
@@ -63,6 +64,7 @@
 			"ACFGameplayAbility.gen.cpp.obj",
 			"ACFGameplayAbility_MeleeBase.gen.cpp.obj",
 			"ACFHUD.gen.cpp.obj",
+			"ACFK2Node_SwitchGameplayAttribute.gen.cpp.obj",
 			"ACFPawnBase.gen.cpp.obj",
 			"ACFPlayerCharacter.gen.cpp.obj",
 			"ACFPlayerController.gen.cpp.obj",
