@@ -31,7 +31,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FACFOnCooldownEnd, UGameplayAbili
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FACFOnDamage, float, DamageAmount, AActor*, SourceCharacter, const struct FGameplayTagContainer&, DamageTags);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_FiveParams(FACFOnGameplayEffectTimeChange, FGameplayTagContainer, AssetTags, FGameplayTagContainer, GrantedTags, FActiveGameplayEffectHandle, ActiveHandle, float, NewStartTime, float, NewDuration);
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS( ClassGroup=(ACF), meta=(BlueprintSpawnableComponent), Blueprintable )
 class ADVANCEDCOMBATSYSTEM_API UACFCoreComponent : public UActorComponent
 {
 	GENERATED_BODY()

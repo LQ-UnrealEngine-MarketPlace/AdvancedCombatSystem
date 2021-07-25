@@ -2624,8 +2624,10 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UACFCoreComponent_Statics::Class_MetaDataParams[] = {
 		{ "BlueprintSpawnableComponent", "" },
-		{ "ClassGroupNames", "Custom" },
+		{ "BlueprintType", "true" },
+		{ "ClassGroupNames", "ACF" },
 		{ "IncludePath", "Core/Components/ACFCoreComponent.h" },
+		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Public/Core/Components/ACFCoreComponent.h" },
 	};
 #endif
@@ -2922,7 +2924,7 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UACFCoreComponent, 1135904202);
+	IMPLEMENT_CLASS(UACFCoreComponent, 1203164666);
 	template<> ADVANCEDCOMBATSYSTEM_API UClass* StaticClass<UACFCoreComponent>()
 	{
 		return UACFCoreComponent::StaticClass();

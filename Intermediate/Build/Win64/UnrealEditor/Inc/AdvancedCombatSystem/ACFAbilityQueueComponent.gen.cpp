@@ -62,8 +62,10 @@ void EmptyLinkFunctionForGeneratedCodeACFAbilityQueueComponent() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UACFAbilityQueueComponent_Statics::Class_MetaDataParams[] = {
 		{ "BlueprintSpawnableComponent", "" },
-		{ "ClassGroupNames", "Custom" },
+		{ "BlueprintType", "true" },
+		{ "ClassGroupNames", "ACF" },
 		{ "IncludePath", "AbilitySystem/Components/ACFAbilityQueueComponent.h" },
+		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Public/AbilitySystem/Components/ACFAbilityQueueComponent.h" },
 	};
 #endif
@@ -133,7 +135,7 @@ void EmptyLinkFunctionForGeneratedCodeACFAbilityQueueComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UACFAbilityQueueComponent, 1528081363);
+	IMPLEMENT_CLASS(UACFAbilityQueueComponent, 1752012668);
 	template<> ADVANCEDCOMBATSYSTEM_API UClass* StaticClass<UACFAbilityQueueComponent>()
 	{
 		return UACFAbilityQueueComponent::StaticClass();

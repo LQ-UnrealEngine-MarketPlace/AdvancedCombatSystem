@@ -13,7 +13,7 @@ class UACFAbilitySystemComponent;
 //class UACFStatisticsComponent;
 
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS( ClassGroup=(ACF), meta=(BlueprintSpawnableComponent), Blueprintable )
 class ADVANCEDCOMBATSYSTEM_API UACFAbilityComboManagerComponent : public UActorComponent
 {
 	GENERATED_BODY()

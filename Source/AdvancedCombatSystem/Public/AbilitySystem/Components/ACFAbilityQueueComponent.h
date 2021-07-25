@@ -12,7 +12,7 @@ class UACFGameplayAbility;
 class UACFUWDebugAbilityQueue;
 
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS( ClassGroup=("ACF"), meta = (BlueprintSpawnableComponent), Blueprintable )
 class ADVANCEDCOMBATSYSTEM_API UACFAbilityQueueComponent : public UActorComponent
 {
 	GENERATED_BODY()

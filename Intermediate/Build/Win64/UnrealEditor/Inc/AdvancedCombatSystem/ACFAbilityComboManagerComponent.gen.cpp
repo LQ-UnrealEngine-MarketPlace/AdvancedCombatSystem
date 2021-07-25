@@ -413,9 +413,11 @@ void EmptyLinkFunctionForGeneratedCodeACFAbilityComboManagerComponent() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UACFAbilityComboManagerComponent_Statics::Class_MetaDataParams[] = {
 		{ "BlueprintSpawnableComponent", "" },
-		{ "ClassGroupNames", "Custom" },
+		{ "BlueprintType", "true" },
+		{ "ClassGroupNames", "ACF" },
 		{ "Comment", "//class UACFStatisticsComponent;\n" },
 		{ "IncludePath", "AbilitySystem/Components/ACFAbilityComboManagerComponent.h" },
+		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Public/AbilitySystem/Components/ACFAbilityComboManagerComponent.h" },
 		{ "ToolTip", "class UACFStatisticsComponent;" },
 	};
@@ -532,7 +534,7 @@ void EmptyLinkFunctionForGeneratedCodeACFAbilityComboManagerComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UACFAbilityComboManagerComponent, 3223779586);
+	IMPLEMENT_CLASS(UACFAbilityComboManagerComponent, 343078559);
 	template<> ADVANCEDCOMBATSYSTEM_API UClass* StaticClass<UACFAbilityComboManagerComponent>()
 	{
 		return UACFAbilityComboManagerComponent::StaticClass();
