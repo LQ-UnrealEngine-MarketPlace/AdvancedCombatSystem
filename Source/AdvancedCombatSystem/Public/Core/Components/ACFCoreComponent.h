@@ -11,6 +11,7 @@ class UGameplayAbility;
 class UGameplayEffect;
 class UAbilitySystemComponent;
 class UACFAttributeSetBase;
+class UACFUWHUD;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FACFOnDeath);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FACFOnDefaultAttributeChange, float, DeltaValue, const struct FGameplayTagContainer, EventTags);
@@ -437,6 +438,34 @@ protected:
 	/** Manage cooldown events trigger when an ability is committed */
 	void HandleCooldownOnAbilityCommit(UGameplayAbility* ActivatedAbility);
 		
+public:
+	/** Helper to get HUD UserWidget from player controller (if any) */
+	UACFUWHUD* GetHUDWidget() const;
+
+	UFUNCTION(Client, Unreliable)
+	void Client_BroadcastAttributeChangeToHUD(const FGameplayAttribute Attribute, float NewValue, float OldValue);
+
+	UFUNCTION(Client, Reliable)
+	void Client_BroadcastGameplayEffectStackChangeToHUD(FActiveGameplayEffectHandle ActiveHandle, FGameplayTagContainer AssetTags, FGameplayTagContainer GrantedTags, int32 NewStackCount, int32 OldStackCount);
+
+	UFUNCTION(Client, Reliable)
+	void Client_BroadcastGameplayEffectTimeChangeToHUD(FActiveGameplayEffectHandle ActiveHandle, FGameplayTagContainer AssetTags, FGameplayTagContainer GrantedTags, float NewStartTime, float NewDuration);
+
+	UFUNCTION(Client, Reliable)
+	void Client_BroadcastGameplayEffectAddedToHUD(FActiveGameplayEffectHandle ActiveHandle, FGameplayTagContainer AssetTags, FGameplayTagContainer GrantedTags);
+
+	UFUNCTION(Client, Reliable)
+	void Client_BroadcastGameplayEffectRemovedToHUD(FActiveGameplayEffectHandle ActiveHandle, FGameplayTagContainer AssetTags, FGameplayTagContainer GrantedTags);
+
+	UFUNCTION(Client, Reliable)
+	void Client_BroadcastGameplayTagChangeToHUD(FGameplayTag GameplayTag, int32 NewCount) const;
+
+	UFUNCTION(Client, Reliable)
+	void Client_BroadcastCooldownEndToHUD(FGameplayAbilitySpecHandle AbilitySpecHandle, FGameplayTag GameplayTag, float Duration);
+
+	UFUNCTION(Client, Reliable)
+	void Client_BroadcastCooldownStartToHUD(FGameplayAbilitySpecHandle AbilitySpecHandle, const FGameplayTagContainer CooldownTags, float TimeRemaining, float Duration);
+
 public:
 	AActor* GetOwnerActor();
 	UAbilitySystemComponent* GetOwnerASC();

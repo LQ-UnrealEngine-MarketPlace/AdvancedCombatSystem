@@ -3,6 +3,9 @@
 
 #include "Core/Components/ACFCoreComponent.h"
 #include "Core/Interfaces/ACFActorInterface.h"
+#include "Core/Game/Player/ACFHUD.h"
+#include "Core/Game/Player/ACFPlayerController.h"
+#include "Core/Widgets/ACFUWHUD.h"
 #include "AbilitySystem/Abilities/ACFGameplayAbility.h"
 #include <AbilitySystemInterface.h>
 #include <Engine/EngineTypes.h>
@@ -892,6 +895,118 @@ void UACFCoreComponent::HandleCooldownOnAbilityCommit(UGameplayAbility* Activate
 		// OwnerAbilitySystemComponent->RegisterGameplayTagEvent(GameplayTag, EGameplayTagEventType::NewOrRemoved).RemoveAll(this);
 		OwnerAbilitySystemComponent->RegisterGameplayTagEvent(GameplayTag, EGameplayTagEventType::NewOrRemoved).AddUObject(this, &UACFCoreComponent::OnCooldownGameplayTagChanged, AbilitySpecHandle, Duration);
 	}
+}
+
+UACFUWHUD* UACFCoreComponent::GetHUDWidget() const
+{
+	if (!OwnerActor)
+	{
+		ACF_LOG(Warning, TEXT("UACFCoreComponent::GetHUDWidget() CoreComponent has not been attached to any actors"))
+		return nullptr;
+	}
+
+	ACharacter* Character = Cast<ACharacter>(OwnerActor);
+	if (!Character)
+	{
+		ACF_LOG(Warning, TEXT("UACFCoreComponent::GetHUDWidget() cannot cast OwnerActor to Character"))
+		return nullptr;
+	}
+
+	AACFPlayerController* PlayerController = Cast<AACFPlayerController>(Character->GetController());
+	if (!PlayerController)
+	{
+		return nullptr;
+	}
+
+	return PlayerController->GetHUDWidget();
+}
+
+void UACFCoreComponent::Client_BroadcastAttributeChangeToHUD_Implementation(const FGameplayAttribute Attribute, float NewValue, float OldValue)
+{
+	UACFUWHUD* HUDWidget = GetHUDWidget();
+	if (HUDWidget)
+	{
+		HUDWidget->HandleAttributeChange(Attribute, NewValue, OldValue);
+	}
+}
+
+void UACFCoreComponent::Client_BroadcastGameplayEffectStackChangeToHUD_Implementation(FActiveGameplayEffectHandle ActiveHandle, FGameplayTagContainer AssetTags, FGameplayTagContainer GrantedTags, int32 NewStackCount, int32 OldStackCount)
+{
+	UACFUWHUD* HUDWidget = GetHUDWidget();
+	if (HUDWidget)
+	{
+		HUDWidget->HandleGameplayEffectStackChange(AssetTags, GrantedTags, ActiveHandle, NewStackCount, OldStackCount);
+	}
+}
+
+void UACFCoreComponent::Client_BroadcastGameplayEffectTimeChangeToHUD_Implementation(FActiveGameplayEffectHandle ActiveHandle, FGameplayTagContainer AssetTags, FGameplayTagContainer GrantedTags, float NewStartTime, float NewDuration)
+{
+	UACFUWHUD* HUDWidget = GetHUDWidget();
+	if (HUDWidget)
+	{
+		HUDWidget->HandleGameplayEffectTimeChange(AssetTags, GrantedTags, ActiveHandle, NewStartTime, NewDuration);
+	}
+}
+
+void UACFCoreComponent::Client_BroadcastGameplayEffectAddedToHUD_Implementation(FActiveGameplayEffectHandle ActiveHandle, FGameplayTagContainer AssetTags, FGameplayTagContainer GrantedTags)
+{
+	UACFUWHUD* HUDWidget = GetHUDWidget();
+	if (HUDWidget)
+	{
+		HUDWidget->HandleGameplayEffectAdded(AssetTags, GrantedTags, ActiveHandle);
+	}
+}
+
+void UACFCoreComponent::Client_BroadcastGameplayEffectRemovedToHUD_Implementation(FActiveGameplayEffectHandle ActiveHandle, FGameplayTagContainer AssetTags, FGameplayTagContainer GrantedTags)
+{
+	UACFUWHUD* HUDWidget = GetHUDWidget();
+	if (HUDWidget)
+	{
+		HUDWidget->HandleGameplayEffectRemoved(AssetTags, GrantedTags, ActiveHandle);
+	}
+}
+
+void UACFCoreComponent::Client_BroadcastGameplayTagChangeToHUD_Implementation(FGameplayTag GameplayTag, int32 NewCount) const
+{
+	UACFUWHUD* HUDWidget = GetHUDWidget();
+	if (HUDWidget)
+	{
+		HUDWidget->HandleGameplayTagChange(GameplayTag, NewCount);
+	}
+}
+
+void UACFCoreComponent::Client_BroadcastCooldownEndToHUD_Implementation(FGameplayAbilitySpecHandle AbilitySpecHandle, FGameplayTag GameplayTag, float Duration)
+{
+	UACFUWHUD* HUDWidget = GetHUDWidget();
+	if (!HUDWidget)
+	{
+		return;
+	}
+
+	if (!OwnerAbilitySystemComponent)
+	{
+		return;
+	}
+
+	FGameplayAbilitySpec* AbilitySpec = OwnerAbilitySystemComponent->FindAbilitySpecFromHandle(AbilitySpecHandle);
+	HUDWidget->HandleCooldownEnd(AbilitySpec->Ability, GameplayTag, Duration);
+}
+
+void UACFCoreComponent::Client_BroadcastCooldownStartToHUD_Implementation(FGameplayAbilitySpecHandle AbilitySpecHandle, const FGameplayTagContainer CooldownTags, float TimeRemaining, float Duration)
+{
+	UACFUWHUD* HUDWidget = GetHUDWidget();
+	if (!HUDWidget)
+	{
+		return;
+	}
+
+	if (!OwnerAbilitySystemComponent)
+	{
+		return;
+	}
+
+	FGameplayAbilitySpec* AbilitySpec = OwnerAbilitySystemComponent->FindAbilitySpecFromHandle(AbilitySpecHandle);
+	HUDWidget->HandleCooldownStart(AbilitySpec->Ability, CooldownTags, TimeRemaining, Duration);
 }
 
 AActor* UACFCoreComponent::GetOwnerActor()

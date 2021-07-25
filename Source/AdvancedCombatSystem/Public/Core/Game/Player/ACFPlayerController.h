@@ -6,6 +6,8 @@
 #include "GameFramework/PlayerController.h"
 #include "ACFPlayerController.generated.h"
 
+class UACFUWHUD;
+
 /**
  * 
  */
@@ -14,6 +16,10 @@ class ADVANCEDCOMBATSYSTEM_API AACFPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 	
+protected:
+	UPROPERTY(BlueprintReadOnly, Category = "ACF | UI")
+	UACFUWHUD* UIHUDWidget;
+
 public:
 	// Set default values in constructor
 	AACFPlayerController();
@@ -24,4 +30,8 @@ public:
 
 protected:
 	virtual void OnPossess(APawn* InPawn) override;
+
+public:
+	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "ACF | UI")
+	UACFUWHUD* GetHUDWidget();
 };

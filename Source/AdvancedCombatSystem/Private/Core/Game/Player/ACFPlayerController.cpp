@@ -3,6 +3,7 @@
 
 #include "Core/Game/Player/ACFPlayerController.h"
 #include "Core/Game/Player/ACFPlayerState.h"
+#include "Core/Widgets/ACFUWHud.h"
 
 AACFPlayerController::AACFPlayerController()
 {
@@ -30,4 +31,9 @@ void AACFPlayerController::OnPossess(APawn* InPawn)
 		// Init ASC with PS (Owner) and our new Pawn (AvatarActor)
 		LPlayerState->GetAbilitySystemComponent()->InitAbilityActorInfo(LPlayerState, InPawn);
 	}
+}
+
+UACFUWHUD* AACFPlayerController::GetHUDWidget()
+{
+	return UIHUDWidget;
 }

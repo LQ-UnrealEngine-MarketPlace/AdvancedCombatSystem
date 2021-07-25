@@ -44,6 +44,7 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ADVANCEDCOMBATSYSTEM_API UClass* Z_Construct_UClass_UACFGameplayAbility_NoRegister();
+	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayAbilitySpecHandle();
 	ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent_NoRegister();
@@ -791,6 +792,90 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 		}
 		return ReturnFunction;
 	}
+	DEFINE_FUNCTION(UACFCoreComponent::execClient_BroadcastCooldownStartToHUD)
+	{
+		P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilitySpecHandle);
+		P_GET_STRUCT(FGameplayTagContainer,Z_Param_CooldownTags);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_TimeRemaining);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Duration);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Client_BroadcastCooldownStartToHUD_Implementation(Z_Param_AbilitySpecHandle,Z_Param_CooldownTags,Z_Param_TimeRemaining,Z_Param_Duration);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UACFCoreComponent::execClient_BroadcastCooldownEndToHUD)
+	{
+		P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilitySpecHandle);
+		P_GET_STRUCT(FGameplayTag,Z_Param_GameplayTag);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_Duration);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Client_BroadcastCooldownEndToHUD_Implementation(Z_Param_AbilitySpecHandle,Z_Param_GameplayTag,Z_Param_Duration);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UACFCoreComponent::execClient_BroadcastGameplayTagChangeToHUD)
+	{
+		P_GET_STRUCT(FGameplayTag,Z_Param_GameplayTag);
+		P_GET_PROPERTY(FIntProperty,Z_Param_NewCount);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Client_BroadcastGameplayTagChangeToHUD_Implementation(Z_Param_GameplayTag,Z_Param_NewCount);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UACFCoreComponent::execClient_BroadcastGameplayEffectRemovedToHUD)
+	{
+		P_GET_STRUCT(FActiveGameplayEffectHandle,Z_Param_ActiveHandle);
+		P_GET_STRUCT(FGameplayTagContainer,Z_Param_AssetTags);
+		P_GET_STRUCT(FGameplayTagContainer,Z_Param_GrantedTags);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Client_BroadcastGameplayEffectRemovedToHUD_Implementation(Z_Param_ActiveHandle,Z_Param_AssetTags,Z_Param_GrantedTags);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UACFCoreComponent::execClient_BroadcastGameplayEffectAddedToHUD)
+	{
+		P_GET_STRUCT(FActiveGameplayEffectHandle,Z_Param_ActiveHandle);
+		P_GET_STRUCT(FGameplayTagContainer,Z_Param_AssetTags);
+		P_GET_STRUCT(FGameplayTagContainer,Z_Param_GrantedTags);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Client_BroadcastGameplayEffectAddedToHUD_Implementation(Z_Param_ActiveHandle,Z_Param_AssetTags,Z_Param_GrantedTags);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UACFCoreComponent::execClient_BroadcastGameplayEffectTimeChangeToHUD)
+	{
+		P_GET_STRUCT(FActiveGameplayEffectHandle,Z_Param_ActiveHandle);
+		P_GET_STRUCT(FGameplayTagContainer,Z_Param_AssetTags);
+		P_GET_STRUCT(FGameplayTagContainer,Z_Param_GrantedTags);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_NewStartTime);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_NewDuration);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Client_BroadcastGameplayEffectTimeChangeToHUD_Implementation(Z_Param_ActiveHandle,Z_Param_AssetTags,Z_Param_GrantedTags,Z_Param_NewStartTime,Z_Param_NewDuration);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UACFCoreComponent::execClient_BroadcastGameplayEffectStackChangeToHUD)
+	{
+		P_GET_STRUCT(FActiveGameplayEffectHandle,Z_Param_ActiveHandle);
+		P_GET_STRUCT(FGameplayTagContainer,Z_Param_AssetTags);
+		P_GET_STRUCT(FGameplayTagContainer,Z_Param_GrantedTags);
+		P_GET_PROPERTY(FIntProperty,Z_Param_NewStackCount);
+		P_GET_PROPERTY(FIntProperty,Z_Param_OldStackCount);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Client_BroadcastGameplayEffectStackChangeToHUD_Implementation(Z_Param_ActiveHandle,Z_Param_AssetTags,Z_Param_GrantedTags,Z_Param_NewStackCount,Z_Param_OldStackCount);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UACFCoreComponent::execClient_BroadcastAttributeChangeToHUD)
+	{
+		P_GET_STRUCT(FGameplayAttribute,Z_Param_Attribute);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_NewValue);
+		P_GET_PROPERTY(FFloatProperty,Z_Param_OldValue);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Client_BroadcastAttributeChangeToHUD_Implementation(Z_Param_Attribute,Z_Param_NewValue,Z_Param_OldValue);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UACFCoreComponent::execAdjustAttributeForMaxChange)
 	{
 		P_GET_OBJECT_REF(UACFAttributeSetBase,Z_Param_Out_AttributeSet);
@@ -978,6 +1063,82 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 		P_THIS->Die();
 		P_NATIVE_END;
 	}
+	static FName NAME_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD = FName(TEXT("Client_BroadcastAttributeChangeToHUD"));
+	void UACFCoreComponent::Client_BroadcastAttributeChangeToHUD(const FGameplayAttribute Attribute, float NewValue, float OldValue)
+	{
+		ACFCoreComponent_eventClient_BroadcastAttributeChangeToHUD_Parms Parms;
+		Parms.Attribute=Attribute;
+		Parms.NewValue=NewValue;
+		Parms.OldValue=OldValue;
+		ProcessEvent(FindFunctionChecked(NAME_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD),&Parms);
+	}
+	static FName NAME_UACFCoreComponent_Client_BroadcastCooldownEndToHUD = FName(TEXT("Client_BroadcastCooldownEndToHUD"));
+	void UACFCoreComponent::Client_BroadcastCooldownEndToHUD(FGameplayAbilitySpecHandle AbilitySpecHandle, FGameplayTag GameplayTag, float Duration)
+	{
+		ACFCoreComponent_eventClient_BroadcastCooldownEndToHUD_Parms Parms;
+		Parms.AbilitySpecHandle=AbilitySpecHandle;
+		Parms.GameplayTag=GameplayTag;
+		Parms.Duration=Duration;
+		ProcessEvent(FindFunctionChecked(NAME_UACFCoreComponent_Client_BroadcastCooldownEndToHUD),&Parms);
+	}
+	static FName NAME_UACFCoreComponent_Client_BroadcastCooldownStartToHUD = FName(TEXT("Client_BroadcastCooldownStartToHUD"));
+	void UACFCoreComponent::Client_BroadcastCooldownStartToHUD(FGameplayAbilitySpecHandle AbilitySpecHandle, const FGameplayTagContainer CooldownTags, float TimeRemaining, float Duration)
+	{
+		ACFCoreComponent_eventClient_BroadcastCooldownStartToHUD_Parms Parms;
+		Parms.AbilitySpecHandle=AbilitySpecHandle;
+		Parms.CooldownTags=CooldownTags;
+		Parms.TimeRemaining=TimeRemaining;
+		Parms.Duration=Duration;
+		ProcessEvent(FindFunctionChecked(NAME_UACFCoreComponent_Client_BroadcastCooldownStartToHUD),&Parms);
+	}
+	static FName NAME_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD = FName(TEXT("Client_BroadcastGameplayEffectAddedToHUD"));
+	void UACFCoreComponent::Client_BroadcastGameplayEffectAddedToHUD(FActiveGameplayEffectHandle ActiveHandle, FGameplayTagContainer AssetTags, FGameplayTagContainer GrantedTags)
+	{
+		ACFCoreComponent_eventClient_BroadcastGameplayEffectAddedToHUD_Parms Parms;
+		Parms.ActiveHandle=ActiveHandle;
+		Parms.AssetTags=AssetTags;
+		Parms.GrantedTags=GrantedTags;
+		ProcessEvent(FindFunctionChecked(NAME_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD),&Parms);
+	}
+	static FName NAME_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD = FName(TEXT("Client_BroadcastGameplayEffectRemovedToHUD"));
+	void UACFCoreComponent::Client_BroadcastGameplayEffectRemovedToHUD(FActiveGameplayEffectHandle ActiveHandle, FGameplayTagContainer AssetTags, FGameplayTagContainer GrantedTags)
+	{
+		ACFCoreComponent_eventClient_BroadcastGameplayEffectRemovedToHUD_Parms Parms;
+		Parms.ActiveHandle=ActiveHandle;
+		Parms.AssetTags=AssetTags;
+		Parms.GrantedTags=GrantedTags;
+		ProcessEvent(FindFunctionChecked(NAME_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD),&Parms);
+	}
+	static FName NAME_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD = FName(TEXT("Client_BroadcastGameplayEffectStackChangeToHUD"));
+	void UACFCoreComponent::Client_BroadcastGameplayEffectStackChangeToHUD(FActiveGameplayEffectHandle ActiveHandle, FGameplayTagContainer AssetTags, FGameplayTagContainer GrantedTags, int32 NewStackCount, int32 OldStackCount)
+	{
+		ACFCoreComponent_eventClient_BroadcastGameplayEffectStackChangeToHUD_Parms Parms;
+		Parms.ActiveHandle=ActiveHandle;
+		Parms.AssetTags=AssetTags;
+		Parms.GrantedTags=GrantedTags;
+		Parms.NewStackCount=NewStackCount;
+		Parms.OldStackCount=OldStackCount;
+		ProcessEvent(FindFunctionChecked(NAME_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD),&Parms);
+	}
+	static FName NAME_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD = FName(TEXT("Client_BroadcastGameplayEffectTimeChangeToHUD"));
+	void UACFCoreComponent::Client_BroadcastGameplayEffectTimeChangeToHUD(FActiveGameplayEffectHandle ActiveHandle, FGameplayTagContainer AssetTags, FGameplayTagContainer GrantedTags, float NewStartTime, float NewDuration)
+	{
+		ACFCoreComponent_eventClient_BroadcastGameplayEffectTimeChangeToHUD_Parms Parms;
+		Parms.ActiveHandle=ActiveHandle;
+		Parms.AssetTags=AssetTags;
+		Parms.GrantedTags=GrantedTags;
+		Parms.NewStartTime=NewStartTime;
+		Parms.NewDuration=NewDuration;
+		ProcessEvent(FindFunctionChecked(NAME_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD),&Parms);
+	}
+	static FName NAME_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD = FName(TEXT("Client_BroadcastGameplayTagChangeToHUD"));
+	void UACFCoreComponent::Client_BroadcastGameplayTagChangeToHUD(FGameplayTag GameplayTag, int32 NewCount) const
+	{
+		ACFCoreComponent_eventClient_BroadcastGameplayTagChangeToHUD_Parms Parms;
+		Parms.GameplayTag=GameplayTag;
+		Parms.NewCount=NewCount;
+		const_cast<UACFCoreComponent*>(this)->ProcessEvent(FindFunctionChecked(NAME_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD),&Parms);
+	}
 	void UACFCoreComponent::StaticRegisterNativesUACFCoreComponent()
 	{
 		UClass* Class = UACFCoreComponent::StaticClass();
@@ -988,6 +1149,14 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 			{ "ClampAttributeValue", &UACFCoreComponent::execClampAttributeValue },
 			{ "ClearAbilities", &UACFCoreComponent::execClearAbilities },
 			{ "ClearAbility", &UACFCoreComponent::execClearAbility },
+			{ "Client_BroadcastAttributeChangeToHUD", &UACFCoreComponent::execClient_BroadcastAttributeChangeToHUD },
+			{ "Client_BroadcastCooldownEndToHUD", &UACFCoreComponent::execClient_BroadcastCooldownEndToHUD },
+			{ "Client_BroadcastCooldownStartToHUD", &UACFCoreComponent::execClient_BroadcastCooldownStartToHUD },
+			{ "Client_BroadcastGameplayEffectAddedToHUD", &UACFCoreComponent::execClient_BroadcastGameplayEffectAddedToHUD },
+			{ "Client_BroadcastGameplayEffectRemovedToHUD", &UACFCoreComponent::execClient_BroadcastGameplayEffectRemovedToHUD },
+			{ "Client_BroadcastGameplayEffectStackChangeToHUD", &UACFCoreComponent::execClient_BroadcastGameplayEffectStackChangeToHUD },
+			{ "Client_BroadcastGameplayEffectTimeChangeToHUD", &UACFCoreComponent::execClient_BroadcastGameplayEffectTimeChangeToHUD },
+			{ "Client_BroadcastGameplayTagChangeToHUD", &UACFCoreComponent::execClient_BroadcastGameplayTagChangeToHUD },
 			{ "Die", &UACFCoreComponent::execDie },
 			{ "GetActiveAbilitiesWithTags", &UACFCoreComponent::execGetActiveAbilitiesWithTags },
 			{ "GetAttributeValue", &UACFCoreComponent::execGetAttributeValue },
@@ -1324,6 +1493,306 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UACFCoreComponent_ClearAbility_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Attribute_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_Attribute;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_NewValue;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_OldValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::NewProp_Attribute_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::NewProp_Attribute = { "Attribute", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastAttributeChangeToHUD_Parms, Attribute), Z_Construct_UScriptStruct_FGameplayAttribute, METADATA_PARAMS(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::NewProp_Attribute_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::NewProp_Attribute_MetaData)) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::NewProp_NewValue = { "NewValue", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastAttributeChangeToHUD_Parms, NewValue), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::NewProp_OldValue = { "OldValue", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastAttributeChangeToHUD_Parms, OldValue), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::NewProp_Attribute,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::NewProp_NewValue,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::NewProp_OldValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Core/Components/ACFCoreComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UACFCoreComponent, nullptr, "Client_BroadcastAttributeChangeToHUD", nullptr, nullptr, sizeof(ACFCoreComponent_eventClient_BroadcastAttributeChangeToHUD_Parms), Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01020C40, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD_Statics
+	{
+		static const UECodeGen_Private::FStructPropertyParams NewProp_AbilitySpecHandle;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_GameplayTag;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_Duration;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD_Statics::NewProp_AbilitySpecHandle = { "AbilitySpecHandle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastCooldownEndToHUD_Parms, AbilitySpecHandle), Z_Construct_UScriptStruct_FGameplayAbilitySpecHandle, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD_Statics::NewProp_GameplayTag = { "GameplayTag", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastCooldownEndToHUD_Parms, GameplayTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD_Statics::NewProp_Duration = { "Duration", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastCooldownEndToHUD_Parms, Duration), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD_Statics::NewProp_AbilitySpecHandle,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD_Statics::NewProp_GameplayTag,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD_Statics::NewProp_Duration,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Core/Components/ACFCoreComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UACFCoreComponent, nullptr, "Client_BroadcastCooldownEndToHUD", nullptr, nullptr, sizeof(ACFCoreComponent_eventClient_BroadcastCooldownEndToHUD_Parms), Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01020CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics
+	{
+		static const UECodeGen_Private::FStructPropertyParams NewProp_AbilitySpecHandle;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_CooldownTags_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_CooldownTags;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_TimeRemaining;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_Duration;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::NewProp_AbilitySpecHandle = { "AbilitySpecHandle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastCooldownStartToHUD_Parms, AbilitySpecHandle), Z_Construct_UScriptStruct_FGameplayAbilitySpecHandle, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::NewProp_CooldownTags_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::NewProp_CooldownTags = { "CooldownTags", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastCooldownStartToHUD_Parms, CooldownTags), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::NewProp_CooldownTags_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::NewProp_CooldownTags_MetaData)) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::NewProp_TimeRemaining = { "TimeRemaining", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastCooldownStartToHUD_Parms, TimeRemaining), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::NewProp_Duration = { "Duration", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastCooldownStartToHUD_Parms, Duration), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::NewProp_AbilitySpecHandle,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::NewProp_CooldownTags,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::NewProp_TimeRemaining,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::NewProp_Duration,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Core/Components/ACFCoreComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UACFCoreComponent, nullptr, "Client_BroadcastCooldownStartToHUD", nullptr, nullptr, sizeof(ACFCoreComponent_eventClient_BroadcastCooldownStartToHUD_Parms), Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01020CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD_Statics
+	{
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ActiveHandle;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_AssetTags;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_GrantedTags;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD_Statics::NewProp_ActiveHandle = { "ActiveHandle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayEffectAddedToHUD_Parms, ActiveHandle), Z_Construct_UScriptStruct_FActiveGameplayEffectHandle, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD_Statics::NewProp_AssetTags = { "AssetTags", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayEffectAddedToHUD_Parms, AssetTags), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD_Statics::NewProp_GrantedTags = { "GrantedTags", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayEffectAddedToHUD_Parms, GrantedTags), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD_Statics::NewProp_ActiveHandle,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD_Statics::NewProp_AssetTags,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD_Statics::NewProp_GrantedTags,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Core/Components/ACFCoreComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UACFCoreComponent, nullptr, "Client_BroadcastGameplayEffectAddedToHUD", nullptr, nullptr, sizeof(ACFCoreComponent_eventClient_BroadcastGameplayEffectAddedToHUD_Parms), Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01020CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD_Statics
+	{
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ActiveHandle;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_AssetTags;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_GrantedTags;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD_Statics::NewProp_ActiveHandle = { "ActiveHandle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayEffectRemovedToHUD_Parms, ActiveHandle), Z_Construct_UScriptStruct_FActiveGameplayEffectHandle, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD_Statics::NewProp_AssetTags = { "AssetTags", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayEffectRemovedToHUD_Parms, AssetTags), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD_Statics::NewProp_GrantedTags = { "GrantedTags", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayEffectRemovedToHUD_Parms, GrantedTags), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD_Statics::NewProp_ActiveHandle,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD_Statics::NewProp_AssetTags,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD_Statics::NewProp_GrantedTags,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Core/Components/ACFCoreComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UACFCoreComponent, nullptr, "Client_BroadcastGameplayEffectRemovedToHUD", nullptr, nullptr, sizeof(ACFCoreComponent_eventClient_BroadcastGameplayEffectRemovedToHUD_Parms), Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01020CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics
+	{
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ActiveHandle;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_AssetTags;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_GrantedTags;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_NewStackCount;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_OldStackCount;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::NewProp_ActiveHandle = { "ActiveHandle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayEffectStackChangeToHUD_Parms, ActiveHandle), Z_Construct_UScriptStruct_FActiveGameplayEffectHandle, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::NewProp_AssetTags = { "AssetTags", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayEffectStackChangeToHUD_Parms, AssetTags), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::NewProp_GrantedTags = { "GrantedTags", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayEffectStackChangeToHUD_Parms, GrantedTags), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::NewProp_NewStackCount = { "NewStackCount", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayEffectStackChangeToHUD_Parms, NewStackCount), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::NewProp_OldStackCount = { "OldStackCount", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayEffectStackChangeToHUD_Parms, OldStackCount), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::NewProp_ActiveHandle,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::NewProp_AssetTags,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::NewProp_GrantedTags,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::NewProp_NewStackCount,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::NewProp_OldStackCount,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Core/Components/ACFCoreComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UACFCoreComponent, nullptr, "Client_BroadcastGameplayEffectStackChangeToHUD", nullptr, nullptr, sizeof(ACFCoreComponent_eventClient_BroadcastGameplayEffectStackChangeToHUD_Parms), Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01020CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics
+	{
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ActiveHandle;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_AssetTags;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_GrantedTags;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_NewStartTime;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_NewDuration;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::NewProp_ActiveHandle = { "ActiveHandle", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayEffectTimeChangeToHUD_Parms, ActiveHandle), Z_Construct_UScriptStruct_FActiveGameplayEffectHandle, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::NewProp_AssetTags = { "AssetTags", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayEffectTimeChangeToHUD_Parms, AssetTags), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::NewProp_GrantedTags = { "GrantedTags", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayEffectTimeChangeToHUD_Parms, GrantedTags), Z_Construct_UScriptStruct_FGameplayTagContainer, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::NewProp_NewStartTime = { "NewStartTime", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayEffectTimeChangeToHUD_Parms, NewStartTime), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::NewProp_NewDuration = { "NewDuration", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayEffectTimeChangeToHUD_Parms, NewDuration), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::NewProp_ActiveHandle,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::NewProp_AssetTags,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::NewProp_GrantedTags,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::NewProp_NewStartTime,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::NewProp_NewDuration,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Core/Components/ACFCoreComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UACFCoreComponent, nullptr, "Client_BroadcastGameplayEffectTimeChangeToHUD", nullptr, nullptr, sizeof(ACFCoreComponent_eventClient_BroadcastGameplayEffectTimeChangeToHUD_Parms), Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x01020CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD_Statics
+	{
+		static const UECodeGen_Private::FStructPropertyParams NewProp_GameplayTag;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_NewCount;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD_Statics::NewProp_GameplayTag = { "GameplayTag", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayTagChangeToHUD_Parms, GameplayTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD_Statics::NewProp_NewCount = { "NewCount", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventClient_BroadcastGameplayTagChangeToHUD_Parms, NewCount), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD_Statics::NewProp_GameplayTag,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD_Statics::NewProp_NewCount,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Core/Components/ACFCoreComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UACFCoreComponent, nullptr, "Client_BroadcastGameplayTagChangeToHUD", nullptr, nullptr, sizeof(ACFCoreComponent_eventClient_BroadcastGameplayTagChangeToHUD_Parms), Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x41020CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -2126,6 +2595,14 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 		{ &Z_Construct_UFunction_UACFCoreComponent_ClampAttributeValue, "ClampAttributeValue" }, // 1365191864
 		{ &Z_Construct_UFunction_UACFCoreComponent_ClearAbilities, "ClearAbilities" }, // 1452548766
 		{ &Z_Construct_UFunction_UACFCoreComponent_ClearAbility, "ClearAbility" }, // 2933865608
+		{ &Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD, "Client_BroadcastAttributeChangeToHUD" }, // 3643859097
+		{ &Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownEndToHUD, "Client_BroadcastCooldownEndToHUD" }, // 2065792169
+		{ &Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastCooldownStartToHUD, "Client_BroadcastCooldownStartToHUD" }, // 2707832284
+		{ &Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectAddedToHUD, "Client_BroadcastGameplayEffectAddedToHUD" }, // 4116151933
+		{ &Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectRemovedToHUD, "Client_BroadcastGameplayEffectRemovedToHUD" }, // 1240132476
+		{ &Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectStackChangeToHUD, "Client_BroadcastGameplayEffectStackChangeToHUD" }, // 846980495
+		{ &Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayEffectTimeChangeToHUD, "Client_BroadcastGameplayEffectTimeChangeToHUD" }, // 2834552216
+		{ &Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastGameplayTagChangeToHUD, "Client_BroadcastGameplayTagChangeToHUD" }, // 4234212385
 		{ &Z_Construct_UFunction_UACFCoreComponent_Die, "Die" }, // 1125104939
 		{ &Z_Construct_UFunction_UACFCoreComponent_GetActiveAbilitiesWithTags, "GetActiveAbilitiesWithTags" }, // 1647088424
 		{ &Z_Construct_UFunction_UACFCoreComponent_GetAttributeValue, "GetAttributeValue" }, // 2345408864
@@ -2445,7 +2922,7 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UACFCoreComponent, 618264087);
+	IMPLEMENT_CLASS(UACFCoreComponent, 1135904202);
 	template<> ADVANCEDCOMBATSYSTEM_API UClass* StaticClass<UACFCoreComponent>()
 	{
 		return UACFCoreComponent::StaticClass();
