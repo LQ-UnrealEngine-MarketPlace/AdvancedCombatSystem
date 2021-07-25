@@ -23,6 +23,7 @@
 			"ACFAbilityQueueNotifyState.cpp.obj",
 			"ACFComboWindowNotifyState.cpp.obj",
 			"ACFCoreComponent.cpp.obj",
+			"ACFCheatManager.cpp.obj",
 			"ACFHUD.cpp.obj",
 			"ACFPlayerController.cpp.obj",
 			"ACFPlayerState.cpp.obj",
@@ -50,6 +51,7 @@
 			"ACFAttributeSet.gen.cpp.obj",
 			"ACFAttributeSetBase.gen.cpp.obj",
 			"ACFCharacterBase.gen.cpp.obj",
+			"ACFCheatManager.gen.cpp.obj",
 			"ACFComboWindowNotifyState.gen.cpp.obj",
 			"ACFCoreComponent.gen.cpp.obj"
 		],
@@ -69,10 +71,10 @@
 			"ACFUserWidget.gen.cpp.obj",
 			"ACFUWDebugAbilityCombo.gen.cpp.obj",
 			"ACFUWDebugAbilityQueue.gen.cpp.obj",
-			"ACFUWHUD.gen.cpp.obj",
-			"ACFUWHUDAttributeDebug.gen.cpp.obj"
+			"ACFUWHUD.gen.cpp.obj"
 		],
 		"Module.AdvancedCombatSystem.gen.3_of_3.cpp.obj": [
+			"ACFUWHUDAttributeDebug.gen.cpp.obj",
 			"ACFUWStatusBar.gen.cpp.obj",
 			"AdvancedCombatSystem.init.gen.cpp.obj"
 		]

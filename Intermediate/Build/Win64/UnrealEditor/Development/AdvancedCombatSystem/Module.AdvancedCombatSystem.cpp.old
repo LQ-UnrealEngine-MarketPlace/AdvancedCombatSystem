@@ -20,6 +20,7 @@
 #include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Animations/AnimNotifyStates/ACFAbilityQueueNotifyState.cpp"
 #include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Animations/AnimNotifyStates/ACFComboWindowNotifyState.cpp"
 #include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Components/ACFCoreComponent.cpp"
+#include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Game/Player/ACFHUD.cpp"
 #include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Game/Player/ACFPlayerController.cpp"
 #include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Game/Player/ACFPlayerState.cpp"
 #include "G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Interfaces/ACFActorInterface.cpp"
