@@ -13,28 +13,28 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ADVANCEDCOMBATSYSTEM_ACFAbilityTypes_generated_h
 
-#define MyProject_Plugins_AdvancedCombatSystem_Source_AdvancedCombatSystem_Public_AbilitySystem_ACFAbilityTypes_h_111_GENERATED_BODY \
+#define repo_Plugins_AdvancedCombatSystem_Source_AdvancedCombatSystem_Public_AbilitySystem_ACFAbilityTypes_h_111_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FACFGameplayEffectExecuteData_Statics; \
 	ADVANCEDCOMBATSYSTEM_API static class UScriptStruct* StaticStruct();
 
 
 template<> ADVANCEDCOMBATSYSTEM_API UScriptStruct* StaticStruct<struct FACFGameplayEffectExecuteData>();
 
-#define MyProject_Plugins_AdvancedCombatSystem_Source_AdvancedCombatSystem_Public_AbilitySystem_ACFAbilityTypes_h_76_GENERATED_BODY \
+#define repo_Plugins_AdvancedCombatSystem_Source_AdvancedCombatSystem_Public_AbilitySystem_ACFAbilityTypes_h_76_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FACFGameplayEffectUIData_Statics; \
 	ADVANCEDCOMBATSYSTEM_API static class UScriptStruct* StaticStruct();
 
 
 template<> ADVANCEDCOMBATSYSTEM_API UScriptStruct* StaticStruct<struct FACFGameplayEffectUIData>();
 
-#define MyProject_Plugins_AdvancedCombatSystem_Source_AdvancedCombatSystem_Public_AbilitySystem_ACFAbilityTypes_h_49_GENERATED_BODY \
+#define repo_Plugins_AdvancedCombatSystem_Source_AdvancedCombatSystem_Public_AbilitySystem_ACFAbilityTypes_h_49_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FRPGGameplayEffectContainerSpec_Statics; \
 	ADVANCEDCOMBATSYSTEM_API static class UScriptStruct* StaticStruct();
 
 
 template<> ADVANCEDCOMBATSYSTEM_API UScriptStruct* StaticStruct<struct FRPGGameplayEffectContainerSpec>();
 
-#define MyProject_Plugins_AdvancedCombatSystem_Source_AdvancedCombatSystem_Public_AbilitySystem_ACFAbilityTypes_h_31_GENERATED_BODY \
+#define repo_Plugins_AdvancedCombatSystem_Source_AdvancedCombatSystem_Public_AbilitySystem_ACFAbilityTypes_h_31_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FRPGGameplayEffectContainer_Statics; \
 	ADVANCEDCOMBATSYSTEM_API static class UScriptStruct* StaticStruct();
 
@@ -42,7 +42,7 @@ template<> ADVANCEDCOMBATSYSTEM_API UScriptStruct* StaticStruct<struct FRPGGamep
 template<> ADVANCEDCOMBATSYSTEM_API UScriptStruct* StaticStruct<struct FRPGGameplayEffectContainer>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID MyProject_Plugins_AdvancedCombatSystem_Source_AdvancedCombatSystem_Public_AbilitySystem_ACFAbilityTypes_h
+#define CURRENT_FILE_ID repo_Plugins_AdvancedCombatSystem_Source_AdvancedCombatSystem_Public_AbilitySystem_ACFAbilityTypes_h
 
 
 #define FOREACH_ENUM_EACFABILITYINPUTID(op) \

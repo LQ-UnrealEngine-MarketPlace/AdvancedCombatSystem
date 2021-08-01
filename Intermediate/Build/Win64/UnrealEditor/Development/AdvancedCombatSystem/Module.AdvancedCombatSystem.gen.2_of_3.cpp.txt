@@ -1,25 +1,25 @@
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Development\AdvancedCombatSystem\Definitions.AdvancedCombatSystem.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFDeveloperSettings.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Development\AdvancedCombatSystem\Definitions.AdvancedCombatSystem.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFDeveloperSettings.gen.cpp
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Settings/ACFDeveloperSettings.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Settings/ACFDeveloperSettings.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\AttributeSet.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\ScalableFloat.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\DataRegistry\Source\DataRegistry\Public\DataRegistryId.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\DataRegistry\Intermediate\Build\Win64\UnrealEditor\Inc\DataRegistry\DataRegistryId.generated.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayAbilities\ScalableFloat.generated.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayAbilities\AttributeSet.generated.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFDeveloperSettings.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFFunctionLibrary.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Libraries/ACFFunctionLibrary.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFDeveloperSettings.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFFunctionLibrary.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Libraries/ACFFunctionLibrary.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\GameplayEffectTypes.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\GameplayTags\Classes\GameplayTagContainer.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayTags\GameplayTagContainer.generated.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\AbilitySystemLog.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayAbilities\GameplayEffectTypes.generated.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFFunctionLibrary.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFGameModeBase.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Game/ACFGameModeBase.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFFunctionLibrary.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFGameModeBase.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Game/ACFGameModeBase.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/Info.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\Info.generated.h
@@ -42,9 +42,9 @@ G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engin
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\ApplicationCore\Public\GenericPlatform/IInputInterface.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\PlayerController.generated.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\GameModeBase.generated.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFGameModeBase.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFGameplayAbility.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/AbilitySystem/Abilities/ACFGameplayAbility.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFGameModeBase.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFGameplayAbility.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/AbilitySystem/Abilities/ACFGameplayAbility.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\Abilities/GameplayAbility.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\GameplayAbilitySpec.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\GameplayPrediction.h
@@ -76,62 +76,65 @@ G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\Gamepl
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayAbilities\GameplayAbilityTargetTypes.generated.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayAbilities\GameplayAbilityTypes.generated.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayAbilities\GameplayAbility.generated.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\AbilitySystem\Abilities\../ACFAbilityTypes.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFAbilityTypes.generated.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFGameplayAbility.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFGameplayAbility_MeleeBase.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/AbilitySystem/Abilities/ACFGameplayAbility_MeleeBase.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFGameplayAbility_MeleeBase.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFHUD.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Game/Player/ACFHUD.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\AbilitySystem\Abilities\../ACFAbilityTypes.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFAbilityTypes.generated.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFGameplayAbility.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFGameplayAbility_MeleeBase.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/AbilitySystem/Abilities/ACFGameplayAbility_MeleeBase.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFGameplayAbility_MeleeBase.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFHUD.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Game/Player/ACFHUD.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/HUD.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/HUDHitBox.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/DebugTextInfo.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\DebugTextInfo.generated.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\HUD.generated.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFHUD.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFK2Node_SwitchGameplayAttribute.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Utils/ACFK2Node_SwitchGameplayAttribute.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFHUD.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFK2Node_SwitchGameplayAttribute.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Utils/ACFK2Node_SwitchGameplayAttribute.h
 G:\Program Files\UE_5.0EA\Engine\Source\Editor\BlueprintGraph\Classes\K2Node_Switch.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\BlueprintGraph\K2Node_Switch.generated.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFK2Node_SwitchGameplayAttribute.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFPawnBase.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Actors/Pawns/ACFPawnBase.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFK2Node_SwitchGameplayAttribute.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFLocomotionComponent.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Animations/Components/ACFLocomotionComponent.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFLocomotionComponent.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFPawnBase.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Actors/Pawns/ACFPawnBase.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\AbilitySystemInterface.h
 G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayAbilities\AbilitySystemInterface.generated.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Interfaces/ACFActorInterface.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFActorInterface.generated.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPawnBase.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFPlayerCharacter.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Actors/Characters/ACFPlayerCharacter.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Characters/ACFCharacterBase.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Interfaces/ACFActorInterface.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFActorInterface.generated.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPawnBase.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFPlayerCharacter.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Actors/Characters/ACFPlayerCharacter.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Characters/ACFCharacterBase.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\CharacterMovementReplication.generated.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\RootMotionSource.generated.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\Character.generated.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFCharacterBase.generated.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPlayerCharacter.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFPlayerController.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Game/Player/ACFPlayerController.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPlayerController.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFPlayerState.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Game/Player/ACFPlayerState.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFCharacterBase.generated.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPlayerCharacter.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFPlayerController.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Game/Player/ACFPlayerController.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPlayerController.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFPlayerState.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Game/Player/ACFPlayerState.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerState.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\PlayerState.generated.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPlayerState.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFProjectileBase.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Actors/Projectiles/ACFProjectileBase.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFProjectileBase.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFTargetType.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/AbilitySystem/ACFTargetType.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFTargetType.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFTriggerComboNotify.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Animations/AnimNotifies/ACFTriggerComboNotify.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFTriggerComboNotify.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFUserWidget.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Widgets/ACFUserWidget.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPlayerState.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFProjectileBase.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Actors/Projectiles/ACFProjectileBase.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFProjectileBase.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFTargetType.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/AbilitySystem/ACFTargetType.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFTargetType.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFTriggerComboNotify.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Animations/AnimNotifies/ACFTriggerComboNotify.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFTriggerComboNotify.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFUserWidget.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Widgets/ACFUserWidget.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\UMG\Public\Blueprint/UserWidget.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\UMG\Public\Components/SlateWrapperTypes.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\UMG\SlateWrapperTypes.generated.h
@@ -229,13 +232,13 @@ G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Prope
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\UMG\DynamicPropertyPath.generated.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\UMG\WidgetBlueprintGeneratedClass.generated.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\UMG\UserWidget.generated.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFUserWidget.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFUWDebugAbilityCombo.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Widgets/Debugs/ACFUWDebugAbilityCombo.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFUWDebugAbilityCombo.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFUWDebugAbilityQueue.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Widgets/Debugs/ACFUWDebugAbilityQueue.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFUWDebugAbilityQueue.generated.h
-G:/Projects/UE4/MyProject/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFUWHUD.gen.cpp
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Widgets/ACFUWHUD.h
-G:\Projects\UE4\MyProject\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFUWHUD.generated.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFUserWidget.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFUWDebugAbilityCombo.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Widgets/Debugs/ACFUWDebugAbilityCombo.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFUWDebugAbilityCombo.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFUWDebugAbilityQueue.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Widgets/Debugs/ACFUWDebugAbilityQueue.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFUWDebugAbilityQueue.generated.h
+G:/Projects/repo/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFUWHUD.gen.cpp
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Widgets/ACFUWHUD.h
+G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFUWHUD.generated.h
