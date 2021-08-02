@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+#include <AttributeSet.h>
 #include "ACFUserWidget.generated.h"
 
 class AActor;

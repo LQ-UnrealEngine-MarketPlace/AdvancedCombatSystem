@@ -1,6 +1,6 @@
-G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Development\AdvancedCombatSystem\Module.AdvancedCombatSystem.gen.2_of_3.cpp
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Development\AdvancedCombatSystem\Module.AdvancedCombatSystem.gen.2_of_3.cpp
 /I .
-/I G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Private
+/I G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Private
 /I ..\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayAbilities
 /I ..\Plugins\Runtime\GameplayAbilities\Source
 /I ..\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public
@@ -238,9 +238,9 @@ G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEdi
 /I ..\Plugins\Runtime\DataRegistry\Intermediate\Build\Win64\UnrealEditor\Inc\DataRegistry
 /I ..\Plugins\Runtime\DataRegistry\Source
 /I ..\Plugins\Runtime\DataRegistry\Source\DataRegistry\Public
-/I G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem
-/I G:\Projects\repo\Plugins\AdvancedCombatSystem\Source
-/I G:\Projects\repo\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public
+/I G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem
+/I G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source
+/I G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
@@ -258,11 +258,11 @@ G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEdi
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"G:\Projects\repo\Intermediate\Build\Win64\LightSoulsEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h"
-/FI"G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Development\AdvancedCombatSystem\Definitions.AdvancedCombatSystem.h"
-/Yu"G:\Projects\repo\Intermediate\Build\Win64\LightSoulsEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h"
-/Fp"G:\Projects\repo\Intermediate\Build\Win64\LightSoulsEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.pch"
-/Fo"G:\Projects\repo\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Development\AdvancedCombatSystem\Module.AdvancedCombatSystem.gen.2_of_3.cpp.obj"
+/FI"G:\Projects\UE4\LightSouls\Intermediate\Build\Win64\LightSoulsEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h"
+/FI"G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Development\AdvancedCombatSystem\Definitions.AdvancedCombatSystem.h"
+/Yu"G:\Projects\UE4\LightSouls\Intermediate\Build\Win64\LightSoulsEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h"
+/Fp"G:\Projects\UE4\LightSouls\Intermediate\Build\Win64\LightSoulsEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.pch"
+/Fo"G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Development\AdvancedCombatSystem\Module.AdvancedCombatSystem.gen.2_of_3.cpp.obj"
 /Zc:inline
 /nologo
 /Oi
