@@ -34,6 +34,7 @@ public class AdvancedCombatSystem : ModuleRules
             "DeveloperSettings",
 			"BlueprintGraph",
 			"UnrealEd",
+			"Niagara"
 		});
 
 

@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Core/Actors/Items/ACFItem.h"
+#include "ACFEquippableItem.h"
 #include "ACFItemTypes.h"
 #include "ACFArmor.generated.h"
 
@@ -11,7 +11,7 @@
  * 
  */
 UCLASS()
-class ADVANCEDCOMBATSYSTEM_API AACFArmor : public AACFItem
+class ADVANCEDCOMBATSYSTEM_API AACFArmor : public AACFEquippableItem
 {
 	GENERATED_BODY()
 	

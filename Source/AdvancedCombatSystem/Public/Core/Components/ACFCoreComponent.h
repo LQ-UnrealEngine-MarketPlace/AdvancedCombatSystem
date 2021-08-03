@@ -279,11 +279,11 @@ public:
 	/* AttributeSet Events */
 
 	/** Sets the base value of an attribute. Existing active modifiers are NOT cleared and will act upon the new base value. */
-	UFUNCTION(BlueprintCallable, Category = "GSC|Attributes")
+	UFUNCTION(BlueprintCallable, Category = "ACF | Attributes")
 	virtual void SetAttributeValue(FGameplayAttribute Attribute, float NewValue);
 
 	/** Clamps the Attribute from MinValue to MaxValue */
-	UFUNCTION(BlueprintCallable, Category = "GSC|Attributes")
+	UFUNCTION(BlueprintCallable, Category = "ACF | Attributes")
 	virtual void ClampAttributeValue(FGameplayAttribute Attribute, float MinValue, float MaxValue);
 
 	/**
@@ -295,7 +295,7 @@ public:
 	* @param MaxAttribute The related MaxAttribute
 	* @param NewMaxValue The new value for the MaxAttribute
 	*/
-	UFUNCTION(BlueprintCallable, Category = "GSC|Attributes")
+	UFUNCTION(BlueprintCallable, Category = "ACF | Attributes")
 	virtual void AdjustAttributeForMaxChange(UPARAM(ref) UACFAttributeSetBase* AttributeSet, const FGameplayAttribute AffectedAttributeProperty, const FGameplayAttribute MaxAttribute, float NewMaxValue);
 
 	/* AttributeSet Events */
@@ -315,7 +315,7 @@ public:
 	* @param SourceTags The aggregated SourceTags for this EffectSpec
 	* @param Payload Payload information with the original AttributeSet, the owning AbilitySystemComponent, calculated DeltaValue and the ClampMinimumValue from config if defined
 	*/
-	UPROPERTY(BlueprintAssignable, Category = "GSC|Attributes")
+	UPROPERTY(BlueprintAssignable, Category = "ACF | Attributes")
 	FACFOnPostGameplayEffectExecute OnPostGameplayEffectExecute;
 
 	/**
@@ -330,12 +330,20 @@ public:
 	* @param Attribute The affected GameplayAttribute
 	* @param NewValue The new value
 	*/
-	UPROPERTY(BlueprintAssignable, Category = "GSC|Attributes")
+	UPROPERTY(BlueprintAssignable, Category = "ACF | Attributes")
 	FACFOnPreAttributeChange OnPreAttributeChange;
 
 	/** Initialize the Actor's attributes. Only run on Server */
 	virtual void InitializeAttributes();
 	bool bStartupAttributesApplied = false;
+
+	/** Apply a GameplayEffect/AttributesModifier */
+	UFUNCTION(BlueprintCallable, Category = "ACF | Attributes")
+	virtual void ApplyGameplayEffectSpecToTarget(AActor* AttributesModifierOwner, TSubclassOf<UGameplayEffect> AttributesModifier);
+
+	/** Remove a GameplayEffect/AttributesModifier */
+	UFUNCTION(BlueprintCallable, Category = "ACF | Attributes")
+	virtual void RemoveActiveGameplayEffectBySourceEffect(AActor* AttributesModifierOwner, TSubclassOf<UGameplayEffect> AttributesModifier);
 
 public:
 	// ~ Ability Events ~

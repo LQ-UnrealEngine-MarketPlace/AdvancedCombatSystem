@@ -44,11 +44,11 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ADVANCEDCOMBATSYSTEM_API UClass* Z_Construct_UClass_UACFGameplayAbility_NoRegister();
+	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect_NoRegister();
 	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayAbilitySpecHandle();
 	ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent_NoRegister();
-	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect_NoRegister();
 // End Cross Module References
 	struct Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnGameplayEffectTimeChange__DelegateSignature_Statics
 	{
@@ -876,6 +876,24 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 		P_THIS->Client_BroadcastAttributeChangeToHUD_Implementation(Z_Param_Attribute,Z_Param_NewValue,Z_Param_OldValue);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(UACFCoreComponent::execRemoveActiveGameplayEffectBySourceEffect)
+	{
+		P_GET_OBJECT(AActor,Z_Param_AttributesModifierOwner);
+		P_GET_OBJECT(UClass,Z_Param_AttributesModifier);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RemoveActiveGameplayEffectBySourceEffect(Z_Param_AttributesModifierOwner,Z_Param_AttributesModifier);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UACFCoreComponent::execApplyGameplayEffectSpecToTarget)
+	{
+		P_GET_OBJECT(AActor,Z_Param_AttributesModifierOwner);
+		P_GET_OBJECT(UClass,Z_Param_AttributesModifier);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ApplyGameplayEffectSpecToTarget(Z_Param_AttributesModifierOwner,Z_Param_AttributesModifier);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UACFCoreComponent::execAdjustAttributeForMaxChange)
 	{
 		P_GET_OBJECT_REF(UACFAttributeSetBase,Z_Param_Out_AttributeSet);
@@ -1146,6 +1164,7 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 			{ "ActivateAbilityWithClass", &UACFCoreComponent::execActivateAbilityWithClass },
 			{ "ActivateAbilityWithTags", &UACFCoreComponent::execActivateAbilityWithTags },
 			{ "AdjustAttributeForMaxChange", &UACFCoreComponent::execAdjustAttributeForMaxChange },
+			{ "ApplyGameplayEffectSpecToTarget", &UACFCoreComponent::execApplyGameplayEffectSpecToTarget },
 			{ "ClampAttributeValue", &UACFCoreComponent::execClampAttributeValue },
 			{ "ClearAbilities", &UACFCoreComponent::execClearAbilities },
 			{ "ClearAbility", &UACFCoreComponent::execClearAbility },
@@ -1173,6 +1192,7 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 			{ "IsAlive", &UACFCoreComponent::execIsAlive },
 			{ "IsUsingAbilityWithClass", &UACFCoreComponent::execIsUsingAbilityWithClass },
 			{ "IsUsingAbilityWithTags", &UACFCoreComponent::execIsUsingAbilityWithTags },
+			{ "RemoveActiveGameplayEffectBySourceEffect", &UACFCoreComponent::execRemoveActiveGameplayEffectBySourceEffect },
 			{ "SetAttributeValue", &UACFCoreComponent::execSetAttributeValue },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -1364,7 +1384,7 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFCoreComponent_AdjustAttributeForMaxChange_Statics::Function_MetaDataParams[] = {
-		{ "Category", "GSC|Attributes" },
+		{ "Category", "ACF | Attributes" },
 		{ "Comment", "/**\n\x09* Helper function to proportionally adjust the value of an attribute when it's associated max attribute changes.\n\x09* (e.g. When MaxHealth increases, Health increases by an amount that maintains the same percentage as before)\n\x09*\n\x09* @param AttributeSet The AttributeSet owner for the affected attributes\n\x09* @param AffectedAttributeProperty The affected Attribute property\n\x09* @param MaxAttribute The related MaxAttribute\n\x09* @param NewMaxValue The new value for the MaxAttribute\n\x09*/" },
 		{ "ModuleRelativePath", "Public/Core/Components/ACFCoreComponent.h" },
 		{ "ToolTip", "Helper function to proportionally adjust the value of an attribute when it's associated max attribute changes.\n(e.g. When MaxHealth increases, Health increases by an amount that maintains the same percentage as before)\n\n@param AttributeSet The AttributeSet owner for the affected attributes\n@param AffectedAttributeProperty The affected Attribute property\n@param MaxAttribute The related MaxAttribute\n@param NewMaxValue The new value for the MaxAttribute" },
@@ -1377,6 +1397,45 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UACFCoreComponent_AdjustAttributeForMaxChange_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UACFCoreComponent_ApplyGameplayEffectSpecToTarget_Statics
+	{
+		struct ACFCoreComponent_eventApplyGameplayEffectSpecToTarget_Parms
+		{
+			AActor* AttributesModifierOwner;
+			TSubclassOf<UGameplayEffect>  AttributesModifier;
+		};
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_AttributesModifierOwner;
+		static const UECodeGen_Private::FClassPropertyParams NewProp_AttributesModifier;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UACFCoreComponent_ApplyGameplayEffectSpecToTarget_Statics::NewProp_AttributesModifierOwner = { "AttributesModifierOwner", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventApplyGameplayEffectSpecToTarget_Parms, AttributesModifierOwner), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UACFCoreComponent_ApplyGameplayEffectSpecToTarget_Statics::NewProp_AttributesModifier = { "AttributesModifier", nullptr, (EPropertyFlags)0x0014000000000080, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventApplyGameplayEffectSpecToTarget_Parms, AttributesModifier), Z_Construct_UClass_UGameplayEffect_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UACFCoreComponent_ApplyGameplayEffectSpecToTarget_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_ApplyGameplayEffectSpecToTarget_Statics::NewProp_AttributesModifierOwner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_ApplyGameplayEffectSpecToTarget_Statics::NewProp_AttributesModifier,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFCoreComponent_ApplyGameplayEffectSpecToTarget_Statics::Function_MetaDataParams[] = {
+		{ "Category", "ACF | Attributes" },
+		{ "Comment", "/** Apply a GameplayEffect/AttributesModifier */" },
+		{ "ModuleRelativePath", "Public/Core/Components/ACFCoreComponent.h" },
+		{ "ToolTip", "Apply a GameplayEffect/AttributesModifier" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UACFCoreComponent_ApplyGameplayEffectSpecToTarget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UACFCoreComponent, nullptr, "ApplyGameplayEffectSpecToTarget", nullptr, nullptr, sizeof(ACFCoreComponent_eventApplyGameplayEffectSpecToTarget_Parms), Z_Construct_UFunction_UACFCoreComponent_ApplyGameplayEffectSpecToTarget_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_ApplyGameplayEffectSpecToTarget_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UACFCoreComponent_ApplyGameplayEffectSpecToTarget_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_ApplyGameplayEffectSpecToTarget_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UACFCoreComponent_ApplyGameplayEffectSpecToTarget()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UACFCoreComponent_ApplyGameplayEffectSpecToTarget_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1407,7 +1466,7 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFCoreComponent_ClampAttributeValue_Statics::Function_MetaDataParams[] = {
-		{ "Category", "GSC|Attributes" },
+		{ "Category", "ACF | Attributes" },
 		{ "Comment", "/** Clamps the Attribute from MinValue to MaxValue */" },
 		{ "ModuleRelativePath", "Public/Core/Components/ACFCoreComponent.h" },
 		{ "ToolTip", "Clamps the Attribute from MinValue to MaxValue" },
@@ -2419,6 +2478,45 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UACFCoreComponent_RemoveActiveGameplayEffectBySourceEffect_Statics
+	{
+		struct ACFCoreComponent_eventRemoveActiveGameplayEffectBySourceEffect_Parms
+		{
+			AActor* AttributesModifierOwner;
+			TSubclassOf<UGameplayEffect>  AttributesModifier;
+		};
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_AttributesModifierOwner;
+		static const UECodeGen_Private::FClassPropertyParams NewProp_AttributesModifier;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UACFCoreComponent_RemoveActiveGameplayEffectBySourceEffect_Statics::NewProp_AttributesModifierOwner = { "AttributesModifierOwner", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventRemoveActiveGameplayEffectBySourceEffect_Parms, AttributesModifierOwner), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UACFCoreComponent_RemoveActiveGameplayEffectBySourceEffect_Statics::NewProp_AttributesModifier = { "AttributesModifier", nullptr, (EPropertyFlags)0x0014000000000080, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFCoreComponent_eventRemoveActiveGameplayEffectBySourceEffect_Parms, AttributesModifier), Z_Construct_UClass_UGameplayEffect_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UACFCoreComponent_RemoveActiveGameplayEffectBySourceEffect_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_RemoveActiveGameplayEffectBySourceEffect_Statics::NewProp_AttributesModifierOwner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFCoreComponent_RemoveActiveGameplayEffectBySourceEffect_Statics::NewProp_AttributesModifier,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFCoreComponent_RemoveActiveGameplayEffectBySourceEffect_Statics::Function_MetaDataParams[] = {
+		{ "Category", "ACF | Attributes" },
+		{ "Comment", "/** Remove a GameplayEffect/AttributesModifier */" },
+		{ "ModuleRelativePath", "Public/Core/Components/ACFCoreComponent.h" },
+		{ "ToolTip", "Remove a GameplayEffect/AttributesModifier" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UACFCoreComponent_RemoveActiveGameplayEffectBySourceEffect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UACFCoreComponent, nullptr, "RemoveActiveGameplayEffectBySourceEffect", nullptr, nullptr, sizeof(ACFCoreComponent_eventRemoveActiveGameplayEffectBySourceEffect_Parms), Z_Construct_UFunction_UACFCoreComponent_RemoveActiveGameplayEffectBySourceEffect_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_RemoveActiveGameplayEffectBySourceEffect_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UACFCoreComponent_RemoveActiveGameplayEffectBySourceEffect_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFCoreComponent_RemoveActiveGameplayEffectBySourceEffect_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UACFCoreComponent_RemoveActiveGameplayEffectBySourceEffect()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UACFCoreComponent_RemoveActiveGameplayEffectBySourceEffect_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_UACFCoreComponent_SetAttributeValue_Statics
 	{
 		struct ACFCoreComponent_eventSetAttributeValue_Parms
@@ -2442,7 +2540,7 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFCoreComponent_SetAttributeValue_Statics::Function_MetaDataParams[] = {
-		{ "Category", "GSC|Attributes" },
+		{ "Category", "ACF | Attributes" },
 		{ "Comment", "/** Sets the base value of an attribute. Existing active modifiers are NOT cleared and will act upon the new base value. */" },
 		{ "ModuleRelativePath", "Public/Core/Components/ACFCoreComponent.h" },
 		{ "ToolTip", "Sets the base value of an attribute. Existing active modifiers are NOT cleared and will act upon the new base value." },
@@ -2591,8 +2689,9 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_UACFCoreComponent_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UACFCoreComponent_ActivateAbilityWithClass, "ActivateAbilityWithClass" }, // 245150037
 		{ &Z_Construct_UFunction_UACFCoreComponent_ActivateAbilityWithTags, "ActivateAbilityWithTags" }, // 2088045671
-		{ &Z_Construct_UFunction_UACFCoreComponent_AdjustAttributeForMaxChange, "AdjustAttributeForMaxChange" }, // 2616517294
-		{ &Z_Construct_UFunction_UACFCoreComponent_ClampAttributeValue, "ClampAttributeValue" }, // 1365191864
+		{ &Z_Construct_UFunction_UACFCoreComponent_AdjustAttributeForMaxChange, "AdjustAttributeForMaxChange" }, // 1494009838
+		{ &Z_Construct_UFunction_UACFCoreComponent_ApplyGameplayEffectSpecToTarget, "ApplyGameplayEffectSpecToTarget" }, // 3272021006
+		{ &Z_Construct_UFunction_UACFCoreComponent_ClampAttributeValue, "ClampAttributeValue" }, // 2882121075
 		{ &Z_Construct_UFunction_UACFCoreComponent_ClearAbilities, "ClearAbilities" }, // 1452548766
 		{ &Z_Construct_UFunction_UACFCoreComponent_ClearAbility, "ClearAbility" }, // 2933865608
 		{ &Z_Construct_UFunction_UACFCoreComponent_Client_BroadcastAttributeChangeToHUD, "Client_BroadcastAttributeChangeToHUD" }, // 3643859097
@@ -2619,7 +2718,8 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 		{ &Z_Construct_UFunction_UACFCoreComponent_IsAlive, "IsAlive" }, // 248923056
 		{ &Z_Construct_UFunction_UACFCoreComponent_IsUsingAbilityWithClass, "IsUsingAbilityWithClass" }, // 4019721002
 		{ &Z_Construct_UFunction_UACFCoreComponent_IsUsingAbilityWithTags, "IsUsingAbilityWithTags" }, // 1209397284
-		{ &Z_Construct_UFunction_UACFCoreComponent_SetAttributeValue, "SetAttributeValue" }, // 2832881400
+		{ &Z_Construct_UFunction_UACFCoreComponent_RemoveActiveGameplayEffectBySourceEffect, "RemoveActiveGameplayEffectBySourceEffect" }, // 3154600709
+		{ &Z_Construct_UFunction_UACFCoreComponent_SetAttributeValue, "SetAttributeValue" }, // 4127079966
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UACFCoreComponent_Statics::Class_MetaDataParams[] = {
@@ -2750,7 +2850,7 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UACFCoreComponent_Statics::NewProp_OnDeath = { "OnDeath", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UACFCoreComponent, OnDeath), Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnDeath__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_UACFCoreComponent_Statics::NewProp_OnDeath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UACFCoreComponent_Statics::NewProp_OnDeath_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UACFCoreComponent_Statics::NewProp_OnPostGameplayEffectExecute_MetaData[] = {
-		{ "Category", "GSC|Attributes" },
+		{ "Category", "ACF | Attributes" },
 		{ "Comment", "/**\n\x09* PostGameplayEffectExecute event fired off from native AttributeSets, define here\n\x09* any attribute change specific management you are not doing in c++ (like clamp)\n\x09*\n\x09* Only triggers after changes to the BaseValue of an Attribute from a GameplayEffect.\n\x09*\n\x09* @param Attribute The affected GameplayAttribute\n\x09* @param SourceActor The instigator Actor that started the whole chain (in case of damage, that would be the damage causer)\n\x09* @param TargetActor The owner Actor to which the Attribute change is applied\n\x09* @param SourceTags The aggregated SourceTags for this EffectSpec\n\x09* @param Payload Payload information with the original AttributeSet, the owning AbilitySystemComponent, calculated DeltaValue and the ClampMinimumValue from config if defined\n\x09*/" },
 		{ "ModuleRelativePath", "Public/Core/Components/ACFCoreComponent.h" },
 		{ "ToolTip", "PostGameplayEffectExecute event fired off from native AttributeSets, define here\nany attribute change specific management you are not doing in c++ (like clamp)\n\nOnly triggers after changes to the BaseValue of an Attribute from a GameplayEffect.\n\n@param Attribute The affected GameplayAttribute\n@param SourceActor The instigator Actor that started the whole chain (in case of damage, that would be the damage causer)\n@param TargetActor The owner Actor to which the Attribute change is applied\n@param SourceTags The aggregated SourceTags for this EffectSpec\n@param Payload Payload information with the original AttributeSet, the owning AbilitySystemComponent, calculated DeltaValue and the ClampMinimumValue from config if defined" },
@@ -2759,7 +2859,7 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 	const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UACFCoreComponent_Statics::NewProp_OnPostGameplayEffectExecute = { "OnPostGameplayEffectExecute", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UACFCoreComponent, OnPostGameplayEffectExecute), Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnPostGameplayEffectExecute__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_UACFCoreComponent_Statics::NewProp_OnPostGameplayEffectExecute_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UACFCoreComponent_Statics::NewProp_OnPostGameplayEffectExecute_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UACFCoreComponent_Statics::NewProp_OnPreAttributeChange_MetaData[] = {
-		{ "Category", "GSC|Attributes" },
+		{ "Category", "ACF | Attributes" },
 		{ "Comment", "/**\n\x09* PreAttributeChange event fired off from native AttributeSets, react here to\n\x09* changes of Attributes CurrentValue before the modification to the BaseValue\n\x09* happens.\n\x09*\n\x09* Called just before any modification happens to an attribute, whether using\n\x09* Attribute setters or using GameplayEffect.\n\x09*\n\x09* @param AttributeSet The AttributeSet that started the change\n\x09* @param Attribute The affected GameplayAttribute\n\x09* @param NewValue The new value\n\x09*/" },
 		{ "ModuleRelativePath", "Public/Core/Components/ACFCoreComponent.h" },
 		{ "ToolTip", "PreAttributeChange event fired off from native AttributeSets, react here to\nchanges of Attributes CurrentValue before the modification to the BaseValue\nhappens.\n\nCalled just before any modification happens to an attribute, whether using\nAttribute setters or using GameplayEffect.\n\n@param AttributeSet The AttributeSet that started the change\n@param Attribute The affected GameplayAttribute\n@param NewValue The new value" },
@@ -2924,7 +3024,7 @@ void EmptyLinkFunctionForGeneratedCodeACFCoreComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UACFCoreComponent, 1203164666);
+	IMPLEMENT_CLASS(UACFCoreComponent, 3774094485);
 	template<> ADVANCEDCOMBATSYSTEM_API UClass* StaticClass<UACFCoreComponent>()
 	{
 		return UACFCoreComponent::StaticClass();

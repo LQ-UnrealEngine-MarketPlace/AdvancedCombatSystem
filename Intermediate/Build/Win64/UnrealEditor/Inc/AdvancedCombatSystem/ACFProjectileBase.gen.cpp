@@ -96,7 +96,7 @@ void EmptyLinkFunctionForGeneratedCodeACFProjectileBase() {}
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ProjectileMovement_MetaData[] = {
-		{ "Category", "GSC|Projectile" },
+		{ "Category", "ACF | Projectile" },
 		{ "Comment", "/** Projectile movement component */" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Core/Actors/Projectiles/ACFProjectileBase.h" },
@@ -106,7 +106,7 @@ void EmptyLinkFunctionForGeneratedCodeACFProjectileBase() {}
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ProjectileMovement = { "ProjectileMovement", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AACFProjectileBase, ProjectileMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ProjectileMovement_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ProjectileMovement_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_bDebugTrace_MetaData[] = {
-		{ "Category", "GSC|Projectile" },
+		{ "Category", "ACF | Projectile" },
 		{ "Comment", "/** Whether to draw debug traces on explosion sphere */" },
 		{ "ExposeOnSpawn", "TRUE" },
 		{ "ModuleRelativePath", "Public/Core/Actors/Projectiles/ACFProjectileBase.h" },
@@ -120,7 +120,7 @@ void EmptyLinkFunctionForGeneratedCodeACFProjectileBase() {}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_bDebugTrace = { "bDebugTrace", nullptr, (EPropertyFlags)0x0011000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AACFProjectileBase), &Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_bDebugTrace_SetBit, METADATA_PARAMS(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_bDebugTrace_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_bDebugTrace_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_bStaticMeshHiddenInGame_MetaData[] = {
-		{ "Category", "GSC|Projectile" },
+		{ "Category", "ACF | Projectile" },
 		{ "Comment", "/** Whether to display the static mesh in game */" },
 		{ "ExposeOnSpawn", "TRUE" },
 		{ "ModuleRelativePath", "Public/Core/Actors/Projectiles/ACFProjectileBase.h" },
@@ -134,7 +134,7 @@ void EmptyLinkFunctionForGeneratedCodeACFProjectileBase() {}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_bStaticMeshHiddenInGame = { "bStaticMeshHiddenInGame", nullptr, (EPropertyFlags)0x0011000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AACFProjectileBase), &Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_bStaticMeshHiddenInGame_SetBit, METADATA_PARAMS(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_bStaticMeshHiddenInGame_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_bStaticMeshHiddenInGame_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ExplosionTraceRadius_MetaData[] = {
-		{ "Category", "GSC|Projectile" },
+		{ "Category", "ACF | Projectile" },
 		{ "Comment", "/** Radius of the explosion sphere to detect overlapped pawns */" },
 		{ "ExposeOnSpawn", "TRUE" },
 		{ "ModuleRelativePath", "Public/Core/Actors/Projectiles/ACFProjectileBase.h" },
@@ -144,7 +144,7 @@ void EmptyLinkFunctionForGeneratedCodeACFProjectileBase() {}
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ExplosionTraceRadius = { "ExplosionTraceRadius", nullptr, (EPropertyFlags)0x0011000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AACFProjectileBase, ExplosionTraceRadius), METADATA_PARAMS(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ExplosionTraceRadius_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ExplosionTraceRadius_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ProjectileInitialSpeed_MetaData[] = {
-		{ "Category", "GSC|Projectile" },
+		{ "Category", "ACF | Projectile" },
 		{ "Comment", "/** Initial speed of projectile */" },
 		{ "ExposeOnSpawn", "TRUE" },
 		{ "ModuleRelativePath", "Public/Core/Actors/Projectiles/ACFProjectileBase.h" },
@@ -154,7 +154,7 @@ void EmptyLinkFunctionForGeneratedCodeACFProjectileBase() {}
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ProjectileInitialSpeed = { "ProjectileInitialSpeed", nullptr, (EPropertyFlags)0x0011000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AACFProjectileBase, ProjectileInitialSpeed), METADATA_PARAMS(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ProjectileInitialSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ProjectileInitialSpeed_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ProjectileGravityScale_MetaData[] = {
-		{ "Category", "GSC|Projectile" },
+		{ "Category", "ACF | Projectile" },
 		{ "Comment", "/** Gravity Scale for this projectile. Set to 0 to disable gravity */" },
 		{ "ExposeOnSpawn", "TRUE" },
 		{ "ModuleRelativePath", "Public/Core/Actors/Projectiles/ACFProjectileBase.h" },
@@ -164,7 +164,7 @@ void EmptyLinkFunctionForGeneratedCodeACFProjectileBase() {}
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ProjectileGravityScale = { "ProjectileGravityScale", nullptr, (EPropertyFlags)0x0011000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AACFProjectileBase, ProjectileGravityScale), METADATA_PARAMS(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ProjectileGravityScale_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ProjectileGravityScale_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_DestroyDelay_MetaData[] = {
-		{ "Category", "GSC|Projectile" },
+		{ "Category", "ACF | Projectile" },
 		{ "Comment", "/** The amount of time (in seconds) before destroying this projectile on explosion, to let the explosion cue vfx play */" },
 		{ "ExposeOnSpawn", "TRUE" },
 		{ "ModuleRelativePath", "Public/Core/Actors/Projectiles/ACFProjectileBase.h" },
@@ -174,7 +174,7 @@ void EmptyLinkFunctionForGeneratedCodeACFProjectileBase() {}
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_DestroyDelay = { "DestroyDelay", nullptr, (EPropertyFlags)0x0011000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AACFProjectileBase, DestroyDelay), METADATA_PARAMS(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_DestroyDelay_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_DestroyDelay_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ProjectileGameplayCueTag_MetaData[] = {
-		{ "Category", "GSC|Projectile" },
+		{ "Category", "ACF | Projectile" },
 		{ "Comment", "/** The GameplayTag associated with the GameplayCue to add for projectile (attached to root component on begin play) */" },
 		{ "ExposeOnSpawn", "TRUE" },
 		{ "ModuleRelativePath", "Public/Core/Actors/Projectiles/ACFProjectileBase.h" },
@@ -184,7 +184,7 @@ void EmptyLinkFunctionForGeneratedCodeACFProjectileBase() {}
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ProjectileGameplayCueTag = { "ProjectileGameplayCueTag", nullptr, (EPropertyFlags)0x0011000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AACFProjectileBase, ProjectileGameplayCueTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ProjectileGameplayCueTag_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ProjectileGameplayCueTag_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ExplosionGameplayCueTag_MetaData[] = {
-		{ "Category", "GSC|Projectile" },
+		{ "Category", "ACF | Projectile" },
 		{ "Comment", "/** The GameplayTag associated with the GameplayCue to add for explosion (triggered when projectile overlap pawns or hit WorldStatic/Dynamic) */" },
 		{ "ExposeOnSpawn", "TRUE" },
 		{ "ModuleRelativePath", "Public/Core/Actors/Projectiles/ACFProjectileBase.h" },
@@ -194,7 +194,7 @@ void EmptyLinkFunctionForGeneratedCodeACFProjectileBase() {}
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ExplosionGameplayCueTag = { "ExplosionGameplayCueTag", nullptr, (EPropertyFlags)0x0011000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AACFProjectileBase, ExplosionGameplayCueTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ExplosionGameplayCueTag_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_ExplosionGameplayCueTag_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_EndAbilityGameplayEventTag_MetaData[] = {
-		{ "Category", "GSC|Projectile" },
+		{ "Category", "ACF | Projectile" },
 		{ "Comment", "/** The Event GameplayTag to send back to instigator to end the ability when the projectile is destroyed (after DestroyDelay on explosion) */" },
 		{ "ExposeOnSpawn", "TRUE" },
 		{ "ModuleRelativePath", "Public/Core/Actors/Projectiles/ACFProjectileBase.h" },
@@ -204,7 +204,7 @@ void EmptyLinkFunctionForGeneratedCodeACFProjectileBase() {}
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_EndAbilityGameplayEventTag = { "EndAbilityGameplayEventTag", nullptr, (EPropertyFlags)0x0011000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AACFProjectileBase, EndAbilityGameplayEventTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_EndAbilityGameplayEventTag_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_EndAbilityGameplayEventTag_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AACFProjectileBase_Statics::NewProp_DamageEffectSpecHandle_MetaData[] = {
-		{ "Category", "GSC|Projectile" },
+		{ "Category", "ACF | Projectile" },
 		{ "Comment", "/** The GameplayEffect spec handle to apply to overlapped actors */" },
 		{ "ExposeOnSpawn", "TRUE" },
 		{ "ModuleRelativePath", "Public/Core/Actors/Projectiles/ACFProjectileBase.h" },
@@ -252,7 +252,7 @@ void EmptyLinkFunctionForGeneratedCodeACFProjectileBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AACFProjectileBase, 3983440859);
+	IMPLEMENT_CLASS(AACFProjectileBase, 3953521211);
 	template<> ADVANCEDCOMBATSYSTEM_API UClass* StaticClass<AACFProjectileBase>()
 	{
 		return AACFProjectileBase::StaticClass();

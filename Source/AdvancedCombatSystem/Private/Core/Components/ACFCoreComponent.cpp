@@ -629,6 +629,47 @@ void UACFCoreComponent::InitializeAttributes()
 	bStartupAttributesApplied = true;
 }
 
+void UACFCoreComponent::ApplyGameplayEffectSpecToTarget(AActor* AttributesModifierOwner, TSubclassOf<UGameplayEffect> AttributesModifier)
+{
+	if (!AttributesModifierOwner)
+	{
+		ACF_LOG(Error, TEXT("UACFCoreCompoennt::ApplyGameplayEffectSpecToTarget AttributesModifierOwner is invalid"));
+		return;
+	}
+
+	if (!AttributesModifier)
+	{
+		ACF_LOG(Error, TEXT("Missing AttributesModifier for %s. Please fill in the %s's Blueprint."), *AttributesModifier->GetName(), *AttributesModifierOwner->GetName());
+		return;
+	}
+
+	FGameplayEffectContextHandle EffectContext = OwnerAbilitySystemComponent->MakeEffectContext();
+	EffectContext.AddSourceObject(this);
+	
+	const FGameplayEffectSpecHandle NewHandle = OwnerAbilitySystemComponent->MakeOutgoingSpec(AttributesModifier, 1, EffectContext);
+	if (NewHandle.IsValid())
+	{
+		OwnerAbilitySystemComponent->ApplyGameplayEffectSpecToTarget(*NewHandle.Data.Get(), OwnerAbilitySystemComponent);
+	}
+}
+
+void UACFCoreComponent::RemoveActiveGameplayEffectBySourceEffect(AActor* AttributesModifierOwner, TSubclassOf<UGameplayEffect> AttributesModifier)
+{
+	if (!AttributesModifierOwner)
+	{
+		ACF_LOG(Error, TEXT("UACFCoreCompoennt::RemoveActiveGameplayEffectBySourceEffect AttributesModifierOwner is invalid"));
+		return;
+	}
+
+	if (!AttributesModifier)
+	{
+		ACF_LOG(Error, TEXT("Missing AttributesModifier for %s. Please fill in the %s's Blueprint."), *AttributesModifier->GetName(), *AttributesModifierOwner->GetName());
+		return;
+	}
+
+	OwnerAbilitySystemComponent->RemoveActiveGameplayEffectBySourceEffect(AttributesModifier, OwnerAbilitySystemComponent, -1);
+}
+
 void UACFCoreComponent::AddStartupAbilities()
 {
 	if (!OwnerActor)

@@ -17,6 +17,7 @@ struct FGameplayAttribute;
 struct FACFGameplayEffectExecuteData;
 class UACFAttributeSetBase;
 struct FGameplayAbilitySpecHandle;
+class UGameplayEffect;
 class UACFGameplayAbility;
 #ifdef ADVANCEDCOMBATSYSTEM_ACFCoreComponent_generated_h
 #error "ACFCoreComponent.generated.h already included, missing '#pragma once' in ACFCoreComponent.h"
@@ -317,6 +318,8 @@ static inline void FACFOnDeath_DelegateWrapper(const FMulticastScriptDelegate& A
 	DECLARE_FUNCTION(execClient_BroadcastGameplayEffectTimeChangeToHUD); \
 	DECLARE_FUNCTION(execClient_BroadcastGameplayEffectStackChangeToHUD); \
 	DECLARE_FUNCTION(execClient_BroadcastAttributeChangeToHUD); \
+	DECLARE_FUNCTION(execRemoveActiveGameplayEffectBySourceEffect); \
+	DECLARE_FUNCTION(execApplyGameplayEffectSpecToTarget); \
 	DECLARE_FUNCTION(execAdjustAttributeForMaxChange); \
 	DECLARE_FUNCTION(execClampAttributeValue); \
 	DECLARE_FUNCTION(execSetAttributeValue); \
@@ -360,6 +363,8 @@ static inline void FACFOnDeath_DelegateWrapper(const FMulticastScriptDelegate& A
 	DECLARE_FUNCTION(execClient_BroadcastGameplayEffectTimeChangeToHUD); \
 	DECLARE_FUNCTION(execClient_BroadcastGameplayEffectStackChangeToHUD); \
 	DECLARE_FUNCTION(execClient_BroadcastAttributeChangeToHUD); \
+	DECLARE_FUNCTION(execRemoveActiveGameplayEffectBySourceEffect); \
+	DECLARE_FUNCTION(execApplyGameplayEffectSpecToTarget); \
 	DECLARE_FUNCTION(execAdjustAttributeForMaxChange); \
 	DECLARE_FUNCTION(execClampAttributeValue); \
 	DECLARE_FUNCTION(execSetAttributeValue); \

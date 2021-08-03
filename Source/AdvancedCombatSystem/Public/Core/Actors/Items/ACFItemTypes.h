@@ -3,11 +3,15 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include <GameplayTagContainer.h>
 #include "ACFItemTypes.generated.h"
 
 class AACFItem;
 class UTexture2D;
 class UACFGameplayAbility;
+class USoundCue;
+class UParticleSystem;
+class UNiagaraSystem;
 
 UENUM(BlueprintType)
 enum class EItemType : uint8
@@ -183,4 +187,19 @@ struct FItemDetails : public FTableRowBase
 	/** Slot in which this item is equipped */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ACF | Item")
 	FGameplayTag SlotTag;
+};
+
+USTRUCT(BlueprintType)
+struct FWeaponEffects : public FTableRowBase
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "ACF")
+	USoundCue* AttackSound;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "ACF")
+	UParticleSystem* AttackParticle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "ACF")
+	UNiagaraSystem* AttackNiagara;
 };
