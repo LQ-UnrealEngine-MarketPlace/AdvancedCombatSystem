@@ -25,7 +25,10 @@
 			"ACFItem.cpp.obj",
 			"ACFItemTypes.cpp.obj",
 			"ACFMaterial.cpp.obj",
+			"ACFMeleeWeapon.cpp.obj",
 			"ACFProjectile.cpp.obj",
+			"ACFRangedWeapon.cpp.obj",
+			"ACFWeapon.cpp.obj",
 			"ACFPawnBase.cpp.obj",
 			"ACFProjectileBase.cpp.obj",
 			"ACFAnimationData.cpp.obj",
@@ -89,14 +92,16 @@
 			"ACFK2Node_SwitchGameplayAttribute.gen.cpp.obj",
 			"ACFLocomotionComponent.gen.cpp.obj",
 			"ACFMaterial.gen.cpp.obj",
-			"ACFPawnBase.gen.cpp.obj",
-			"ACFPlayerCharacter.gen.cpp.obj",
-			"ACFPlayerController.gen.cpp.obj"
+			"ACFMeleeWeapon.gen.cpp.obj"
 		],
 		"Module.AdvancedCombatSystem.gen.3_of_3.cpp.obj": [
+			"ACFPawnBase.gen.cpp.obj",
+			"ACFPlayerCharacter.gen.cpp.obj",
+			"ACFPlayerController.gen.cpp.obj",
 			"ACFPlayerState.gen.cpp.obj",
 			"ACFProjectile.gen.cpp.obj",
 			"ACFProjectileBase.gen.cpp.obj",
+			"ACFRangedWeapon.gen.cpp.obj",
 			"ACFTargetType.gen.cpp.obj",
 			"ACFTriggerComboNotify.gen.cpp.obj",
 			"ACFUserWidget.gen.cpp.obj",
@@ -105,6 +110,7 @@
 			"ACFUWHUD.gen.cpp.obj",
 			"ACFUWHUDAttributeDebug.gen.cpp.obj",
 			"ACFUWStatusBar.gen.cpp.obj",
+			"ACFWeapon.gen.cpp.obj",
 			"AdvancedCombatSystem.init.gen.cpp.obj"
 		]
 	}

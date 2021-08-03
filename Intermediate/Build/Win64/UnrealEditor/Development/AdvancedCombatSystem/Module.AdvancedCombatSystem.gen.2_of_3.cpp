@@ -11,6 +11,4 @@
 #include "G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFK2Node_SwitchGameplayAttribute.gen.cpp"
 #include "G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFLocomotionComponent.gen.cpp"
 #include "G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFMaterial.gen.cpp"
-#include "G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFPawnBase.gen.cpp"
-#include "G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFPlayerCharacter.gen.cpp"
-#include "G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFPlayerController.gen.cpp"
+#include "G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFMeleeWeapon.gen.cpp"

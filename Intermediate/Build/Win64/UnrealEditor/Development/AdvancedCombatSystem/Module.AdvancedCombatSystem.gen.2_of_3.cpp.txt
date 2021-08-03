@@ -110,24 +110,8 @@ G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFMaterial.gen.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Actors/Items/ACFMaterial.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFMaterial.generated.h
-G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFPawnBase.gen.cpp
-G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Actors/Pawns/ACFPawnBase.h
-G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\AbilitySystemInterface.h
-G:\Program Files\UE_5.0EA\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UnrealEditor\Inc\GameplayAbilities\AbilitySystemInterface.generated.h
-G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Interfaces/ACFActorInterface.h
-G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFActorInterface.generated.h
-G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPawnBase.generated.h
-G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFPlayerCharacter.gen.cpp
-G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Actors/Characters/ACFPlayerCharacter.h
-G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Characters/ACFCharacterBase.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\CharacterMovementReplication.generated.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\RootMotionSource.generated.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\Character.generated.h
-G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFCharacterBase.generated.h
-G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPlayerCharacter.generated.h
-G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFPlayerController.gen.cpp
-G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Game/Player/ACFPlayerController.h
-G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPlayerController.generated.h
+G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Intermediate/Build/Win64/UnrealEditor/Inc/AdvancedCombatSystem/ACFMeleeWeapon.gen.cpp
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem/Public/Core/Actors/Items/ACFMeleeWeapon.h
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Items/ACFWeapon.h
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFWeapon.generated.h
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFMeleeWeapon.generated.h

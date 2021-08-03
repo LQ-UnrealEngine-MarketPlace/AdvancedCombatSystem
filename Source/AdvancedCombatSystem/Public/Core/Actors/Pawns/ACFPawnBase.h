@@ -9,6 +9,7 @@
 #include "ACFPawnBase.generated.h"
 
 class UACFCoreComponent;
+class UACFAbilitySystemComponent;
 class UACFAbilityComboManagerComponent;
 class UACFAbilityQueueComponent;
 class UAttributeSet;

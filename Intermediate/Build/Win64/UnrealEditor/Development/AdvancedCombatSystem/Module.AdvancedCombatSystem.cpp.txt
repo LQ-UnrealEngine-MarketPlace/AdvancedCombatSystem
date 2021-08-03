@@ -307,6 +307,11 @@ G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSys
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Items/ACFMaterial.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Items/ACFMaterial.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFMaterial.generated.h
+G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Items/ACFMeleeWeapon.cpp
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Items/ACFMeleeWeapon.h
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Items/ACFWeapon.h
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFWeapon.generated.h
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFMeleeWeapon.generated.h
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Items/ACFProjectile.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Items/ACFProjectile.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFProjectile.generated.h
@@ -314,6 +319,10 @@ G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/Pro
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\MovementComponent.generated.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\ProjectileMovementComponent.generated.h
+G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Items/ACFRangedWeapon.cpp
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Items/ACFRangedWeapon.h
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFRangedWeapon.generated.h
+G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Items/ACFWeapon.cpp
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Pawns/ACFPawnBase.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Pawns/ACFPawnBase.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPawnBase.generated.h

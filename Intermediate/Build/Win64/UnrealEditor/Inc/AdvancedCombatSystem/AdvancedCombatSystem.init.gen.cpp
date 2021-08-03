@@ -14,6 +14,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvancedCombatSystem_init() {}
 	ADVANCEDCOMBATSYSTEM_API UFunction* Z_Construct_UDelegateFunction_AdvancedCombatSystem_OnAbilityEnded__DelegateSignature();
 	ADVANCEDCOMBATSYSTEM_API UFunction* Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFPlayMontageAndWaitForEventDelegate__DelegateSignature();
 	ADVANCEDCOMBATSYSTEM_API UFunction* Z_Construct_UDelegateFunction_AdvancedCombatSystem_SpawnActorDelegate__DelegateSignature();
+	ADVANCEDCOMBATSYSTEM_API UFunction* Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnWeaponHit__DelegateSignature();
 	ADVANCEDCOMBATSYSTEM_API UFunction* Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnLocomotionStateChanged__DelegateSignature();
 	ADVANCEDCOMBATSYSTEM_API UFunction* Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnDeath__DelegateSignature();
 	ADVANCEDCOMBATSYSTEM_API UFunction* Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnDefaultAttributeChange__DelegateSignature();
@@ -41,6 +42,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvancedCombatSystem_init() {}
 				(UObject* (*)())Z_Construct_UDelegateFunction_AdvancedCombatSystem_OnAbilityEnded__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFPlayMontageAndWaitForEventDelegate__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_AdvancedCombatSystem_SpawnActorDelegate__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnWeaponHit__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnLocomotionStateChanged__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnDeath__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnDefaultAttributeChange__DelegateSignature,
@@ -65,8 +67,8 @@ void EmptyLinkFunctionForGeneratedCodeAdvancedCombatSystem_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xC18E5072,
-				0xB0682721,
+				0xDCE88AD2,
+				0x37FF0B2F,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UECodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
