@@ -77,7 +77,7 @@ void UACFAbilityComboManagerComponent::ActivateComboAbility(TSubclassOf<UACFGame
 	const bool bIsStandalone = UKismetSystemLibrary::IsStandalone(this);
 	if (bIsStandalone)
 	{
-		ActivateComboAbility_Internal(AbilityClass, bAllowRemoteActivation);
+		Internal_ActivateComboAbility(AbilityClass, bAllowRemoteActivation);
 	}
 	else
 	{
@@ -128,11 +128,11 @@ void UACFAbilityComboManagerComponent::NetMulticast_ActivateComboAbility_Impleme
 {
 	if (OwningCharacter && !OwningCharacter->IsLocallyControlled())
 	{
-		ActivateComboAbility_Internal(AbilityClass, bAllowRemoteActivation);
+		Internal_ActivateComboAbility(AbilityClass, bAllowRemoteActivation);
 	}
 }
 
-void UACFAbilityComboManagerComponent::ActivateComboAbility_Internal(TSubclassOf<UACFGameplayAbility> AbilityClass, bool bAllowRemoteActivation /*= true*/)
+void UACFAbilityComboManagerComponent::Internal_ActivateComboAbility(TSubclassOf<UACFGameplayAbility> AbilityClass, bool bAllowRemoteActivation /*= true*/)
 {
 	bShouldTriggerCombo = false;
 

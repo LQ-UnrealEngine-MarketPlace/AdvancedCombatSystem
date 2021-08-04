@@ -14,6 +14,8 @@
 			"ACFAbilityTask_PlayMontageAndWaitForEvent.cpp.obj",
 			"ACFAbilityTask_SpawnProjectile.cpp.obj",
 			"AdvancedCombatSystem.cpp.obj",
+			"ACMData.cpp.obj",
+			"ACMCollisionHandlerComponent.cpp.obj",
 			"ACFActor.cpp.obj",
 			"ACFAICharacter.cpp.obj",
 			"ACFCharacterBase.cpp.obj",
@@ -56,7 +58,7 @@
 			"ACFK2Node_SwitchGameplayAttribute.cpp.obj",
 			"ACFLog.cpp.obj"
 		],
-		"Module.AdvancedCombatSystem.gen.1_of_3.cpp.obj": [
+		"Module.AdvancedCombatSystem.gen.1_of_4.cpp.obj": [
 			"ACFAbilityComboManagerComponent.gen.cpp.obj",
 			"ACFAbilityQueueComponent.gen.cpp.obj",
 			"ACFAbilityQueueNotifyState.gen.cpp.obj",
@@ -79,7 +81,7 @@
 			"ACFConsumable.gen.cpp.obj",
 			"ACFCoreComponent.gen.cpp.obj"
 		],
-		"Module.AdvancedCombatSystem.gen.2_of_3.cpp.obj": [
+		"Module.AdvancedCombatSystem.gen.2_of_4.cpp.obj": [
 			"ACFDeveloperSettings.gen.cpp.obj",
 			"ACFEquippableItem.gen.cpp.obj",
 			"ACFFunctionLibrary.gen.cpp.obj",
@@ -94,7 +96,7 @@
 			"ACFMaterial.gen.cpp.obj",
 			"ACFMeleeWeapon.gen.cpp.obj"
 		],
-		"Module.AdvancedCombatSystem.gen.3_of_3.cpp.obj": [
+		"Module.AdvancedCombatSystem.gen.3_of_4.cpp.obj": [
 			"ACFPawnBase.gen.cpp.obj",
 			"ACFPlayerCharacter.gen.cpp.obj",
 			"ACFPlayerController.gen.cpp.obj",
@@ -111,6 +113,10 @@
 			"ACFUWHUDAttributeDebug.gen.cpp.obj",
 			"ACFUWStatusBar.gen.cpp.obj",
 			"ACFWeapon.gen.cpp.obj",
+			"ACMCollisionHandlerComponent.gen.cpp.obj"
+		],
+		"Module.AdvancedCombatSystem.gen.4_of_4.cpp.obj": [
+			"ACMData.gen.cpp.obj",
 			"AdvancedCombatSystem.init.gen.cpp.obj"
 		]
 	}

@@ -11,6 +11,8 @@
 #include "G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/AbilitySystem/Tasks/ACFAbilityTask_PlayMontageAndWaitForEvent.cpp"
 #include "G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/AbilitySystem/Tasks/ACFAbilityTask_SpawnProjectile.cpp"
 #include "G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/AdvancedCombatSystem.cpp"
+#include "G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/CollisionSystem/ACMData.cpp"
+#include "G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/CollisionSystem/Components/ACMCollisionHandlerComponent.cpp"
 #include "G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/ACFActor.cpp"
 #include "G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Characters/ACFAICharacter.cpp"
 #include "G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Characters/ACFCharacterBase.cpp"

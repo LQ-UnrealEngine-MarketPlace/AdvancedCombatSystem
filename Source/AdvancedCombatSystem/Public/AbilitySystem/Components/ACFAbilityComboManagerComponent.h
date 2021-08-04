@@ -88,7 +88,7 @@ protected:
 	UFUNCTION(NetMulticast, Reliable, Category = "ACF | Combo")
 	void NetMulticast_ActivateComboAbility(TSubclassOf<UACFGameplayAbility> AbilityClass, bool bAllowRemoteActivation = true);
 
-	void ActivateComboAbility_Internal(TSubclassOf<UACFGameplayAbility> AbilityClass, bool bAllowRemoteActivation = true);
+	void Internal_ActivateComboAbility(TSubclassOf<UACFGameplayAbility> AbilityClass, bool bAllowRemoteActivation = true);
 
 	UFUNCTION(Server, Reliable, Category = "ACF | Combo")
 	void Server_SetComboIndex(int32 InComboIndex);

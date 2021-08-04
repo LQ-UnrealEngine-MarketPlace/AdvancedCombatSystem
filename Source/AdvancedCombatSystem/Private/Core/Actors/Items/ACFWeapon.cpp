@@ -11,7 +11,7 @@ AACFWeapon::AACFWeapon()
 	HandlePosition = CreateDefaultSubobject<USceneComponent>(TEXT("Handle Position"));
 	SetRootComponent(HandlePosition);
 
-	SkeletalMeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	//SkeletalMeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision); Causing error
 }
 
 void AACFWeapon::AlignWeapon()

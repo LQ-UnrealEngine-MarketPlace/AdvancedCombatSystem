@@ -3,7 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
+#include "AbilitySystem/ACFAbilityTypes.h"
+#include <Components/ActorComponent.h>
+#include <GameplayTagContainer.h>
+#include <AttributeSet.h>
+#include <GameplayAbilitySpec.h>
 #include "ACFCoreComponent.generated.h"
 
 class UACFGameplayAbility;
