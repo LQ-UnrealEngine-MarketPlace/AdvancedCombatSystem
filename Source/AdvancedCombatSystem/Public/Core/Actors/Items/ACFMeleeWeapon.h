@@ -19,7 +19,8 @@ class ADVANCEDCOMBATSYSTEM_API AACFMeleeWeapon : public AACFWeapon
 	GENERATED_BODY()
 
 protected:
-	 UACMCollisionHandlerComponent* CollisionHandlerComponent;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "ACF")
+	UACMCollisionHandlerComponent* CollisionHandlerComponent;
 
 public:
 	AACFMeleeWeapon();

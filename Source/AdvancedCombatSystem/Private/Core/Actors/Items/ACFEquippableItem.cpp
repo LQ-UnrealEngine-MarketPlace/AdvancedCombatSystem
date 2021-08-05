@@ -11,7 +11,9 @@
 
 AACFEquippableItem::AACFEquippableItem()
 {
-
+	SetReplicates(true);
+	SkeletalMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Item Skeletal Mesh"));
+	SkeletalMeshComponent->SetRelativeLocation(FVector::ZeroVector);
 }
 
 void AACFEquippableItem::Internal_OnEquipped(AACFCharacterBase* InOwner)
