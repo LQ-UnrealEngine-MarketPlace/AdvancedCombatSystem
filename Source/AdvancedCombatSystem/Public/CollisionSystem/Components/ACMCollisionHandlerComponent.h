@@ -8,6 +8,7 @@
 #include "ACMCollisionHandlerComponent.generated.h"
 
 class AActor;
+class UParticleSystemComponent;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FACMOnActorDamaged, AActor*, damageReceiver);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FACMOnCollisionDetected, FName, TraceName, const FHitResult&, HitResult);
@@ -21,10 +22,13 @@ class ADVANCEDCOMBATSYSTEM_API UACMCollisionHandlerComponent : public UActorComp
 	AActor* OwnerActor;
 
 	UPROPERTY()
-	UMeshComponent* DmaageMesh;
+	UMeshComponent* DamageMesh;
 
 	UPROPERTY()
 	TMap<FName, FTraceInfo> ActivatedTraces;
+
+	UPROPERTY()
+	TArray<FName> PendingDelete;
 
 	UPROPERTY()
 	TMap<FName, FHitActors> AlreadyHitActors;
@@ -33,7 +37,7 @@ class ADVANCEDCOMBATSYSTEM_API UACMCollisionHandlerComponent : public UActorComp
 	bool bIsStarted = false;
 
 	UPROPERTY()
-	TMap<FName, FTrailEffect> EffectComponents;
+	TMap<FName, UParticleSystemComponent*> ParticleSystemComponents;
 
 	UPROPERTY()
 	FTimerHandle AllTraceTimer;
@@ -59,6 +63,15 @@ private:
 	void ApplyPointDamage(const FHitResult& HitResult, const FTraceInfo& CurrentTrace);
 
 	void ApplyAreaDamage(const FHitResult& HitResult, const FTraceInfo& CurrentTrace);
+
+	UFUNCTION()
+	void DisplayDebugTraces();
+
+	UFUNCTION()
+	void HandleTimedSingleTraceFinished(const FName& TraceEnded);
+
+	UFUNCTION()
+	void HandleAllTimedTraceFinished();
 
 	void SetStarted(bool InStarted);
 
@@ -91,7 +104,7 @@ protected:
 
 	/** If hit, this will apply GameplayEffectToTarget */
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "ACM")
-	bool bAutoApplyGameplayEffect = true;
+	bool bAutoApplyDamage = true;
 
 protected:
 	virtual void BeginPlay() override;
@@ -128,7 +141,7 @@ public:
 	void Server_StopSingleTrace(const FName& Name);
 
 	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACM")
-	void Server_TimedSingleTrace(const FName& TraceName, float Duration);
+	void Server_StartTimedSingleTrace(const FName& TraceName, float Duration);
 
 	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACM")
 	void Server_StartAllTimedTraces(float Duration);

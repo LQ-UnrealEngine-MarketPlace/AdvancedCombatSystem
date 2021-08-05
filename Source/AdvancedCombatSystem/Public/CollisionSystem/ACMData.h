@@ -40,8 +40,16 @@ struct FTrailEffect
 {
 	GENERATED_BODY()
 
+	FTrailEffect() {}
+
+	FTrailEffect(UParticleSystemComponent* InParticleSystemComponent, UNiagaraComponent* InNiagaraComponent)
+	{
+		ParticleSystemComponent = InParticleSystemComponent;
+		NiagaraComponent = InNiagaraComponent;
+	}
+
 	UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Category = "ACM")
-	UParticleSystemComponent* ParticleSystemComponents;
+	UParticleSystemComponent* ParticleSystemComponent;
 
 	UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Category = "ACM")
 	UNiagaraComponent* NiagaraComponent;

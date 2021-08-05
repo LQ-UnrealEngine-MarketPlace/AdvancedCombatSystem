@@ -254,6 +254,41 @@ G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/CollisionSystem/Components/ACMCollisionHandlerComponent.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\CollisionSystem/Components/ACMCollisionHandlerComponent.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACMCollisionHandlerComponent.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Particles/ParticleSystemComponent.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Particles/ParticleSystem.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Particles/ParticlePerfStats.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\ParticleSystem.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Particles/Emitter.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\Emitter.generated.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\ParticleSystemComponent.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\DialogueTypes.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\GameplayStaticsTypes.generated.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\GameplayStatics.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound/SoundBase.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound\SoundConcurrency.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\SoundConcurrency.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound\SoundModulationDestination.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\SoundModulationDestination.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound\SoundGenerator.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\SoundBase.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound/SoundCue.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound/SoundNode.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound/SoundWave.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound/SoundGroups.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\SoundGroups.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound/SoundWaveLoadingBehavior.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\AudioPlatformConfiguration\Public\AudioCompressionSettings.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\AudioPlatformConfiguration\AudioCompressionSettings.generated.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\SoundWave.generated.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\SoundNode.generated.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\SoundCue.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\ServerStatReplicator.generated.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\GameModeBase.generated.h
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/ACFActor.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/ACFActor.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFActor.generated.h
@@ -284,30 +319,6 @@ G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSys
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Items/ACFConsumable.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFConsumable.generated.h
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Items/ACFEquippableItem.cpp
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\DialogueTypes.generated.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\GameplayStaticsTypes.generated.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\GameplayStatics.generated.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound/SoundCue.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound/SoundBase.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound\SoundConcurrency.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\SoundConcurrency.generated.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound\SoundModulationDestination.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\SoundModulationDestination.generated.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound\SoundGenerator.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\SoundBase.generated.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound/SoundNode.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound/SoundWave.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound/SoundGroups.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\SoundGroups.generated.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Sound/SoundWaveLoadingBehavior.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\AudioPlatformConfiguration\Public\AudioCompressionSettings.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\AudioPlatformConfiguration\AudioCompressionSettings.generated.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\SoundWave.generated.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\SoundNode.generated.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\SoundCue.generated.h
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Items/ACFItem.cpp
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Items/ACFItemTypes.cpp
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Items/ACFMaterial.cpp
@@ -367,10 +378,6 @@ G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSys
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Game/ACFData.h
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Game/ACFGameModeBase.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Game/ACFGameModeBase.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\ServerStatReplicator.generated.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\GameModeBase.generated.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFGameModeBase.generated.h
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Game/Player/ACFHUD.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Widgets/Debugs/ACFUWDebugAbilityCombo.h
