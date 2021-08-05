@@ -11,6 +11,7 @@
 #include <Sound/SoundBase.h>
 #include <Sound/SoundCue.h>
 #include <GameFramework/GameModeBase.h>
+#include <CollisionSystem/Components/ACMCollisionManagerComponent.h>
 
 // Sets default values for this component's properties
 UACMCollisionHandlerComponent::UACMCollisionHandlerComponent()
@@ -259,7 +260,7 @@ void UACMCollisionHandlerComponent::UpdateCollisions()
 
 					if (!ObjectParams.IsValid())
 					{
-						ACF_LOG(Warning, TEXT("ACMCollisionHandlerComponent::UpdateCollisions: Invalid Collsiion Channel"))
+						ACF_LOG(Warning, TEXT("UACMCollisionHandlerComponent::UpdateCollisions: Invalid Collsiion Channel"))
 						return;
 					}
 
@@ -366,7 +367,10 @@ void UACMCollisionHandlerComponent::ApplyDamage(const FHitResult& HitResult, con
 
 void UACMCollisionHandlerComponent::ApplyPointDamage(const FHitResult& HitResult, const FTraceInfo& CurrentTrace)
 {
-	// TODO: Find a way to integrate this with AbilitySystem
+	if (HitResult.GetActor()->IsValidLowLevel())
+	{
+		FVector DamageRelativePos = GetOwner()->GetActorLocation() - HitResult.GetActor()->GetActorLocation();
+	}
 }
 
 void UACMCollisionHandlerComponent::ApplyAreaDamage(const FHitResult& HitResult, const FTraceInfo& CurrentTrace)
@@ -466,6 +470,14 @@ void UACMCollisionHandlerComponent::SetStarted(bool InStarted)
 	AGameModeBase* GameMode = UGameplayStatics::GetGameMode(this);
 	if (GameMode)
 	{
-		//UACMCollisionHandlerComponent* Collisio
+		UACMCollisionManagerComponent* CollisionManagerComponent = GameMode->FindComponentByClass<UACMCollisionManagerComponent>();
+		if (CollisionManagerComponent)
+		{
+			(ShowDebugInfo == EDebugType::AlwaysShowDebug || bIsStarted) ? CollisionManagerComponent->AddComponent(this) : CollisionManagerComponent->RemoveComponent(this);
+		}
+		else
+		{
+			ACF_LOG(Error, TEXT("UACMCollisionHandlerComponent::SetStarted: Adding %s to GameMode"), *GetName())
+		}
 	}
 }

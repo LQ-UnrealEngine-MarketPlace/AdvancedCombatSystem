@@ -16,6 +16,7 @@
 			"AdvancedCombatSystem.cpp.obj",
 			"ACMData.cpp.obj",
 			"ACMCollisionHandlerComponent.cpp.obj",
+			"ACMCollisionManagerComponent.cpp.obj",
 			"ACFActor.cpp.obj",
 			"ACFAICharacter.cpp.obj",
 			"ACFCharacterBase.cpp.obj",
@@ -38,6 +39,7 @@
 			"ACFTriggerComboNotify.cpp.obj",
 			"ACFAbilityQueueNotifyState.cpp.obj",
 			"ACFComboWindowNotifyState.cpp.obj",
+			"ACMActivateCollisionNotifyState.cpp.obj",
 			"ACFLocomotionComponent.cpp.obj",
 			"ACFCoreComponent.cpp.obj",
 			"ACFCheatManager.cpp.obj",
@@ -113,9 +115,11 @@
 			"ACFUWHUDAttributeDebug.gen.cpp.obj",
 			"ACFUWStatusBar.gen.cpp.obj",
 			"ACFWeapon.gen.cpp.obj",
+			"ACMActivateCollisionNotifyState.gen.cpp.obj",
 			"ACMCollisionHandlerComponent.gen.cpp.obj"
 		],
 		"Module.AdvancedCombatSystem.gen.4_of_4.cpp.obj": [
+			"ACMCollisionManagerComponent.gen.cpp.obj",
 			"ACMData.gen.cpp.obj",
 			"AdvancedCombatSystem.init.gen.cpp.obj"
 		]

@@ -289,6 +289,9 @@ G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/Gam
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\ServerStatReplicator.generated.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\GameModeBase.generated.h
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\CollisionSystem/Components/ACMCollisionManagerComponent.h
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACMCollisionManagerComponent.generated.h
+G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/CollisionSystem/Components/ACMCollisionManagerComponent.cpp
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/ACFActor.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/ACFActor.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFActor.generated.h
@@ -361,6 +364,9 @@ G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Animations/AnimNotifyStates/ACFComboWindowNotifyState.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Animations/AnimNotifyStates/ACFComboWindowNotifyState.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFComboWindowNotifyState.generated.h
+G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Animations/AnimNotifyStates/ACMActivateCollisionNotifyState.cpp
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Animations/AnimNotifyStates/ACMActivateCollisionNotifyState.h
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACMActivateCollisionNotifyState.generated.h
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Animations/Components/ACFLocomotionComponent.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Animations/Components/ACFLocomotionComponent.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFLocomotionComponent.generated.h
