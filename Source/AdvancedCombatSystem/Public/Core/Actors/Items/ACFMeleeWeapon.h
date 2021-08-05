@@ -6,6 +6,8 @@
 #include "Core/Actors/Items/ACFWeapon.h"
 #include "ACFMeleeWeapon.generated.h"
 
+class UACMCollisionHandlerComponent;
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FACFOnWeaponHit, FHitResult, HitResult);
 
 /**
@@ -16,8 +18,8 @@ class ADVANCEDCOMBATSYSTEM_API AACFMeleeWeapon : public AACFWeapon
 {
 	GENERATED_BODY()
 
-//protected:
-	// TODO UACFCollisionManagerComponent
+protected:
+	 UACMCollisionHandlerComponent* CollisionHandlerComponent;
 
 public:
 	AACFMeleeWeapon();

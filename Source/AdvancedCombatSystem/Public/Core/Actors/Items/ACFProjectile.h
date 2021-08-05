@@ -9,6 +9,7 @@
 #include <Components/StaticMeshComponent.h>
 #include "ACFProjectile.generated.h"
 
+class UACMCollisionHandlerComponent;
 class UProjectileMovementComponent;
 class AACFCharacterBase;
 class UStaticMesh;
@@ -27,9 +28,13 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "ACF | Projectile")
 	UStaticMeshComponent* StaticMeshComponent;
 
-	/** Projectile movement component */
+	/** Projectile Movement component */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "ACF | Projectile")
 	UProjectileMovementComponent* ProjectileMovementComponent;
+
+	/** Collision Handler Component */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "ACF | Projectile")
+	UACMCollisionHandlerComponent* CollisionHandlerComponent;
 
 	/** Whether to draw debug traces on explosion sphere */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ExposeOnSpawn = true), Category = "ACF | Projectile")

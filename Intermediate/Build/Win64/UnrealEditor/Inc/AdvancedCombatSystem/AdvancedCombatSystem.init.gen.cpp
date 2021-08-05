@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvancedCombatSystem_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x0174F326,
+				0xFD527187,
 				0xB81C2F2B,
 				METADATA_PARAMS(nullptr, 0)
 			};

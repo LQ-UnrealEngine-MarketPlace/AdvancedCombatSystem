@@ -14,4 +14,6 @@ class ADVANCEDCOMBATSYSTEM_API AACFRangedWeapon : public AACFWeapon
 {
 	GENERATED_BODY()
 	
+//protected:
+
 };
