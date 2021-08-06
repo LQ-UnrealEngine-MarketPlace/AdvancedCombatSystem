@@ -60,7 +60,7 @@
 			"ACFK2Node_SwitchGameplayAttribute.cpp.obj",
 			"ACFLog.cpp.obj"
 		],
-		"Module.AdvancedCombatSystem.gen.1_of_4.cpp.obj": [
+		"Module.AdvancedCombatSystem.gen.1_of_5.cpp.obj": [
 			"ACFAbilityComboManagerComponent.gen.cpp.obj",
 			"ACFAbilityQueueComponent.gen.cpp.obj",
 			"ACFAbilityQueueNotifyState.gen.cpp.obj",
@@ -78,15 +78,17 @@
 			"ACFAttributeSet.gen.cpp.obj",
 			"ACFAttributeSetBase.gen.cpp.obj",
 			"ACFCharacterBase.gen.cpp.obj",
-			"ACFCheatManager.gen.cpp.obj",
+			"ACFCheatManager.gen.cpp.obj"
+		],
+		"Module.AdvancedCombatSystem.gen.2_of_5.cpp.obj": [
 			"ACFComboWindowNotifyState.gen.cpp.obj",
 			"ACFConsumable.gen.cpp.obj",
-			"ACFCoreComponent.gen.cpp.obj"
-		],
-		"Module.AdvancedCombatSystem.gen.2_of_4.cpp.obj": [
+			"ACFCoreComponent.gen.cpp.obj",
 			"ACFDeveloperSettings.gen.cpp.obj",
 			"ACFEquippableItem.gen.cpp.obj",
-			"ACFFunctionLibrary.gen.cpp.obj",
+			"ACFFunctionLibrary.gen.cpp.obj"
+		],
+		"Module.AdvancedCombatSystem.gen.3_of_5.cpp.obj": [
 			"ACFGameModeBase.gen.cpp.obj",
 			"ACFGameplayAbility.gen.cpp.obj",
 			"ACFGameplayAbility_MeleeBase.gen.cpp.obj",
@@ -96,14 +98,14 @@
 			"ACFK2Node_SwitchGameplayAttribute.gen.cpp.obj",
 			"ACFLocomotionComponent.gen.cpp.obj",
 			"ACFMaterial.gen.cpp.obj",
-			"ACFMeleeWeapon.gen.cpp.obj"
-		],
-		"Module.AdvancedCombatSystem.gen.3_of_4.cpp.obj": [
+			"ACFMeleeWeapon.gen.cpp.obj",
 			"ACFPawnBase.gen.cpp.obj",
 			"ACFPlayerCharacter.gen.cpp.obj",
 			"ACFPlayerController.gen.cpp.obj",
 			"ACFPlayerState.gen.cpp.obj",
-			"ACFProjectile.gen.cpp.obj",
+			"ACFProjectile.gen.cpp.obj"
+		],
+		"Module.AdvancedCombatSystem.gen.4_of_5.cpp.obj": [
 			"ACFProjectileBase.gen.cpp.obj",
 			"ACFRangedWeapon.gen.cpp.obj",
 			"ACFTargetType.gen.cpp.obj",
@@ -116,11 +118,11 @@
 			"ACFUWStatusBar.gen.cpp.obj",
 			"ACFWeapon.gen.cpp.obj",
 			"ACMActivateCollisionNotifyState.gen.cpp.obj",
-			"ACMCollisionHandlerComponent.gen.cpp.obj"
-		],
-		"Module.AdvancedCombatSystem.gen.4_of_4.cpp.obj": [
+			"ACMCollisionHandlerComponent.gen.cpp.obj",
 			"ACMCollisionManagerComponent.gen.cpp.obj",
-			"ACMData.gen.cpp.obj",
+			"ACMData.gen.cpp.obj"
+		],
+		"Module.AdvancedCombatSystem.gen.5_of_5.cpp.obj": [
 			"AdvancedCombatSystem.init.gen.cpp.obj"
 		]
 	}

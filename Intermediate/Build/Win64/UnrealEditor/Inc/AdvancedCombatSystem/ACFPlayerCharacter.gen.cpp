@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeACFPlayerCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AACFPlayerCharacter, 2465307405);
+	IMPLEMENT_CLASS(AACFPlayerCharacter, 2015387269);
 	template<> ADVANCEDCOMBATSYSTEM_API UClass* StaticClass<AACFPlayerCharacter>()
 	{
 		return AACFPlayerCharacter::StaticClass();

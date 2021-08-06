@@ -22,7 +22,7 @@ UACFAbilityComboManagerComponent* UACFFunctionLibrary::GetComboManagerComponentF
 		return ActorInterface->GetAbilityComboManagerComponent();
 	}
 
-	ACF_LOG(Warning, TEXT("UACFFunctionLibrary::GetComboManagerComponentFromActor() FindComponentByClass() on %s"), *Actor->GetName());
+	ACF_LOG(Warning, TEXT("UACFFunctionLibrary::GetComboManagerComponentFromActor: FindComponentByClass() on %s"), *Actor->GetName())
 	return Cast<UACFAbilityComboManagerComponent>(Actor->FindComponentByClass(UACFAbilityComboManagerComponent::StaticClass()));
 }
 
@@ -39,26 +39,9 @@ UACFCoreComponent* UACFFunctionLibrary::GetCoreComponentFromActor(const AActor* 
 		return ActorInterface->GetCoreComponent();
 	}
 
-	ACF_LOG(Warning, TEXT("UACFFunctionLibrary::GetCoreComponentFromActor() FindComponentByClass() on %s"), *Actor->GetName());
+	ACF_LOG(Warning, TEXT("UACFFunctionLibrary::GetCoreComponentFromActor: FindComponentByClass() on %s"), *Actor->GetName())
 	return Cast<UACFCoreComponent>(Actor->FindComponentByClass(UACFCoreComponent::StaticClass()));
 }
-
-//UACFStatisticsComponent* UACFFunctionLibrary::GetStatisticsComponentFromActor(const AActor* Actor)
-//{
-//	if (!Actor)
-//	{
-//		return nullptr;
-//	}
-//
-//	const IACFActorInterface* ActorInterface = Cast<IACFActorInterface>(Actor);
-//	if (ActorInterface)
-//	{
-//		return ActorInterface->GetStatisticsComponent();
-//	}
-//
-//	ACF_LOG(Warning, TEXT("UACFFunctionLibrary::GetStatisticsComponent() FindComponentByClass() on %s"), *Actor->GetName());
-//	return Cast<UACFStatisticsComponent>(Actor->FindComponentByClass(UACFStatisticsComponent::StaticClass()));
-//}
 
 UACFAbilityQueueComponent* UACFFunctionLibrary::GetAbilityQueueComponentFromActor(const AActor* Actor)
 {
@@ -73,8 +56,25 @@ UACFAbilityQueueComponent* UACFFunctionLibrary::GetAbilityQueueComponentFromActo
 		return ActorInterface->GetAbilityQueueComponent();
 	}
 
-	ACF_LOG(Warning, TEXT("UACFFunctionLibrary::GetAbilityQueueComponentFromActor() FindComponentByClass() on %s"), *Actor->GetName());
+	ACF_LOG(Warning, TEXT("UACFFunctionLibrary::GetAbilityQueueComponentFromActor: FindComponentByClass() on %s"), *Actor->GetName())
 	return Cast<UACFAbilityQueueComponent>(Actor->FindComponentByClass(UACFAbilityQueueComponent::StaticClass()));
+}
+
+UACFLocomotionComponent* UACFFunctionLibrary::GetLocomotionComponentFromActor(const AActor* Actor)
+{
+	if (!Actor)
+	{
+		return nullptr;
+	}
+
+	const IACFActorInterface* ActorInterface = Cast<IACFActorInterface>(Actor);
+	if (ActorInterface)
+	{
+		return ActorInterface->GetLocomotionComponent();
+	}
+
+	ACF_LOG(Warning, TEXT("UACFFunctionLibrary::GetLocomotionComponent: FindComponentByClass: on %s"), *Actor->GetName())
+	return Cast<UACFLocomotionComponent>(Actor->FindComponentByClass(UACFLocomotionComponent::StaticClass()));
 }
 
 bool UACFFunctionLibrary::AddLooseGameplayTagsToActor(AActor* Actor, const FGameplayTagContainer GameplayTags)

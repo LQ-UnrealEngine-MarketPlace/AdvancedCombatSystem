@@ -12,6 +12,7 @@ class UAbilitySystemComponent;
 class UACFAbilityQueueComponent;
 class UACFAbilityComboManagerComponent;
 class UACFAbilitySystemComponent;
+class UACFLocomotionComponent;
 
 UCLASS()
 class ADVANCEDCOMBATSYSTEM_API AACFCharacterBase : public ACharacter, public IAbilitySystemInterface, public IACFActorInterface
@@ -27,6 +28,9 @@ protected:
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "ACF | Components", meta = (AllowPrivateAccess = "true"))
 	UACFAbilityQueueComponent* AbilityQueueComponent = nullptr;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "ACF | Components", meta = (AllowPrivateAccess = "true"))
+	UACFLocomotionComponent* LocomotionComponent = nullptr;
 
 	UPROPERTY()
 	TMap<FString, const UAttributeSet*> AttributeSets;
@@ -44,6 +48,7 @@ public:
 	UACFCoreComponent* GetCoreComponent() const override;
 	UACFAbilityComboManagerComponent* GetAbilityComboManagerComponent() const override;
 	UACFAbilityQueueComponent* GetAbilityQueueComponent() const override;
+	UACFLocomotionComponent* GetLocomotionComponent() const override;
 	TMap<FString, const UAttributeSet*> GetAttributeSets() const override;
 	// ~IACFActorInterface
 

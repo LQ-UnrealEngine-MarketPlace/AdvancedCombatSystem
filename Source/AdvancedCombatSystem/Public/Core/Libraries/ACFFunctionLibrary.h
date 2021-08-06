@@ -7,6 +7,8 @@
 #include <GameplayEffectTypes.h>
 #include "ACFFunctionLibrary.generated.h"
 
+class UACFLocomotionComponent;
+
 /**
  * 
  */
@@ -31,16 +33,22 @@ public:
 	static UACFAbilityComboManagerComponent* GetComboManagerComponentFromActor(const AActor* Actor);
 
 	/**
-	* Tries to find a companion core component on the actor
+	* Tries to find a core component on the actor
 	*/
 	UFUNCTION(BlueprintPure, Category = "ACF | Components")
 	static UACFCoreComponent* GetCoreComponentFromActor(const AActor* Actor);
 
 	/**
-	* Tries to find an ability queue core component on the actor
+	* Tries to find an ability queue component on the actor
 	*/
 	UFUNCTION(BlueprintPure, Category = "ACF | Components")
 	static UACFAbilityQueueComponent* GetAbilityQueueComponentFromActor(const AActor* Actor);
+
+	/**
+	* Tries to find a locomotion component on the actor
+	*/
+	UFUNCTION(BlueprintPure, Category = "ACF | Components")
+	static UACFLocomotionComponent* GetLocomotionComponentFromActor(const AActor* Actor);
 
 	/** Gameplay Tags */
 

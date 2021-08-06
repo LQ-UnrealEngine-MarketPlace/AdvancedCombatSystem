@@ -9,6 +9,7 @@
 class UACFCoreComponent;
 class UACFAbilityComboManagerComponent;
 class UACFAbilityQueueComponent;
+class UACFLocomotionComponent;
 class UAttributeSet;
 
 // This class does not need to be modified.
@@ -35,6 +36,9 @@ public:
 
 	/** Returns the ability queue component to use for this actor. */
 	virtual UACFAbilityQueueComponent* GetAbilityQueueComponent() const = 0;
+
+	/** Returns the locomotion component to use for this actor. */
+	virtual UACFLocomotionComponent* GetLocomotionComponent() const = 0;
 
 	/** Returns the AttributeSets array initialized in constructor from config */
 	virtual TMap<FString, const UAttributeSet*> GetAttributeSets() const = 0;

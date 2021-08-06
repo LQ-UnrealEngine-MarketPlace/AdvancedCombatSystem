@@ -21,6 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeACFCharacterBase() {}
 	ADVANCEDCOMBATSYSTEM_API UClass* Z_Construct_UClass_UACFCoreComponent_NoRegister();
 	ADVANCEDCOMBATSYSTEM_API UClass* Z_Construct_UClass_UACFAbilityComboManagerComponent_NoRegister();
 	ADVANCEDCOMBATSYSTEM_API UClass* Z_Construct_UClass_UACFAbilityQueueComponent_NoRegister();
+	ADVANCEDCOMBATSYSTEM_API UClass* Z_Construct_UClass_UACFLocomotionComponent_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAttributeSet_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemInterface_NoRegister();
 	ADVANCEDCOMBATSYSTEM_API UClass* Z_Construct_UClass_UACFActorInterface_NoRegister();
@@ -136,6 +137,10 @@ void EmptyLinkFunctionForGeneratedCodeACFCharacterBase() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_AbilityQueueComponent_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_AbilityQueueComponent;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_LocomotionComponent_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_LocomotionComponent;
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_AttributeSets_ValueProp;
 		static const UECodeGen_Private::FStrPropertyParams NewProp_AttributeSets_Key_KeyProp;
 #if WITH_METADATA
@@ -189,6 +194,15 @@ void EmptyLinkFunctionForGeneratedCodeACFCharacterBase() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AACFCharacterBase_Statics::NewProp_AbilityQueueComponent = { "AbilityQueueComponent", nullptr, (EPropertyFlags)0x00200800000b001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AACFCharacterBase, AbilityQueueComponent), Z_Construct_UClass_UACFAbilityQueueComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AACFCharacterBase_Statics::NewProp_AbilityQueueComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AACFCharacterBase_Statics::NewProp_AbilityQueueComponent_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AACFCharacterBase_Statics::NewProp_LocomotionComponent_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "ACF | Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Core/Actors/Characters/ACFCharacterBase.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AACFCharacterBase_Statics::NewProp_LocomotionComponent = { "LocomotionComponent", nullptr, (EPropertyFlags)0x00200800000b001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AACFCharacterBase, LocomotionComponent), Z_Construct_UClass_UACFLocomotionComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AACFCharacterBase_Statics::NewProp_LocomotionComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AACFCharacterBase_Statics::NewProp_LocomotionComponent_MetaData)) };
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AACFCharacterBase_Statics::NewProp_AttributeSets_ValueProp = { "AttributeSets", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 1, Z_Construct_UClass_UAttributeSet_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_AACFCharacterBase_Statics::NewProp_AttributeSets_Key_KeyProp = { "AttributeSets_Key", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
@@ -202,6 +216,7 @@ void EmptyLinkFunctionForGeneratedCodeACFCharacterBase() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AACFCharacterBase_Statics::NewProp_CoreComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AACFCharacterBase_Statics::NewProp_AbilityComboManagerComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AACFCharacterBase_Statics::NewProp_AbilityQueueComponent,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AACFCharacterBase_Statics::NewProp_LocomotionComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AACFCharacterBase_Statics::NewProp_AttributeSets_ValueProp,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AACFCharacterBase_Statics::NewProp_AttributeSets_Key_KeyProp,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AACFCharacterBase_Statics::NewProp_AttributeSets,
@@ -237,7 +252,7 @@ void EmptyLinkFunctionForGeneratedCodeACFCharacterBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AACFCharacterBase, 2466830152);
+	IMPLEMENT_CLASS(AACFCharacterBase, 1645833346);
 	template<> ADVANCEDCOMBATSYSTEM_API UClass* StaticClass<AACFCharacterBase>()
 	{
 		return AACFCharacterBase::StaticClass();

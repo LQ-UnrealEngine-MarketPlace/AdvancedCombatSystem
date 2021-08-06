@@ -101,6 +101,11 @@ UACFAbilityQueueComponent* AACFActor::GetAbilityQueueComponent() const
 	return nullptr;
 }
 
+UACFLocomotionComponent* AACFActor::GetLocomotionComponent() const
+{
+	return nullptr;
+}
+
 TMap<FString, const UAttributeSet*> AACFActor::GetAttributeSets() const
 {
 	return AttributeSets;

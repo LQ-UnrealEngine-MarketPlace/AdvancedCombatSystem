@@ -12,6 +12,7 @@ class UACFCoreComponent;
 class UACFAbilitySystemComponent;
 class UACFAbilityComboManagerComponent;
 class UACFAbilityQueueComponent;
+class UACFLocomotionComponent;
 class UAttributeSet;
 
 UCLASS()
@@ -42,6 +43,7 @@ public:
 	UACFCoreComponent* GetCoreComponent() const override;
 	UACFAbilityComboManagerComponent* GetAbilityComboManagerComponent() const override;
 	UACFAbilityQueueComponent* GetAbilityQueueComponent() const override;
+	UACFLocomotionComponent* GetLocomotionComponent() const override;
 	TMap<FString, const UAttributeSet*> GetAttributeSets() const override;
 	// ~ IACFActorInterface
 

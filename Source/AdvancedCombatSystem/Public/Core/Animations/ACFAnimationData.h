@@ -15,6 +15,55 @@ enum class ELocomotionState : uint8
 	Wilderness = 4
 };
 
+UENUM(BlueprintType)
+enum class EAimOffsetClamp : uint8
+{
+	Nearest = 0 UMETA(DisplayName = "Nearest"),
+	Left = 1    UMETA(DisplayName = "Left"),
+	Right = 2   UMETA(DisplayName = "Right"),
+};
+
+UENUM(BlueprintType)
+enum class EAimOffsets :uint8
+{
+	None = 0	UMETA(DisplayName = "NONE"),
+	Aim = 1		UMETA(DisplayName = "Aim"),
+	Look = 2	UMETA(DisplayName = "Look")
+};
+
+UENUM(BlueprintType)
+enum class ERotationMethod : uint8
+{
+	None = 0			    UMETA(DisplayName = "NONE"),
+	RotateToVelocity = 1	UMETA(DisplayName = "Rotate To Velocity"),
+	AbsoluteRotation = 2	UMETA(DisplayName = "Absolute Rotation"),
+	DesiredRotation	= 3 	UMETA(DisplayName = "Desired Rotation"),
+	DesiredAtAngle	= 4 	UMETA(DisplayName = "Desired At Angle")
+};
+
+USTRUCT(BlueprintType)
+struct FDebugLineParams
+{
+	GENERATED_BODY()
+
+	/** LookAtLineColor Debug */
+	UPROPERTY(EditDefaultsOnly, Category = "ACF | Debug")
+	FLinearColor LookAtLineColor;
+
+	/** AimLineColor Debug */
+	UPROPERTY(EditDefaultsOnly, Category = "ACF | Debug")
+	FLinearColor AimLineColor;
+
+	UPROPERTY(EditDefaultsOnly, Category = "ACF | Debug")
+	bool bLinePersists = false;
+
+	UPROPERTY(EditDefaultsOnly, Category = "ACF | Debug")
+	float LineThickness = 0.f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "ACF | Debug")
+	float LineLifeTime = 0.f;
+};
+
 USTRUCT(BlueprintType)
 struct FAimOffset
 {

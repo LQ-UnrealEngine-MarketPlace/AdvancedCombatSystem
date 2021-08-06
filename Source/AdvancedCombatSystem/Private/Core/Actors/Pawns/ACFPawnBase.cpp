@@ -3,6 +3,7 @@
 
 #include "Core/Actors/Pawns/ACFPawnBase.h"
 #include "Core/Components/ACFCoreComponent.h"
+#include "Core/Animations/Components/ACFLocomotionComponent.h"
 #include "AbilitySystem/Components/ACFAbilitySystemComponent.h"
 #include "AbilitySystem/Attributes/ACFAttributeSetBase.h"
 #include "Utils/ACFLog.h"
@@ -43,6 +44,11 @@ UACFAbilityComboManagerComponent* AACFPawnBase::GetAbilityComboManagerComponent(
 }
 
 UACFAbilityQueueComponent* AACFPawnBase::GetAbilityQueueComponent() const
+{
+	return nullptr;
+}
+
+UACFLocomotionComponent* AACFPawnBase::GetLocomotionComponent() const
 {
 	return nullptr;
 }

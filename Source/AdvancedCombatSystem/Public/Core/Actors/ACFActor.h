@@ -10,8 +10,9 @@
 
 class UACFCoreComponent;
 class UACFAbilitySystemComponent;
-class UAttributeSet;
 class UAbilitySystemComponent;
+class UACFLocomotionComponent;
+class UAttributeSet;
 
 UCLASS()
 class ADVANCEDCOMBATSYSTEM_API AACFActor : public AActor, public IAbilitySystemInterface, public IACFActorInterface
@@ -41,6 +42,7 @@ public:
 	UACFCoreComponent* GetCoreComponent() const override;
 	UACFAbilityComboManagerComponent* GetAbilityComboManagerComponent() const override;
 	UACFAbilityQueueComponent* GetAbilityQueueComponent() const override;
+	UACFLocomotionComponent* GetLocomotionComponent() const override;
 	TMap<FString, const UAttributeSet*> GetAttributeSets() const override;
 	// ~IACFActorInterface
 

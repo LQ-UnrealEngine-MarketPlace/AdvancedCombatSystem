@@ -29,6 +29,7 @@ void EmptyLinkFunctionForGeneratedCodeACFFunctionLibrary() {}
 	GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayAttribute();
 	ADVANCEDCOMBATSYSTEM_API UClass* Z_Construct_UClass_UACFAbilityComboManagerComponent_NoRegister();
 	ADVANCEDCOMBATSYSTEM_API UClass* Z_Construct_UClass_UACFCoreComponent_NoRegister();
+	ADVANCEDCOMBATSYSTEM_API UClass* Z_Construct_UClass_UACFLocomotionComponent_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(UACFFunctionLibrary::execRemoveAllGameplayCues)
 	{
@@ -149,6 +150,14 @@ void EmptyLinkFunctionForGeneratedCodeACFFunctionLibrary() {}
 		*(bool*)Z_Param__Result=UACFFunctionLibrary::AddLooseGameplayTagsToActor(Z_Param_Actor,Z_Param_GameplayTags);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(UACFFunctionLibrary::execGetLocomotionComponentFromActor)
+	{
+		P_GET_OBJECT(AActor,Z_Param_Actor);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UACFLocomotionComponent**)Z_Param__Result=UACFFunctionLibrary::GetLocomotionComponentFromActor(Z_Param_Actor);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UACFFunctionLibrary::execGetAbilityQueueComponentFromActor)
 	{
 		P_GET_OBJECT(AActor,Z_Param_Actor);
@@ -196,6 +205,7 @@ void EmptyLinkFunctionForGeneratedCodeACFFunctionLibrary() {}
 			{ "GetComboManagerComponentFromActor", &UACFFunctionLibrary::execGetComboManagerComponentFromActor },
 			{ "GetCoreComponentFromActor", &UACFFunctionLibrary::execGetCoreComponentFromActor },
 			{ "GetDebugStringFromAttribute", &UACFFunctionLibrary::execGetDebugStringFromAttribute },
+			{ "GetLocomotionComponentFromActor", &UACFFunctionLibrary::execGetLocomotionComponentFromActor },
 			{ "HasAnyMatchingGameplayTags", &UACFFunctionLibrary::execHasAnyMatchingGameplayTags },
 			{ "HasMatchingGameplayTag", &UACFFunctionLibrary::execHasMatchingGameplayTag },
 			{ "NotEqual_GameplayAttributeGameplayAttribute", &UACFFunctionLibrary::execNotEqual_GameplayAttributeGameplayAttribute },
@@ -493,9 +503,9 @@ void EmptyLinkFunctionForGeneratedCodeACFFunctionLibrary() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFFunctionLibrary_GetAbilityQueueComponentFromActor_Statics::Function_MetaDataParams[] = {
 		{ "Category", "ACF | Components" },
-		{ "Comment", "/**\n\x09* Tries to find an ability queue core component on the actor\n\x09*/" },
+		{ "Comment", "/**\n\x09* Tries to find an ability queue component on the actor\n\x09*/" },
 		{ "ModuleRelativePath", "Public/Core/Libraries/ACFFunctionLibrary.h" },
-		{ "ToolTip", "Tries to find an ability queue core component on the actor" },
+		{ "ToolTip", "Tries to find an ability queue component on the actor" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UACFFunctionLibrary_GetAbilityQueueComponentFromActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UACFFunctionLibrary, nullptr, "GetAbilityQueueComponentFromActor", nullptr, nullptr, sizeof(ACFFunctionLibrary_eventGetAbilityQueueComponentFromActor_Parms), Z_Construct_UFunction_UACFFunctionLibrary_GetAbilityQueueComponentFromActor_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFFunctionLibrary_GetAbilityQueueComponentFromActor_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UACFFunctionLibrary_GetAbilityQueueComponentFromActor_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFFunctionLibrary_GetAbilityQueueComponentFromActor_Statics::Function_MetaDataParams)) };
@@ -700,9 +710,9 @@ void EmptyLinkFunctionForGeneratedCodeACFFunctionLibrary() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFFunctionLibrary_GetCoreComponentFromActor_Statics::Function_MetaDataParams[] = {
 		{ "Category", "ACF | Components" },
-		{ "Comment", "/**\n\x09* Tries to find a companion core component on the actor\n\x09*/" },
+		{ "Comment", "/**\n\x09* Tries to find a core component on the actor\n\x09*/" },
 		{ "ModuleRelativePath", "Public/Core/Libraries/ACFFunctionLibrary.h" },
-		{ "ToolTip", "Tries to find a companion core component on the actor" },
+		{ "ToolTip", "Tries to find a core component on the actor" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UACFFunctionLibrary_GetCoreComponentFromActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UACFFunctionLibrary, nullptr, "GetCoreComponentFromActor", nullptr, nullptr, sizeof(ACFFunctionLibrary_eventGetCoreComponentFromActor_Parms), Z_Construct_UFunction_UACFFunctionLibrary_GetCoreComponentFromActor_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFFunctionLibrary_GetCoreComponentFromActor_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UACFFunctionLibrary_GetCoreComponentFromActor_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFFunctionLibrary_GetCoreComponentFromActor_Statics::Function_MetaDataParams)) };
@@ -751,6 +761,61 @@ void EmptyLinkFunctionForGeneratedCodeACFFunctionLibrary() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UACFFunctionLibrary_GetDebugStringFromAttribute_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics
+	{
+		struct ACFFunctionLibrary_eventGetLocomotionComponentFromActor_Parms
+		{
+			const AActor* Actor;
+			UACFLocomotionComponent* ReturnValue;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Actor_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_Actor;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::NewProp_Actor_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::NewProp_Actor = { "Actor", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFFunctionLibrary_eventGetLocomotionComponentFromActor_Parms, Actor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::NewProp_Actor_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::NewProp_Actor_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::NewProp_ReturnValue_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACFFunctionLibrary_eventGetLocomotionComponentFromActor_Parms, ReturnValue), Z_Construct_UClass_UACFLocomotionComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::NewProp_ReturnValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::NewProp_ReturnValue_MetaData)) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::NewProp_Actor,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::Function_MetaDataParams[] = {
+		{ "Category", "ACF | Components" },
+		{ "Comment", "/**\n\x09* Tries to find a locomotion component on the actor\n\x09*/" },
+		{ "ModuleRelativePath", "Public/Core/Libraries/ACFFunctionLibrary.h" },
+		{ "ToolTip", "Tries to find a locomotion component on the actor" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UACFFunctionLibrary, nullptr, "GetLocomotionComponentFromActor", nullptr, nullptr, sizeof(ACFFunctionLibrary_eventGetLocomotionComponentFromActor_Parms), Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -1071,12 +1136,13 @@ void EmptyLinkFunctionForGeneratedCodeACFFunctionLibrary() {}
 		{ &Z_Construct_UFunction_UACFFunctionLibrary_AddLooseGameplayTagsToActor, "AddLooseGameplayTagsToActor" }, // 2814109522
 		{ &Z_Construct_UFunction_UACFFunctionLibrary_ExecuteGameplayCueForActor, "ExecuteGameplayCueForActor" }, // 2776450477
 		{ &Z_Construct_UFunction_UACFFunctionLibrary_ExecuteGameplayCueWithParams, "ExecuteGameplayCueWithParams" }, // 2129771482
-		{ &Z_Construct_UFunction_UACFFunctionLibrary_GetAbilityQueueComponentFromActor, "GetAbilityQueueComponentFromActor" }, // 1044440810
+		{ &Z_Construct_UFunction_UACFFunctionLibrary_GetAbilityQueueComponentFromActor, "GetAbilityQueueComponentFromActor" }, // 241428056
 		{ &Z_Construct_UFunction_UACFFunctionLibrary_GetAbilitySystemComponentFromActor, "GetAbilitySystemComponentFromActor" }, // 3126055352
 		{ &Z_Construct_UFunction_UACFFunctionLibrary_GetAllAttributes, "GetAllAttributes" }, // 3599978811
 		{ &Z_Construct_UFunction_UACFFunctionLibrary_GetComboManagerComponentFromActor, "GetComboManagerComponentFromActor" }, // 1489260386
-		{ &Z_Construct_UFunction_UACFFunctionLibrary_GetCoreComponentFromActor, "GetCoreComponentFromActor" }, // 1355361372
+		{ &Z_Construct_UFunction_UACFFunctionLibrary_GetCoreComponentFromActor, "GetCoreComponentFromActor" }, // 1943683515
 		{ &Z_Construct_UFunction_UACFFunctionLibrary_GetDebugStringFromAttribute, "GetDebugStringFromAttribute" }, // 3880277541
+		{ &Z_Construct_UFunction_UACFFunctionLibrary_GetLocomotionComponentFromActor, "GetLocomotionComponentFromActor" }, // 3987552947
 		{ &Z_Construct_UFunction_UACFFunctionLibrary_HasAnyMatchingGameplayTags, "HasAnyMatchingGameplayTags" }, // 985703820
 		{ &Z_Construct_UFunction_UACFFunctionLibrary_HasMatchingGameplayTag, "HasMatchingGameplayTag" }, // 790874561
 		{ &Z_Construct_UFunction_UACFFunctionLibrary_NotEqual_GameplayAttributeGameplayAttribute, "NotEqual_GameplayAttributeGameplayAttribute" }, // 1572914005
@@ -1118,7 +1184,7 @@ void EmptyLinkFunctionForGeneratedCodeACFFunctionLibrary() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UACFFunctionLibrary, 2796696538);
+	IMPLEMENT_CLASS(UACFFunctionLibrary, 1727165283);
 	template<> ADVANCEDCOMBATSYSTEM_API UClass* StaticClass<UACFFunctionLibrary>()
 	{
 		return UACFFunctionLibrary::StaticClass();

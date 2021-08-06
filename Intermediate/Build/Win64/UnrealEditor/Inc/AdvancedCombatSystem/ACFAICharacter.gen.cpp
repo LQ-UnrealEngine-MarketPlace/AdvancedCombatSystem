@@ -75,7 +75,7 @@ void EmptyLinkFunctionForGeneratedCodeACFAICharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AACFAICharacter, 2242795799);
+	IMPLEMENT_CLASS(AACFAICharacter, 2278017113);
 	template<> ADVANCEDCOMBATSYSTEM_API UClass* StaticClass<AACFAICharacter>()
 	{
 		return AACFAICharacter::StaticClass();

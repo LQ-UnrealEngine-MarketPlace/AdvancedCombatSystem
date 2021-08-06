@@ -2,6 +2,7 @@
 
 
 #include "Core/Actors/Characters/ACFCharacterBase.h"
+#include "Core/Animations/Components/ACFLocomotionComponent.h"
 #include "AbilitySystem/Components/ACFAbilitySystemComponent.h"
 #include "AbilitySystem/Components/ACFAbilityComboManagerComponent.h"
 #include "AbilitySystemComponent.h"
@@ -16,6 +17,7 @@ AACFCharacterBase::AACFCharacterBase()
 	CoreComponent = CreateDefaultSubobject<UACFCoreComponent>("Core Component");
 	AbilityQueueComponent = CreateDefaultSubobject<UACFAbilityQueueComponent>("Ability Queue Component");
 	AbilityComboManagerComponent = CreateDefaultSubobject<UACFAbilityComboManagerComponent>("Ability Combo Manager Component");
+	LocomotionComponent = CreateDefaultSubobject<UACFLocomotionComponent>("Locomotion Component");
 
 	// Setup sensible defaults;
 	bUseControllerRotationYaw = false;
@@ -42,6 +44,11 @@ UACFAbilityComboManagerComponent* AACFCharacterBase::GetAbilityComboManagerCompo
 UACFAbilityQueueComponent* AACFCharacterBase::GetAbilityQueueComponent() const
 {
 	return AbilityQueueComponent;
+}
+
+UACFLocomotionComponent* AACFCharacterBase::GetLocomotionComponent() const
+{
+	return LocomotionComponent;
 }
 
 TMap<FString, const UAttributeSet*> AACFCharacterBase::GetAttributeSets() const
