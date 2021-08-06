@@ -42,6 +42,7 @@ void UACFLocomotionComponent::BeginPlay()
 	RecastOwner();
 	SetupBasePose(BasePose);
 	SetOverlayPose(OverlayPose);
+	SetupFPP(bFirstPerson);
 	SetupRotation(RotationMethod, RotationSpeed, TurnStartAngle, TurnStopTolerance);
 	SetupAimOffset(AimOffsetType, AimOffsetBehavior, AimClamp, CameraBased, AimSocketName, LookAtSocketName);
 }
@@ -435,6 +436,12 @@ void UACFLocomotionComponent::SetOverlayPose(FGameplayTag InOverlayPose)
 {
 	OverlayPose = InOverlayPose;
 	Server_SetOverlayPose(InOverlayPose);
+}
+
+void UACFLocomotionComponent::SetupFPP(bool bInFirstPerson)
+{
+	bFirstPerson = bInFirstPerson;
+	OnFirstPerson.Broadcast(bInFirstPerson);
 }
 
 void UACFLocomotionComponent::SetupRotation(const ERotationMethod InRotationMethod /*= ERotationMethod::NONE*/, const float InRotationSpeed /*= 360.f*/, const float InTurnStartAngle /*= 90.f*/, const float InTurnStopTolerance /*= 5.f*/)

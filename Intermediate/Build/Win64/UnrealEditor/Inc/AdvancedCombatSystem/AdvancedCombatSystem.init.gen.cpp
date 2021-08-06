@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvancedCombatSystem_init() {}
 	ADVANCEDCOMBATSYSTEM_API UFunction* Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACMOnCollisionDetected__DelegateSignature();
 	ADVANCEDCOMBATSYSTEM_API UFunction* Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnWeaponHit__DelegateSignature();
 	ADVANCEDCOMBATSYSTEM_API UFunction* Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnLocomotionStateChanged__DelegateSignature();
+	ADVANCEDCOMBATSYSTEM_API UFunction* Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnFirstPerson__DelegateSignature();
 	ADVANCEDCOMBATSYSTEM_API UFunction* Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnDeath__DelegateSignature();
 	ADVANCEDCOMBATSYSTEM_API UFunction* Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnDefaultAttributeChange__DelegateSignature();
 	ADVANCEDCOMBATSYSTEM_API UFunction* Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnAttributeChange__DelegateSignature();
@@ -48,6 +49,7 @@ void EmptyLinkFunctionForGeneratedCodeAdvancedCombatSystem_init() {}
 				(UObject* (*)())Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACMOnCollisionDetected__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnWeaponHit__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnLocomotionStateChanged__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnFirstPerson__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnDeath__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnDefaultAttributeChange__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_AdvancedCombatSystem_ACFOnAttributeChange__DelegateSignature,
@@ -71,8 +73,8 @@ void EmptyLinkFunctionForGeneratedCodeAdvancedCombatSystem_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x61DA96AF,
-				0x2829D02C,
+				0x611D4E33,
+				0xDFF51B1C,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UECodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

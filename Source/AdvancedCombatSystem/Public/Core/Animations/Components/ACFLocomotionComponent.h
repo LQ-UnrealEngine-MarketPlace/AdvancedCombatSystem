@@ -11,6 +11,7 @@
 class AACFCharacterBase;
 class UCharacterMovementComponent;
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FACFOnFirstPerson, bool, bIsFirstPersonView);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class ADVANCEDCOMBATSYSTEM_API UACFLocomotionComponent : public UActorComponent
@@ -35,6 +36,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated, Category = "ACF | Animation")
 	FGameplayTag OverlayPose;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "AGR| Animation")
+	bool bFirstPerson = false;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ACF | Animation")
 	FRotator AimOffset;
@@ -83,6 +87,9 @@ public:
 
 	UPROPERTY(BlueprintReadOnly, Category = "ACF | Animation")
 	UCharacterMovementComponent* OwnerCharacterMovementComponent;
+
+	UPROPERTY(BlueprintReadOnly, Category = "ACF | FPP")
+	FACFOnFirstPerson OnFirstPerson;
 
 private:
 	void RecastOwner();
@@ -136,6 +143,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "ACF | Poses")
 	void SetOverlayPose(FGameplayTag InOverlayPose);
+
+	UFUNCTION(BlueprintCallable, Category = "ACF | FPP")
+	void SetupFPP(bool bInFirstPerson);
 
 	UFUNCTION(BlueprintCallable, Category = "ACF | Rotation")
 	void SetupRotation(const ERotationMethod InRotationMethod = ERotationMethod::None, const float InRotationSpeed = 360.f, const float InTurnStartAngle = 90.f, const float InTurnStopTolerance = 5.f);
