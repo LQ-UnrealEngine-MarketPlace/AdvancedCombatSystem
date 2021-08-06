@@ -15,6 +15,7 @@ struct FGameplayEffectContextHandle;
 struct FGameplayAttribute;
 class UAttributeSet;
 struct FGameplayTagContainer;
+class UACFAnimInstance;
 class UACFLocomotionComponent;
 class UACFAbilityQueueComponent;
 class UACFCoreComponent;
@@ -41,6 +42,7 @@ class UACFAbilitySystemComponent;
 	DECLARE_FUNCTION(execHasMatchingGameplayTag); \
 	DECLARE_FUNCTION(execRemoveLooseGameplayTagsFromActor); \
 	DECLARE_FUNCTION(execAddLooseGameplayTagsToActor); \
+	DECLARE_FUNCTION(execGetAnimInstanceFromActor); \
 	DECLARE_FUNCTION(execGetLocomotionComponentFromActor); \
 	DECLARE_FUNCTION(execGetAbilityQueueComponentFromActor); \
 	DECLARE_FUNCTION(execGetCoreComponentFromActor); \
@@ -63,6 +65,7 @@ class UACFAbilitySystemComponent;
 	DECLARE_FUNCTION(execHasMatchingGameplayTag); \
 	DECLARE_FUNCTION(execRemoveLooseGameplayTagsFromActor); \
 	DECLARE_FUNCTION(execAddLooseGameplayTagsToActor); \
+	DECLARE_FUNCTION(execGetAnimInstanceFromActor); \
 	DECLARE_FUNCTION(execGetLocomotionComponentFromActor); \
 	DECLARE_FUNCTION(execGetAbilityQueueComponentFromActor); \
 	DECLARE_FUNCTION(execGetCoreComponentFromActor); \

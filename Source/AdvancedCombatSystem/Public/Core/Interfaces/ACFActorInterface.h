@@ -11,6 +11,7 @@ class UACFAbilityComboManagerComponent;
 class UACFAbilityQueueComponent;
 class UACFLocomotionComponent;
 class UAttributeSet;
+class UACFAnimInstance;
 
 // This class does not need to be modified.
 UINTERFACE(MinimalAPI)
@@ -42,4 +43,7 @@ public:
 
 	/** Returns the AttributeSets array initialized in constructor from config */
 	virtual TMap<FString, const UAttributeSet*> GetAttributeSets() const = 0;
+
+	/** Returns the AnimInstance to use for this actor. */
+	virtual UACFAnimInstance* GetAnimInstance() const = 0;
 };

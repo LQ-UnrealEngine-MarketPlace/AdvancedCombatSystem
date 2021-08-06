@@ -5,6 +5,9 @@
 #include "CoreMinimal.h"
 #include "ACFAnimationData.generated.h"
 
+class UACFGameplayAbility;
+
+
 UENUM(BlueprintType)
 enum class ELocomotionState : uint8
 {
@@ -87,46 +90,49 @@ struct FACFLocomotionState
 
 	FACFLocomotionState() {};
 
-	FACFLocomotionState(ELocomotionState InState, float InMaxStateSpeed) 
+	FACFLocomotionState(ELocomotionState InLocomotionState, TSubclassOf<UACFGameplayAbility> InLocomotionAbility)
 	{
-		State = InState;
-		MaxStateSpeed = InMaxStateSpeed;
+		LocomotionState = InLocomotionState;
+		LocomotionAbility = InLocomotionAbility;
 	}
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "ACF | Locomotion")
-	ELocomotionState State;
+	ELocomotionState LocomotionState;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "ACF | Locomotion")
 	float MaxStateSpeed = 0.f;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "ACF | Locomotion")
+	TSubclassOf<UACFGameplayAbility> LocomotionAbility;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "ACF | Locomotion")
 	FName CameraMovement;
 
-	FORCEINLINE bool operator < (const FACFLocomotionState& Other) const
+	FORCEINLINE	bool operator < (const FACFLocomotionState& Other) const
 	{
 		return this->MaxStateSpeed < Other.MaxStateSpeed;
 	}
 
 	FORCEINLINE bool operator == (const FACFLocomotionState& Other) const
 	{
-		return this->State == Other.State;
+		return this->LocomotionState == Other.LocomotionState;
 	}
 
 	FORCEINLINE bool operator != (const ELocomotionState& Other) const
 	{
-		return this->State != Other;
+		return this->LocomotionState != LocomotionState;
 	}
 
 	FORCEINLINE bool operator == (const ELocomotionState& Other) const
 	{
-		return this->State == Other;
+		return this->LocomotionState == LocomotionState;
 	}
 
 	FORCEINLINE bool operator != (const FACFLocomotionState& Other) const
 	{
-		return this->State != Other.State;
+		return this->LocomotionState != Other.LocomotionState;
 	}
 };
 
-
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FACFOnLocomotionStateChanged, ELocomotionState, State);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FACFOnFirstPerson, bool, bIsFirstPersonView);

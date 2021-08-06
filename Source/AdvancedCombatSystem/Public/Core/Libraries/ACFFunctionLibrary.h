@@ -50,6 +50,13 @@ public:
 	UFUNCTION(BlueprintPure, Category = "ACF | Components")
 	static UACFLocomotionComponent* GetLocomotionComponentFromActor(const AActor* Actor);
 
+	/**
+	* Tries to find an AnimInstance on the actor
+	*/
+	UFUNCTION(BlueprintPure, Category = "ACF | Components")
+	static UACFAnimInstance* GetAnimInstanceFromActor(const AActor* Actor);
+
+
 	/** Gameplay Tags */
 
 	/**

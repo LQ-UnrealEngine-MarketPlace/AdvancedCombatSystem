@@ -295,6 +295,8 @@ G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSys
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/ACFActor.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/ACFActor.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFActor.generated.h
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Animations/AnimInstances/ACFAnimInstance.h
+G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFAnimInstance.generated.h
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Characters/ACFAICharacter.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Characters/ACFAICharacter.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFAICharacter.generated.h
@@ -306,6 +308,22 @@ G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSys
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Animations/Components/ACFLocomotionComponent.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core\Animations\Components\../ACFAnimationData.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFAnimationData.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementComponent.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\AI/Navigation/NavigationAvoidanceTypes.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\NavigationAvoidanceTypes.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Public\AI/RVOAvoidanceInterface.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\RVOAvoidanceInterface.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/PawnMovementComponent.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/NavMovementComponent.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\AI/Navigation/PathFollowingAgentInterface.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\PathFollowingAgentInterface.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\MovementComponent.generated.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\NavMovementComponent.generated.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\PawnMovementComponent.generated.h
+G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Interfaces/NetworkPredictionInterface.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\NetworkPredictionInterface.generated.h
+G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\CharacterMovementComponent.generated.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFLocomotionComponent.generated.h
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Characters/ACFPlayerCharacter.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Characters/ACFPlayerCharacter.h
@@ -340,8 +358,6 @@ G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSys
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Items/ACFProjectile.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFProjectile.generated.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\MovementComponent.generated.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\ProjectileMovementComponent.generated.h
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Items/ACFRangedWeapon.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Actors/Items/ACFRangedWeapon.h
@@ -353,8 +369,6 @@ G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Actors/Projectiles/ACFProjectileBase.cpp
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Animations/ACFAnimationData.cpp
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Animations/AnimInstances/ACFAnimInstance.cpp
-G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Animations/AnimInstances/ACFAnimInstance.h
-G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFAnimInstance.generated.h
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Animations/AnimNotifies/ACFTriggerComboNotify.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Animations/AnimNotifies/ACFTriggerComboNotify.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFTriggerComboNotify.generated.h
@@ -374,20 +388,6 @@ G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Kismet/KismetMathLibrary.h
 G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\KismetMathLibrary.generated.h
 G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Kismet\KismetMathLibrary.inl
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementComponent.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\AI/Navigation/NavigationAvoidanceTypes.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\NavigationAvoidanceTypes.generated.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Public\AI/RVOAvoidanceInterface.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\RVOAvoidanceInterface.generated.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/PawnMovementComponent.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\GameFramework/NavMovementComponent.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\AI/Navigation/PathFollowingAgentInterface.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\PathFollowingAgentInterface.generated.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\NavMovementComponent.generated.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\PawnMovementComponent.generated.h
-G:\Program Files\UE_5.0EA\Engine\Source\Runtime\Engine\Classes\Interfaces/NetworkPredictionInterface.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\NetworkPredictionInterface.generated.h
-G:\Program Files\UE_5.0EA\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\CharacterMovementComponent.generated.h
 G:/Projects/UE4/LightSouls/Plugins/AdvancedCombatSystem/Source/AdvancedCombatSystem/Private/Core/Components/ACFCoreComponent.cpp
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Source\AdvancedCombatSystem\Public\Core/Game/Player/ACFPlayerController.h
 G:\Projects\UE4\LightSouls\Plugins\AdvancedCombatSystem\Intermediate\Build\Win64\UnrealEditor\Inc\AdvancedCombatSystem\ACFPlayerController.generated.h

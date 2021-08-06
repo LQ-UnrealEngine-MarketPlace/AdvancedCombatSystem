@@ -3,6 +3,7 @@
 
 #include "Core/Actors/Characters/ACFCharacterBase.h"
 #include "Core/Animations/Components/ACFLocomotionComponent.h"
+#include "Core/Animations/AnimInstances/ACFAnimInstance.h"
 #include "AbilitySystem/Components/ACFAbilitySystemComponent.h"
 #include "AbilitySystem/Components/ACFAbilityComboManagerComponent.h"
 #include "AbilitySystemComponent.h"
@@ -54,6 +55,11 @@ UACFLocomotionComponent* AACFCharacterBase::GetLocomotionComponent() const
 TMap<FString, const UAttributeSet*> AACFCharacterBase::GetAttributeSets() const
 {
 	return TMap<FString, const UAttributeSet*>();
+}
+
+UACFAnimInstance* AACFCharacterBase::GetAnimInstance() const
+{
+	return Cast<UACFAnimInstance>(GetMesh()->GetAnimInstance());
 }
 
 UACFAbilitySystemComponent* AACFCharacterBase::GetAbilitySystemComponent()

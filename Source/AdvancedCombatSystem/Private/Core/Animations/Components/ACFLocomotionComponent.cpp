@@ -3,11 +3,16 @@
 
 #include "Core/Animations/Components/ACFLocomotionComponent.h"
 #include "Core/Actors/Characters/ACFCharacterBase.h"
+#include "Core/Libraries/ACFFunctionLibrary.h"
+#include "Core/Components/ACFCoreComponent.h"
+#include "Core/Animations/AnimInstances/ACFAnimInstance.h"
+#include "AbilitySystem/Components/ACFAbilitySystemComponent.h"
+#include "AbilitySystem/Abilities/ACFGameplayAbility.h"
 #include <DrawDebugHelpers.h>
 #include <Kismet/GameplayStatics.h>
 #include <Kismet/KismetMathLibrary.h>
-#include <GameFramework/CharacterMovementComponent.h>
 #include <Engine/World.h>
+#include <Abilities/GameplayAbility.h>
 
 // Sets default values for this component's properties
 UACFLocomotionComponent::UACFLocomotionComponent()
@@ -45,6 +50,9 @@ void UACFLocomotionComponent::BeginPlay()
 	SetupFPP(bFirstPerson);
 	SetupRotation(RotationMethod, RotationSpeed, TurnStartAngle, TurnStopTolerance);
 	SetupAimOffset(AimOffsetType, AimOffsetBehavior, AimClamp, CameraBased, AimSocketName, LookAtSocketName);
+	Server_SetLocomotionState(DefaultLocomotionState);
+
+	LocomotionStates.Sort();
 }
 
 // Called every frame
@@ -323,6 +331,87 @@ void UACFLocomotionComponent::LookAtWithoutCamera()
 	}
 }
 
+void UACFLocomotionComponent::UpdateCharacterMaxSpeed()
+{
+	float MaxSpeed = 0.f;
+	for (FACFLocomotionState LocomotionState : LocomotionStates)
+	{
+		if (LocomotionState.MaxStateSpeed >= MaxSpeed)
+		{
+			MaxSpeed = LocomotionState.MaxStateSpeed;
+		}
+	}
+
+	OwnerCharacterMovementComponent->MaxWalkSpeed = MaxSpeed;
+}
+
+void UACFLocomotionComponent::UpdateLocomotionState()
+{
+	if (!CharacterOwner)
+	{
+		ACF_LOG(Warning, TEXT("UACFLocomotionComponent::UpdateLocomotionState: CharacterOwner is invalid"))
+		return;
+	}
+
+	if (CharacterOwner && OwnerCharacterMovementComponent && !OwnerCharacterMovementComponent->IsFalling() /*&& reproductionType == EMontageReproductionType::ERootMotion*/)
+	{
+		if (OwnerCharacterMovementComponent->GetGroundMovementMode() == MOVE_Walking)
+		{
+			for (int32 Index = 0; Index < LocomotionStates.Num() - 1; Index++)
+			{
+				const float Speed = CharacterOwner->GetVelocity().Size();
+				if (FMath::IsNearlyZero(Speed) && CurrentLocomotionState != ELocomotionState::Idle)
+				{
+					HandleStateChanged(ELocomotionState::Idle);
+				}
+				else if (LocomotionStates[Index + 1].LocomotionState != CurrentLocomotionState && Speed > LocomotionStates[Index].MaxStateSpeed + 5.f && Speed <= LocomotionStates[Index + 1].MaxStateSpeed + 5.f)
+				{
+					HandleStateChanged(LocomotionStates[Index + 1].LocomotionState);
+				}
+			}
+
+			if (CurrentLocomotionState == ELocomotionState::Sprint)
+			{
+				UACFAnimInstance* AnimInstance = CharacterOwner->GetAnimInstance();
+				if (AnimInstance)
+				{
+					/*const float Direction = AnimInstance->GetDirection();
+					if (FMath::Abs(Direction) > SprintDirectionCone)
+					{
+						Server_SetLocomotionState(ELocomotionState::Jog);
+					}*/
+				}
+			}
+		}
+		else
+		{
+			Server_SetLocomotionState(ELocomotionState::Idle);
+		}
+	}
+}
+
+void UACFLocomotionComponent::HandleStateChanged(const ELocomotionState NewLocomotionState)
+{
+	if (CurrentLocomotionState == NewLocomotionState)
+	{
+		ACF_LOG(Warning, TEXT("UACFLocomotionComponent::HandleStateChanged: passed in NewLocomotionState is equal to CurrentLocomotionState"))
+		return;
+	}
+
+	FACFLocomotionState* PreviousStatePtr = LocomotionStates.FindByKey(CurrentLocomotionState);
+	FACFLocomotionState* NextStatePtr = LocomotionStates.FindByKey(NewLocomotionState);
+
+	if (PreviousStatePtr && NextStatePtr && CharacterOwner)
+	{
+		if (CharacterOwner->HasAuthority())
+		{
+			UACFCoreComponent* CoreComponent = UACFFunctionLibrary::GetCoreComponentFromActor(CharacterOwner);
+			CurrentLocomotionAbility->K2_CancelAbility();
+			CoreComponent->ActivateAbilityWithClass(NextStatePtr->LocomotionAbility, CurrentLocomotionAbility);
+		}
+	}
+}
+
 void UACFLocomotionComponent::OnRep_RotationMethod()
 {
 	HandleRotationMethodChange();
@@ -331,6 +420,17 @@ void UACFLocomotionComponent::OnRep_RotationMethod()
 void UACFLocomotionComponent::OnRep_RotationSpeed()
 {
 	HandleRotationSpeedChange();
+}
+
+void UACFLocomotionComponent::OnRep_LocomotionState()
+{
+	if (!OwnerCharacterMovementComponent)
+	{
+		ACF_LOG(Warning, TEXT("UACFLocomotionComponent::OnRep_LocomotionState: OwnerCharacterMovementComponent is invalid so fire RecastOwner()"))
+		RecastOwner();
+	}
+
+	//OwnerCharacterMovementComponent->MaxWalkSpeed = GetCharactermax
 }
 
 void UACFLocomotionComponent::Server_SetBasePose_Implementation(FGameplayTag InBasePose)
@@ -426,6 +526,92 @@ bool UACFLocomotionComponent::NetMulticast_SetLookAtLocation_Validate(FVector In
 	return true;
 }
 
+void UACFLocomotionComponent::NetMulticast_ShouldStrafe_Implementation(bool bInShouldStrafe)
+{
+	if (CharacterOwner)
+	{
+		bIsStrafing = bInShouldStrafe;
+		OwnerCharacterMovementComponent->bOrientRotationToMovement = !bIsStrafing;
+		OwnerCharacterMovementComponent->bUseControllerDesiredRotation = bIsStrafing;
+	}
+}
+
+bool UACFLocomotionComponent::NetMulticast_ShouldStrafe_Validate(bool bInShouldStrafe)
+{
+	return true;
+}
+
+void UACFLocomotionComponent::Server_SetStrafeMovement_Implementation(const bool bInShouldStrafe)
+{
+	if (!CharacterOwner)
+	{
+		ACF_LOG(Error, TEXT("UACFLocomotionComponent::Server_SetStrafeMovement: %s has invalid CharacterOwner,"), *GetName())
+		RecastOwner();
+		Server_SetStrafeMovement(bInShouldStrafe); // Re-Calls after RecastOwner()
+		return;
+	}
+
+	bIsStrafing = bShouldStrafe;
+	OwnerCharacterMovementComponent->bOrientRotationToMovement = !bIsStrafing; // Character moves based on input's direction
+	OwnerCharacterMovementComponent->bUseControllerDesiredRotation = bIsStrafing;
+	NetMulticast_ShouldStrafe(bInShouldStrafe);
+}
+
+bool UACFLocomotionComponent::Server_SetStrafeMovement_Validate(const bool bInShouldStrafe)
+{
+	return true;
+}
+
+void UACFLocomotionComponent::Server_AccelerateToNextState_Implementation()
+{
+	LocomotionStates.Sort();
+
+	int32 CurrentIndex = LocomotionStates.IndexOfByKey(CurrentLocomotionState);
+	if (LocomotionStates.IsValidIndex(CurrentIndex + 1))
+	{
+		Server_SetLocomotionState(LocomotionStates[CurrentIndex + 1].LocomotionState);
+	}
+}
+
+bool UACFLocomotionComponent::Server_AccelerateToNextState_Validate()
+{
+	return true;
+}
+
+void UACFLocomotionComponent::Server_BrakeToPreviousState_Implementation()
+{
+	LocomotionStates.Sort();
+	
+	int32 CurrentIndex = LocomotionStates.IndexOfByKey(CurrentLocomotionState);
+	if (LocomotionStates.IsValidIndex(CurrentIndex + 1))
+	{
+		Server_SetLocomotionState(LocomotionStates[CurrentIndex + 1].LocomotionState);
+	}
+}
+
+bool UACFLocomotionComponent::Server_BrakeToPreviousState_Validate()
+{
+	return true;
+}
+
+void UACFLocomotionComponent::Server_SetLocomotionState_Implementation(const ELocomotionState InLocomotionState)
+{
+	FACFLocomotionState* LocomotionStatePtr = LocomotionStates.FindByKey(InLocomotionState);
+	if (LocomotionStatePtr && LocomotionStatePtr->LocomotionAbility)
+	{
+		TargetLocomotionState.MaxStateSpeed = GetCharacterMaxSpeedByState(InLocomotionState);
+		TargetLocomotionState.LocomotionAbility = GetLocomotionAbilityByState(InLocomotionState);
+		UACFCoreComponent* CoreComponent = UACFFunctionLibrary::GetCoreComponentFromActor(CharacterOwner); 
+		CoreComponent->ActivateAbilityWithClass(TargetLocomotionState.LocomotionAbility, CurrentLocomotionAbility);
+		OnTargetLocomotionStateChanged.Broadcast(InLocomotionState);
+	}
+}
+
+bool UACFLocomotionComponent::Server_SetLocomotionState_Validate(ELocomotionState InLocomotionState)
+{
+	return true;
+}
+
 void UACFLocomotionComponent::SetupBasePose(FGameplayTag InBasePose)
 {
 	BasePose = InBasePose;
@@ -456,7 +642,7 @@ void UACFLocomotionComponent::SetupRotation(const ERotationMethod InRotationMeth
 	Server_SetRotation(InRotationMethod, InRotationSpeed, InTurnStartAngle, InTurnStopTolerance);
 }
 
-void UACFLocomotionComponent::SetupAimOffset(const EAimOffsets InAimOffsetType /*= EAimOffsets::NONE*/, const EAimOffsetClamp InAimBehavior /*= EAimOffsetClamp::Nearest*/, const float InAimClamp /*= 90.f*/, const bool InCameraBased /*= true*/, const FName InAimSocketName /*= "hand_r"*/, const FName InLookAtSocketName /*= "head"*/)
+void UACFLocomotionComponent::SetupAimOffset(const EAimOffsets InAimOffsetType /*= EAimOffsets::None*/, const EAimOffsetClamp InAimBehavior /*= EAimOffsetClamp::Nearest*/, const float InAimClamp /*= 90.f*/, const bool InCameraBased /*= true*/, const FName InAimSocketName /*= "hand_r"*/, const FName InLookAtSocketName /*= "head"*/)
 {
 	AimOffsetType = InAimOffsetType;
 	AimOffsetBehavior = InAimBehavior;
@@ -521,4 +707,15 @@ void UACFLocomotionComponent::TurnInPlaceTick()
 			}
 		}
 	}
+}
+
+TSubclassOf<UACFGameplayAbility> UACFLocomotionComponent::GetLocomotionAbilityByState(const ELocomotionState InLocomotionState)
+{
+	FACFLocomotionState* LocomotionStatePtr = LocomotionStates.FindByKey(InLocomotionState);
+	if (LocomotionStatePtr)
+	{
+		return LocomotionStatePtr->LocomotionAbility;
+	}
+
+	return nullptr;
 }

@@ -14,6 +14,7 @@ class UACFAbilityComboManagerComponent;
 class UACFAbilityQueueComponent;
 class UACFLocomotionComponent;
 class UAttributeSet;
+class UACFAnimInstance;
 
 UCLASS()
 class ADVANCEDCOMBATSYSTEM_API AACFPawnBase : public APawn, public IAbilitySystemInterface, public IACFActorInterface
@@ -45,6 +46,7 @@ public:
 	UACFAbilityQueueComponent* GetAbilityQueueComponent() const override;
 	UACFLocomotionComponent* GetLocomotionComponent() const override;
 	TMap<FString, const UAttributeSet*> GetAttributeSets() const override;
+	UACFAnimInstance* GetAnimInstance() const override;
 	// ~ IACFActorInterface
 
 	// Implement IAbilitySystemInterface

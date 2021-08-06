@@ -4,6 +4,7 @@
 #include "Core/Actors/ACFActor.h"
 #include "Core/Components/ACFCoreComponent.h"
 #include "Core/Settings/ACFDeveloperSettings.h"
+#include "Core/Animations/AnimInstances/ACFAnimInstance.h"
 #include "AbilitySystem/Attributes/ACFAttributeSetBase.h"
 #include "AbilitySystem/Components/ACFAbilitySystemComponent.h"
 #include <AttributeSet.h>
@@ -111,4 +112,8 @@ TMap<FString, const UAttributeSet*> AACFActor::GetAttributeSets() const
 	return AttributeSets;
 }
 
+UACFAnimInstance* AACFActor::GetAnimInstance() const
+{
+	return nullptr;
+}
 

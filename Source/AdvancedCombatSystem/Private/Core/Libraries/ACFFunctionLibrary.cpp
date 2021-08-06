@@ -77,6 +77,24 @@ UACFLocomotionComponent* UACFFunctionLibrary::GetLocomotionComponentFromActor(co
 	return Cast<UACFLocomotionComponent>(Actor->FindComponentByClass(UACFLocomotionComponent::StaticClass()));
 }
 
+UACFAnimInstance* UACFFunctionLibrary::GetAnimInstanceFromActor(const AActor* Actor)
+{
+	if (!Actor || !Actor->IsA(ACharacter::StaticClass()))
+	{
+		return nullptr;
+	}
+
+	const IACFActorInterface* ActorInterface = Cast<IACFActorInterface>(Actor);
+
+	if (ActorInterface)
+	{
+		return ActorInterface->GetAnimInstance();
+	}
+
+	ACF_LOG(Warning, TEXT("UACFFunctionLibrary::GetLocomotionComponent: cast %s in order to GetAnimInstance()"), *Actor->GetName())
+	return Cast<AACFCharacterBase>(Actor)->GetAnimInstance();
+}
+
 bool UACFFunctionLibrary::AddLooseGameplayTagsToActor(AActor* Actor, const FGameplayTagContainer GameplayTags)
 {
 	UAbilitySystemComponent* AbilitySystemComponent = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(Actor);

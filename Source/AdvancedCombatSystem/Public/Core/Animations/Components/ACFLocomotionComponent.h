@@ -6,23 +6,29 @@
 #include "Components/ActorComponent.h"
 #include "../ACFAnimationData.h"
 #include <Net/UnrealNetwork.h>
+#include <GameFramework/CharacterMovementComponent.h>
 #include "ACFLocomotionComponent.generated.h"
 
 class AACFCharacterBase;
 class UCharacterMovementComponent;
-
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FACFOnFirstPerson, bool, bIsFirstPersonView);
+class UACFGameplayAbility;
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class ADVANCEDCOMBATSYSTEM_API UACFLocomotionComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
-private:
 #if WITH_EDITORONLY_DATA
 	UPROPERTY(EditDefaultsOnly, Category = "ACF | Debug")
 	FDebugLineParams DebugLineParams;
 #endif
+
+	UPROPERTY(ReplicatedUsing = OnRep_LocomotionState)
+	FACFLocomotionState TargetLocomotionState;
+
+	ELocomotionState CurrentLocomotionState;
+
+	UACFGameplayAbility* CurrentLocomotionAbility;
 
 public:
 #if WITH_EDITORONLY_DATA
@@ -88,8 +94,30 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "ACF | Animation")
 	UCharacterMovementComponent* OwnerCharacterMovementComponent;
 
-	UPROPERTY(BlueprintReadOnly, Category = "ACF | FPP")
+	UPROPERTY(BlueprintAssignable, Category = "ACF | FPP")
 	FACFOnFirstPerson OnFirstPerson;
+
+	UPROPERTY(BlueprintAssignable, Category = "ACF | Locomotion")
+	FACFOnLocomotionStateChanged OnLocomotionStateChanged;
+
+	UPROPERTY(BlueprintAssignable, Category = "ACF | Locomotion")
+	FACFOnLocomotionStateChanged OnTargetLocomotionStateChanged;
+
+	/** Default Locomotion State */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "ACF | Locomotion")
+	ELocomotionState DefaultLocomotionState = ELocomotionState::Jog;
+
+	/** Indicates the max speed for each Locomotion State */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "ACF | Locomotion")
+	TArray<FACFLocomotionState> LocomotionStates;
+
+	/** Indicates if the character follows control rotation and strafes */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "ACF | Locomotion")
+	bool bShouldStrafe = false;
+
+	/** Indicates whether the character is strafing or not */
+	UPROPERTY(BlueprintReadOnly, Category = "ACF | Locomotion")
+	bool bIsStrafing = false;
 
 private:
 	void RecastOwner();
@@ -102,11 +130,21 @@ private:
 
 	void LookAtWithoutCamera();
 
+	void UpdateCharacterMaxSpeed();
+
+	void UpdateLocomotionState();
+
+	UFUNCTION()
+	void HandleStateChanged(const ELocomotionState NewLocomotionState);
+
 	UFUNCTION()
 	void OnRep_RotationMethod();
 
 	UFUNCTION()
 	void OnRep_RotationSpeed();
+
+	UFUNCTION()
+	void OnRep_LocomotionState();
 
 	UFUNCTION(Server, Reliable, WithValidation)
 	void Server_SetBasePose(FGameplayTag InBasePose);
@@ -129,8 +167,24 @@ private:
 	UFUNCTION(Server, Reliable, WithValidation)
 	void Server_SetLookAtLocation(FVector InLocation);
 
-	UFUNCTION(NetMulticast, Unreliable, WithValidation)
+	UFUNCTION(NetMulticast, Reliable, WithValidation)
 	void NetMulticast_SetLookAtLocation(FVector InLocation);
+
+	UFUNCTION(NetMulticast, Reliable, WithValidation)
+	void NetMulticast_ShouldStrafe(bool bInShouldStrafe);
+
+public:
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACF | Locomotion", meta = (DisplayName = "Set Strafe Movement"))
+	void Server_SetStrafeMovement(const bool bInShouldStrafe);
+
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACF | Locomotion", meta = (DisplayName = "Accelerate To Next State"))
+	void Server_AccelerateToNextState();
+
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACF | Locomotion", meta = (DisplayName = "Brake To Previous State"))
+	void Server_BrakeToPreviousState();
+
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACF | Locomotion", meta = (DisplayName = "Set Locomotion State"))
+	void Server_SetLocomotionState(const ELocomotionState InLocomotionState);
 
 public:	
 	// Sets default values for this component's properties
@@ -164,6 +218,25 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "ACF | Tick")
 	void TurnInPlaceTick();
+
+	UFUNCTION(BlueprintPure, Category = "ACF | Locomotion")
+	float GetCharacterMaxSpeed() const { return OwnerCharacterMovementComponent->MaxWalkSpeed; }
+
+	UFUNCTION(BlueprintPure, Category = "ACF | Locomotion")
+	TSubclassOf<UACFGameplayAbility> GetLocomotionAbilityByState(const ELocomotionState InLocomotionState);
+
+	UFUNCTION(BlueprintPure, Category = "ACF | Locomotion")
+	float GetCharacterMaxSpeedByState(ELocomotionState InLocomotioState) 
+	{ 
+		FACFLocomotionState* LocomotionStatePtr = LocomotionStates.FindByKey(InLocomotioState);
+		return (LocomotionStatePtr) ? LocomotionStatePtr->MaxStateSpeed : 0.f;
+	}
+
+	UFUNCTION(BlueprintPure, Category = "ACF | Locomotion")
+	FORCEINLINE ELocomotionState GetCurrentLocomotionState() const { return CurrentLocomotionState; }
+
+	UFUNCTION(BlueprintPure, Category = "ACF | Locomotion")
+	FORCEINLINE ELocomotionState GetTargetLocomotionState() const { return TargetLocomotionState.LocomotionState; }
 
 protected:
 	// Called when the game starts

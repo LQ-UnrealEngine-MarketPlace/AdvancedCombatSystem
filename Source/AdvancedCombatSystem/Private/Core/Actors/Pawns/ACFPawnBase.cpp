@@ -4,6 +4,7 @@
 #include "Core/Actors/Pawns/ACFPawnBase.h"
 #include "Core/Components/ACFCoreComponent.h"
 #include "Core/Animations/Components/ACFLocomotionComponent.h"
+#include "Core/Animations/AnimInstances/ACFAnimInstance.h"
 #include "AbilitySystem/Components/ACFAbilitySystemComponent.h"
 #include "AbilitySystem/Attributes/ACFAttributeSetBase.h"
 #include "Utils/ACFLog.h"
@@ -56,6 +57,11 @@ UACFLocomotionComponent* AACFPawnBase::GetLocomotionComponent() const
 TMap<FString, const UAttributeSet*> AACFPawnBase::GetAttributeSets() const
 {
 	return AttributeSets;
+}
+
+UACFAnimInstance* AACFPawnBase::GetAnimInstance() const
+{
+	return nullptr;
 }
 
 UAbilitySystemComponent* AACFPawnBase::GetAbilitySystemComponent() const
