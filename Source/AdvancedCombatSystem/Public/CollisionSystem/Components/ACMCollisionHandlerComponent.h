@@ -128,22 +128,22 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "ACM")
 	void ClearCollisionChannels();
 
-	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACM")
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACM", meta = (DisplayName = "Start All Traces"))
 	void Server_StartAllTraces();
 
-	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACM")
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACM", meta = (DisplayName = "Stop All Traces"))
 	void Server_StopAllTraces();
 
-	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACM")
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACM", meta = (DisplayName = "Start Single Trace"))
 	void Server_StartSingleTrace(const FName& Name);
 
-	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACM")
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACM", meta = (DisplayName = "Stop Single Trace"))
 	void Server_StopSingleTrace(const FName& Name);
 
-	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACM")
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACM", meta = (DisplayName = "Start Timed Single Trace"))
 	void Server_StartTimedSingleTrace(const FName& TraceName, float Duration);
 
-	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACM")
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable, Category = "ACM", meta = (DisplayName = "Start All Timed Traces"))
 	void Server_StartAllTimedTraces(float Duration);
 
 	UFUNCTION(BlueprintCallable, Category = "ACM")

@@ -10,8 +10,6 @@ AACFWeapon::AACFWeapon()
 
 	HandlePosition = CreateDefaultSubobject<USceneComponent>(TEXT("Handle Position"));
 	SetRootComponent(HandlePosition);
-
-	//SkeletalMeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision); Causing error
 }
 
 void AACFWeapon::AlignWeapon()
@@ -30,6 +28,8 @@ void AACFWeapon::AlignWeapon()
 void AACFWeapon::BeginPlay()
 {
 	Super::BeginPlay();
+
+	SkeletalMeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
 	SkeletalMeshComponent->AttachToComponent(HandlePosition, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, false));
 	AlignWeapon();

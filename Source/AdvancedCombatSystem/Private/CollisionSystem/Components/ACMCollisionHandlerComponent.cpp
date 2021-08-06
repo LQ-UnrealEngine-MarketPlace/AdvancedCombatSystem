@@ -25,10 +25,8 @@ UACMCollisionHandlerComponent::UACMCollisionHandlerComponent()
 void UACMCollisionHandlerComponent::BeginPlay()
 {
 	Super::BeginPlay();
-	SetComponentTickEnabled(false);
 	SetStarted(false);
 }
-
 
 void UACMCollisionHandlerComponent::SetupCollisionManager(UMeshComponent* InDamageMesh)
 {
@@ -391,7 +389,7 @@ void UACMCollisionHandlerComponent::DisplayDebugTraces()
 			break;
 
 		case EDebugType::ShowInfoDuringSwing:
-			if (!bIsStarted)
+			if (bIsStarted)
 			{
 				return;
 			}
@@ -401,6 +399,7 @@ void UACMCollisionHandlerComponent::DisplayDebugTraces()
 			break;
 
 		case EDebugType::DontShowDebugInfos:
+			return;
 		default:
 			return;
 	}
