@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "AttributeSet.h"
+#include <GameplayTagContainer.h>
 #include "ACFAttributeSetBase.generated.h"
 
 class AACFCharacterBase;
