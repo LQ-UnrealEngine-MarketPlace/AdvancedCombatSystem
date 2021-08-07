@@ -406,10 +406,13 @@ void UACFLocomotionComponent::HandleStateChanged(const ELocomotionState NewLocom
 		if (CharacterOwner->HasAuthority())
 		{
 			UACFCoreComponent* CoreComponent = UACFFunctionLibrary::GetCoreComponentFromActor(CharacterOwner);
-			CurrentLocomotionAbility->K2_CancelAbility();
-			CoreComponent->ActivateAbilityWithClass(NextStatePtr->LocomotionAbility, CurrentLocomotionAbility);
+			CoreComponent->RemoveActiveGameplayEffectBySourceEffect(CharacterOwner, PreviousStatePtr->LocomotionCost);
+			CoreComponent->ApplyGameplayEffectSpecToTarget(CharacterOwner, TargetLocomotionState.LocomotionCost);
 		}
 	}
+
+	CurrentLocomotionState = NewLocomotionState;
+	OnLocomotionStateChanged.Broadcast(NewLocomotionState);
 }
 
 void UACFLocomotionComponent::OnRep_RotationMethod()
@@ -430,7 +433,8 @@ void UACFLocomotionComponent::OnRep_LocomotionState()
 		RecastOwner();
 	}
 
-	//OwnerCharacterMovementComponent->MaxWalkSpeed = GetCharactermax
+	OwnerCharacterMovementComponent->MaxWalkSpeed = GetCharacterMaxSpeedByState(TargetLocomotionState.LocomotionState);
+	TargetLocomotionState.MaxStateSpeed = GetCharacterMaxSpeedByState(TargetLocomotionState.LocomotionState);
 }
 
 void UACFLocomotionComponent::Server_SetBasePose_Implementation(FGameplayTag InBasePose)
@@ -462,7 +466,6 @@ void UACFLocomotionComponent::Server_SetRotation_Implementation(ERotationMethod 
 	TurnStartAngle = InTurnStartAngle;
 	TurnStopTolerance = InTurnStopToTolerance;
 }
-
 
 bool UACFLocomotionComponent::Server_SetRotation_Validate(ERotationMethod InRotationMethod, float InRotationSpeed /*= 0.f*/, float InTurnStartAngle /*= 0.f*/, float InTurnStopToTolerance /*= 0.f*/)
 {
@@ -597,12 +600,11 @@ bool UACFLocomotionComponent::Server_BrakeToPreviousState_Validate()
 void UACFLocomotionComponent::Server_SetLocomotionState_Implementation(const ELocomotionState InLocomotionState)
 {
 	FACFLocomotionState* LocomotionStatePtr = LocomotionStates.FindByKey(InLocomotionState);
-	if (LocomotionStatePtr && LocomotionStatePtr->LocomotionAbility)
+
+	if (LocomotionStatePtr && OwnerCharacterMovementComponent)
 	{
 		TargetLocomotionState.MaxStateSpeed = GetCharacterMaxSpeedByState(InLocomotionState);
-		TargetLocomotionState.LocomotionAbility = GetLocomotionAbilityByState(InLocomotionState);
-		UACFCoreComponent* CoreComponent = UACFFunctionLibrary::GetCoreComponentFromActor(CharacterOwner); 
-		CoreComponent->ActivateAbilityWithClass(TargetLocomotionState.LocomotionAbility, CurrentLocomotionAbility);
+		TargetLocomotionState.LocomotionCost = GetLocomotionCostByStates(InLocomotionState);
 		OnTargetLocomotionStateChanged.Broadcast(InLocomotionState);
 	}
 }
@@ -709,12 +711,12 @@ void UACFLocomotionComponent::TurnInPlaceTick()
 	}
 }
 
-TSubclassOf<UACFGameplayAbility> UACFLocomotionComponent::GetLocomotionAbilityByState(const ELocomotionState InLocomotionState)
+TSubclassOf<UGameplayEffect> UACFLocomotionComponent::GetLocomotionCostByStates(const ELocomotionState InLocomotionState)
 {
 	FACFLocomotionState* LocomotionStatePtr = LocomotionStates.FindByKey(InLocomotionState);
 	if (LocomotionStatePtr)
 	{
-		return LocomotionStatePtr->LocomotionAbility;
+		return LocomotionStatePtr->LocomotionCost;
 	}
 
 	return nullptr;

@@ -227,7 +227,7 @@ public:
 	float GetCharacterMaxSpeed() const { return OwnerCharacterMovementComponent->MaxWalkSpeed; }
 
 	UFUNCTION(BlueprintPure, Category = "ACF | Locomotion")
-	TSubclassOf<UACFGameplayAbility> GetLocomotionAbilityByState(const ELocomotionState InLocomotionState);
+	TSubclassOf<UGameplayEffect> GetLocomotionCostByStates(const ELocomotionState InLocomotionState);
 
 	UFUNCTION(BlueprintPure, Category = "ACF | Locomotion")
 	float GetCharacterMaxSpeedByState(ELocomotionState InLocomotioState) 

@@ -6,6 +6,7 @@
 #include "ACFAnimationData.generated.h"
 
 class UACFGameplayAbility;
+class UGameplayEffect;
 
 
 UENUM(BlueprintType)
@@ -90,10 +91,10 @@ struct FACFLocomotionState
 
 	FACFLocomotionState() {};
 
-	FACFLocomotionState(ELocomotionState InLocomotionState, TSubclassOf<UACFGameplayAbility> InLocomotionAbility)
+	FACFLocomotionState(ELocomotionState InLocomotionState, TSubclassOf<UGameplayEffect> InLocomotionCost)
 	{
 		LocomotionState = InLocomotionState;
-		LocomotionAbility = InLocomotionAbility;
+		LocomotionCost = InLocomotionCost;
 	}
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "ACF | Locomotion")
@@ -103,7 +104,7 @@ struct FACFLocomotionState
 	float MaxStateSpeed = 0.f;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "ACF | Locomotion")
-	TSubclassOf<UACFGameplayAbility> LocomotionAbility;
+	TSubclassOf<UGameplayEffect> LocomotionCost;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "ACF | Locomotion")
 	FName CameraMovement;
