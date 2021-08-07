@@ -115,6 +115,10 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "ACF | Locomotion")
 	bool bShouldStrafe = false;
 
+	/*Indicates the max angular distance from the cone that allows your character to sprint (you cannot sprint backward)*/
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "ACF | Locomotion")
+	float SprintDirectionCone = 10.f;
+
 	/** Indicates whether the character is strafing or not */
 	UPROPERTY(BlueprintReadOnly, Category = "ACF | Locomotion")
 	bool bIsStrafing = false;

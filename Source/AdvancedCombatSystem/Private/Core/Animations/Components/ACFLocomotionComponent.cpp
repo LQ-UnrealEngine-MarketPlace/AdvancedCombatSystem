@@ -375,11 +375,11 @@ void UACFLocomotionComponent::UpdateLocomotionState()
 				UACFAnimInstance* AnimInstance = CharacterOwner->GetAnimInstance();
 				if (AnimInstance)
 				{
-					/*const float Direction = AnimInstance->GetDirection();
+					const float Direction = AnimInstance->Direction;
 					if (FMath::Abs(Direction) > SprintDirectionCone)
 					{
 						Server_SetLocomotionState(ELocomotionState::Jog);
-					}*/
+					}
 				}
 			}
 		}
