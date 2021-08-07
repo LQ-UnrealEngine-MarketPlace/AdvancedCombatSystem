@@ -91,6 +91,12 @@ struct FACFLocomotionState
 
 	FACFLocomotionState() {};
 
+	FACFLocomotionState(ELocomotionState InLocomotionState, float InMaxStateSpeed)
+	{
+		LocomotionState = InLocomotionState;
+		MaxStateSpeed = InMaxStateSpeed;
+	}
+
 	FACFLocomotionState(ELocomotionState InLocomotionState, TSubclassOf<UGameplayEffect> InLocomotionCost)
 	{
 		LocomotionState = InLocomotionState;

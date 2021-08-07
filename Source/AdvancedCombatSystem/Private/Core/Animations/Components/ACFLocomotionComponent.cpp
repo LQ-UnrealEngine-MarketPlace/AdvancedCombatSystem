@@ -20,6 +20,16 @@ UACFLocomotionComponent::UACFLocomotionComponent()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
+	bEditableWhenInherited = true;
+
+	// Populate LocomotionStates
+	LocomotionStates.Add(FACFLocomotionState(ELocomotionState::Idle, 0.f));
+	LocomotionStates.Add(FACFLocomotionState(ELocomotionState::Walk, 180.f));
+	LocomotionStates.Add(FACFLocomotionState(ELocomotionState::Jog, 350.f));
+	LocomotionStates.Add(FACFLocomotionState(ELocomotionState::Sprint, 550.f));
+
+	// Set CurrentLocomotionState
+	CurrentLocomotionState = ELocomotionState::Idle;
 
 #if WITH_EDITOR
 	bDebug = false;
