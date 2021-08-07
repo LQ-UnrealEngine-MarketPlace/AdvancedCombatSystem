@@ -78,6 +78,7 @@ void UACFLocomotionComponent::TickComponent(float DeltaTime, ELevelTick TickType
 
 	AimTick();
 	TurnInPlaceTick();
+	UpdateLocomotionState();
 }
 
 void UACFLocomotionComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
@@ -382,6 +383,8 @@ void UACFLocomotionComponent::UpdateLocomotionState()
 
 			if (CurrentLocomotionState == ELocomotionState::Sprint)
 			{
+				AddTag(FGameplayTag::RequestGameplayTag("Ability.Sprint"));
+				SetupRotation(ERotationMethod::RotateToVelocity, RotationSpeed, TurnStartAngle, TurnStopTolerance);
 				UACFAnimInstance* AnimInstance = CharacterOwner->GetAnimInstance();
 				if (AnimInstance)
 				{
@@ -613,9 +616,14 @@ void UACFLocomotionComponent::Server_SetLocomotionState_Implementation(const ELo
 
 	if (LocomotionStatePtr && OwnerCharacterMovementComponent)
 	{
+		OwnerCharacterMovementComponent->MaxWalkSpeed = GetCharacterMaxSpeedByState(InLocomotionState);
 		TargetLocomotionState.MaxStateSpeed = GetCharacterMaxSpeedByState(InLocomotionState);
 		TargetLocomotionState.LocomotionCost = GetLocomotionCostByStates(InLocomotionState);
 		OnTargetLocomotionStateChanged.Broadcast(InLocomotionState);
+	}
+	else
+	{
+		ACF_LOG(Warning, TEXT("UACFLocomotionComponent::Server_SetLocomotionState: Locomotion State is inexistent"))
 	}
 }
 
